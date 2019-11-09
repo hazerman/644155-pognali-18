@@ -13,7 +13,7 @@
       <button class="button-toggle main-header__button-toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <div class="main-header__wrapper">
+      <div class="main-header__nav-wrapper">
         <nav class="main-nav">
           <ul class="site-list main-nav__list">
             <li class="site-list__item">
@@ -23,10 +23,10 @@
               <a class="site-list__link" href="directions.html">Направления</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link">Попутчики</a>
+              <a class="site-list__link" href="companions.html">Попутчики</a>
             </li>
           </ul>
-          <a class="button main-nav__button button--bg--yellow" href="#">Авторизация</a>
+          <a class="main-nav__button button button--bg--yellow" href="#">Авторизация</a>
         </nav>
         <ul class="contacts main-header__contacts">
           <li class="contacts__item">
@@ -42,17 +42,17 @@
         </ul>
         <ul class="social-list main-header__social-list">
           <li class="social-list__item">
-            <a href="#" class="social-list__link social-list__link--fb--light">
+            <a class="social-list__link social-list__link--icon--light social-list__link--fb" href="#">
               <span class="visually-hidden">Погнали в Фэйсбуке</span>
             </a>
           </li>
           <li class="social-list__item">
-            <a href="#" class="social-list__link social-list__link--vk--light">
+            <a class="social-list__link social-list__link--icon--light social-list__link--vk" href="#">
               <span class="visually-hidden">Погнали во Вконтакте </span>
             </a>
           </li>
           <li class="social-list__item">
-            <a href="#" class="social-list__link social-list__link--in--light">
+            <a class="social-list__link social-list__link--icon--light social-list__link--in" href="#">
               <span class="visually-hidden">Погнали в Инстаграме</span>
             </a>
           </li>
@@ -67,13 +67,13 @@
         <ul class="companions-list">
 
           <li class="companions-list__item">
-            <div class="user companions-list__user">
-              <div class="user__wrapper">
+            <div class="companions-list__user">
+              <div class="companions-list__user-info">
                 <span class="companions-list__name">Таня Фирсова</span>
-                <span class="user__popularity">1,5 М</span>
+                <span class="companions-list__popularity">1,5 М</span>
               </div>
-              <div class="user__wrapper user__favorites user__favorites--red">
-                <img class="user__avatar" src="#" alt="Таня Фирсова">
+              <div class="companions-list__avatar-wrapper companions-list__favorites companions-list__favorites--heart">
+                <img class="companions-list__avatar" src="#" alt="Таня Фирсова">
               </div>
             </div>
             <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
@@ -108,20 +108,20 @@
               </li>
             </ul>
             <h3 class="companions-list__title">левел:</h3>
-            <div class="level companions-list__level level--bg-transparent">
+            <div class="companions-list__level level level--bg-transparent">
               <span class="level__number">99</span>
             </div>
             <a class="button button--bg--yellow button--border--full-rounded" href="#">Позвать</a>
           </li>
 
           <li class="companions-list__item">
-            <div class="user companions-list__user">
-              <div class="user__wrapper">
+            <div class="companions-list__user">
+              <div class="companions-list__user-info">
                 <span class="companions-list__name">Петя Демин</span>
-                <span class="user__popularity">150</span>
+                <span class="companions-list__popularity">150</span>
               </div>
-              <div class="user__wrapper user__favorites">
-                <img class="user__avatar" src="#" alt="Петя Демин">
+              <div class="companions-list__avatar-wrapper companions-list__favorites">
+                <img class="companions-list__avatar" src="#" alt="Петя Демин">
               </div>
             </div>
             <p class="companions-list__hashtags">#бургер #бар #футбол #концерт #крафт</p>
@@ -152,20 +152,20 @@
               </li>
             </ul>
             <h3 class="companions-list__title">левел:</h3>
-            <div class="level companions-list__level level--bg-transparent">
+            <div class="companions-list__level level level--bg-transparent">
               <span class="level__number">80</span>
             </div>
             <a class="button button--bg--yellow button--border--full-rounded" href="#">Позвать</a>
           </li>
 
           <li class="companions-list__item">
-            <div class="user companions-list__user">
-              <div class="user__wrapper">
+            <div class="companions-list__user">
+              <div class="companions-list__user-info">
                 <span class="companions-list__name">Марк Смолов</span>
-                <span class="user__popularity">1700</span>
+                <span class="companions-list__popularity">1700</span>
               </div>
-              <div class="user__wrapper user__favorites">
-                <img class="user__avatar" src="#" alt="Марк Смолов">
+              <div class="companions-list__avatar-wrapper companions-list__favorites">
+                <img class="companions-list__avatar" src="#" alt="Марк Смолов">
               </div>
             </div>
             <p class="companions-list__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
@@ -200,20 +200,20 @@
               </li>
             </ul>
             <h3 class="companions-list__title">левел:</h3>
-            <div class="level companions-list__level level--bg-transparent">
+            <div class="companions-list__level level level--bg-transparent">
               <span class="level__number">25</span>
             </div>
             <a class="button button--bg--yellow button--border--full-rounded" href="#">Позвать</a>
           </li>
 
           <li class="companions-list__item">
-            <div class="user companions-list__user">
-              <div class="user__wrapper">
+            <div class="companions-list__user">
+              <div class="companions-list__user-info">
                 <span class="companions-list__name">Лариса Роговая</span>
-                <span class="user__popularity">23</span>
+                <span class="companions-list__popularity">23</span>
               </div>
-              <div class="user__wrapper user__favorites user__favorites--red">
-                <img class="user__avatar" src="#" alt="Лариса Роговая">
+              <div class="companions-list__avatar-wrapper companions-list__favorites">
+                <img class="companions-list__avatar" src="#" alt="Лариса Роговая">
               </div>
             </div>
             <p class="companions-list__hashtags">#образование #карьера #учеба #линкедин</p>
@@ -244,7 +244,7 @@
               </li>
             </ul>
             <h3 class="companions-list__title">левел:</h3>
-            <div class="level companions-list__level level--bg-transparent">
+            <div class="companions-list__level level level--bg-transparent">
               <span class="level__number">50</span>
             </div>
             <a class="button button--bg--yellow button--border--full-rounded" href="#">Позвать</a>
@@ -272,22 +272,22 @@
       </a>
       <ul class="social-list main-footer__social-list">
         <li class="social-list__item">
-          <a href="#" class="social-list__link social-list__link--bg--yellow social-list__link--fb--dark">
+          <a class="social-list__link social-list__link--bg--footer social-list__link--icon--dark social-list__link--fb" href="#">
             <span class="visually-hidden">Погнали в Фэйсбуке</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a href="#" class="social-list__link social-list__link--bg--yellow social-list__link--vk--dark">
+          <a class="social-list__link social-list__link--bg--footer social-list__link--icon--dark social-list__link--vk" href="#">
             <span class="visually-hidden">Погнали во Вконтакте </span>
           </a>
         </li>
         <li class="social-list__item">
-          <a href="#" class="social-list__link social-list__link--bg--yellow social-list__link--in--dark">
+          <a class="social-list__link social-list__link--bg--footer social-list__link--icon--dark social-list__link--in" href="#">
             <span class="visually-hidden">Погнали в Инстаграме</span>
           </a>
         </li>
       </ul>
-      <a class="link main-footer__link link--color--grey" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="main-footer__link link link--color--grey" href="https://htmlacademy.ru/intensive/adaptive">
         Разработано
         <span class="visually-hidden">в HTML Academy</span>
       </a>
