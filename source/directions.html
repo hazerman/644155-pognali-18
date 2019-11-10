@@ -115,6 +115,169 @@
         </ol>
       </section>
 
+      <section class="plan plan--add">
+        <h2 class="plan__title">Добавить план:</h2>
+        <form class="plan__form form" action="https://echo.htmlacademy.ru" method="post">
+          <ol class="plan__list">
+            <li class="plan__item">
+              <h3 class="plan__subtitle">Шаг 1. Даты пребывания</h3>
+              <p class="plan__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              <div class="plan__input-wrapper">
+                <label class="form__label form__label--plan" for="count-companions">Ищу попутчиков:</label>
+                <span class="plan__brief">Чел.</span>
+                <div class="plan__count-wrapper">
+                  <button class="plan__button plan__button--minus" type="button">
+                    <span class="visually-hidden">Уменьшить значение</span>
+                  </button>
+                  <input class="form__input form__input--plan form__input--type--text" name="count-companions" id="count-companions" type="text" value="2">
+                  <button class="plan__button plan__button--plus" type="button">
+                    <span class="visually-hidden">Увеличить значение</span>
+                  </button>
+                </div>
+              </div>
+              <div class="plan__input-wrapper">
+                <label class="form__label form__label--plan" for="count-days">Длительность:</label>
+                <span class="plan__brief">Дн.</span>
+                <div class="plan__count-wrapper">
+                  <button class="plan__button plan__button--minus" type="button">
+                    <span class="visually-hidden">Уменьшить значение</span>
+                  </button>
+                  <input class="form__input form__input--plan form__input--type--text" name="count-days" id="count-days" type="text" value="2">
+                  <button class="plan__button plan__button--plus" type="button">
+                    <span class="visually-hidden">Увеличить значение</span>
+                  </button>
+                </div>
+              </div>
+              <p class="plan__input-wrapper">
+                <input class="form__input form__input--plan form__input--type--checkbox" name="children" id="children" type="checkbox" checked>
+                <label class="form__label form__label--filters" for="children">Можно с детьми</label>
+              </p>
+              <div class="plan__calendar-wrapper">
+                <div class="plan__calendar-month">
+                  <button class="plan__button plan__button--prev" type="button">
+                    <span class="visually-hidden">Предыдущий месяц</span>
+                  </button>
+                  Март 2019
+                  <button class="plan__button plan__button--next" type="button">
+                    <span class="visually-hidden">Следующий месяц</span>
+                  </button>
+                </div>
+                <div class="plan__calendar-days">
+                  <span class="plan__weekdays">П</span>
+                  <span class="plan__weekdays">В</span>
+                  <span class="plan__weekdays">С</span>
+                  <span class="plan__weekdays">Ч</span>
+                  <span class="plan__weekdays">П</span>
+                  <span class="plan__weekdays plan__weekdays--ends">С</span>
+                  <span class="plan__weekdays plan__weekdays--ends">В</span>
+                  <button class="plan__button plan__button--days plan__button--disabled">23</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">24</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">25</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">26</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">27</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">28</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">1</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">2</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">3</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">4</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">5</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">6</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">7</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">8</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">9</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">10</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">11</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">12</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">13</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">14</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">15</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">16</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">17</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">18</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">19</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">20</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">21</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">22</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">23</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">24</button>
+                  <button class="plan__button plan__button--days plan__button--disabled">25</button>
+                  <button class="plan__button plan__button--days plan__button--checked">26</button>
+                  <button class="plan__button plan__button--days plan__button--checked">27</button>
+                  <button class="plan__button plan__button--days plan__button--checked">28</button>
+                  <button class="plan__button plan__button--days">29</button>
+                  <button class="plan__button plan__button--days">30</button>
+                  <button class="plan__button plan__button--days">31</button>
+                  <button class="plan__button plan__button--days">1</button>
+                  <button class="plan__button plan__button--days">2</button>
+                  <button class="plan__button plan__button--days">3</button>
+                  <button class="plan__button plan__button--days">4</button>
+                  <button class="plan__button plan__button--days">5</button>
+                </div>
+              </div>
+              <a class="button" href="#">Следующий шаг</a>
+            </li>
+            <li class="plan__item">
+              <h3 class="plan__subtitle">Шаг 2. Маршрут</h3>
+              <p class="plan__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <div class="plan__country-wrapper plan__country-wrapper--change plan__country-wrapper--delete">
+                <span class="plan__country-name">
+                  Босния и Герцеговина
+                  <button class="plan__button plan__button--select">Раскрыть список</button>
+                </span>
+                <span class="plan__flag-wrapper">
+                  <img class="plan__flag-img" src="#" alt="Босния и Герцеговина">
+                </span>
+              </div>
+              <div class="plan__country-wrapper plan__country-wrapper--change plan__country-wrapper--delete">
+                <span class="plan__country-name">
+                  Чехия
+                  <button class="plan__button plan__button--select">Раскрыть список</button>
+                </span>
+                <span class="plan__flag-wrapper">
+                  <img class="plan__flag-img" src="#" alt="Чехия">
+                </span>
+              </div>
+              <div class="plan__country-wrapper plan__country-wrapper--add plan__country-wrapper--delete">
+                <span class="plan__country-name">
+                  Выберите страну
+                  <button class="plan__button plan__button--select">Раскрыть список</button>
+                </span>
+              </div>
+              <div class="plan__country-wrapper plan__country-wrapper--add">
+                <span class="plan__country-name">
+                  Добавить страну
+                  <button class="plan__button plan__button--plus">Добавить</button>
+                </span>
+              </div>
+              <a class="button" href="#">Следующий шаг</a>
+              <a class="link" href="#">На шаг назад</a>
+            </li>
+            <li class="plan__item">
+              <h3 class="plan__subtitle">Шаг 3. Развлечения</h3>
+              <p class="plan__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <div class="plan__action-wrapper">
+                <div class="plan__action">
+                  <label class="form__label form__label--action" for="action-country-bosnia">Босния и Герцеговина</label>
+                  <span class="plan__flag-wrapper">
+                    <img class="plan__flag-img" src="#" alt="Босния и Герцеговина">
+                  </span>
+                  <textarea class="form__textarea" name="action-country-bosnia" id="action-country-bosnia" cols="30" rows="10" placeholder="План действий"></textarea>
+                </div>
+                <div class="plan__action">
+                  <label class="form__label form__label--action" for="action-country-czech">Чехия</label>
+                  <span class="plan__flag-wrapper">
+                    <img class="plan__flag-img" src="#" alt="Чехия">
+                  </span>
+                  <textarea class="form__textarea" name="action-country-czech" id="action-country-czech" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </div>
+              </div>
+              <button class="button" type="submit">Отправить</button>
+              <a class="link" href="#">На шаг назад</a>
+            </li>
+          </ol>
+        </form>
+      </section>
+
     </main>
 
     <footer class="main-footer">
