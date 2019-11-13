@@ -1,0 +1,19 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+
+  font-weight: 700;
+  color: $night-blue;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &--theme--light {
+    background-color: $yellow;
+  }
+
+  &--border--full-rounded {
+    border-radius: 50px;
+  }
+}

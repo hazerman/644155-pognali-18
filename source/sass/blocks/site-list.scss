@@ -1,0 +1,9 @@
+.site-list {
+  @include list;
+}
+
+.site-list__link {
+  font-weight: 500;
+  @include link-style($dark-blue, 30px, 36px);
+  text-transform: uppercase;
+}

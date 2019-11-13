@@ -1,0 +1,12 @@
+.contacts {
+  @include list;
+}
+
+.contacts__link {
+  font-weight: 700;
+  @include link-style($dark-blue, 16px, 22px);
+}
+
+.contacts__mode {
+  font-style: normal;
+}

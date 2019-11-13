@@ -1,1 +1,9 @@
-// main-header
+.main-header {
+  color: $white;
+
+  background-color: $night-blue;
+}
+
+.main-header__nav-wrapper {
+  background-color: $white;
+}
