@@ -1,3 +1,9 @@
+.main {
+  &--bg--inner {
+    background-color: $light-grey;
+  }
+}
+
 .main__item {
   &--bg--dark {
     background-color: $night-blue;
@@ -30,4 +36,8 @@
   &--bold {
     font-weight: 700;
   }
+}
+
+.main__filter-country {
+  background-color: $blue-grey;
 }

@@ -18,6 +18,10 @@
     background-color: $yellow;
   }
 
+  &--theme--pale {
+    background-color: $dark-blue-grey;
+  }
+
   &--border--full-rounded {
     border-radius: 50px;
   }

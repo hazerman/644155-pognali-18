@@ -27,7 +27,7 @@
               <a class="site-list__link" href="companions.html">Попутчики</a>
             </li>
           </ul>
-          <a class="main-nav__button button button--theme--light" href="#">Авторизация</a>
+          <a class="main-nav__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
         </nav>
         <ul class="contacts main-header__contacts">
           <li class="contacts__item">
@@ -62,23 +62,31 @@
       <h1 class="page-title main-header__page-title">Попутчики</h1>
     </header>
 
-    <main class="main">
+    <main class="main main--bg--inner">
 
       <section class="filter-country main__filter-country main__item">
-        <a class="filter-country__show-button" href="#">
+        <a class="filter-country__show-button button" href="#">
           <h2 class="filter-country__title">Фильтрация по странам</h2>
           <span class="filter-country__toggle"></span>
         </a>
         <div class="filter-country__wrapper">
           <ul class="filter-country__continent-list">
-            <li class="filter-country__item-continent filter-country__item-continent--current">Европа</li>
-            <li class="filter-country__item-continent">Азия</li>
-            <li class="filter-country__item-continent">Америка</li>
-            <li class="filter-country__item-continent">Острова</li>
+            <li class="filter-country__item-continent">
+              <a class="filter-country__link-continent filter-country__link-continent--current" href="#">Европа</a>
+            </li>
+            <li class="filter-country__item-continent">
+              <a class="filter-country__link-continent" href="#">Азия</a>
+            </li>
+            <li class="filter-country__item-continent">
+              <a class="filter-country__link-continent" href="#">Америка</a>
+            </li>
+            <li class="filter-country__item-continent">
+              <a class="filter-country__link-continent" href="#">Острова</a>
+            </li>
           </ul>
           <ul class="filter-country__country-letter-list">
-            <li class="filter-country__item-letter filter-country__item-letter--current">
-              <a class="filter-country__link-letter" href="#">а</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter filter-country__link-letter--current" href="#">а</a>
               <ul class="filter-country__country-name-list">
                 <li class="filter-country__item-name">
                   <a class="filter-country__link-name" href="#">Афганистан</a>
@@ -182,7 +190,7 @@
               <a class="filter-country__link-letter" href="#">я</a>
             </li>
           </ul>
-          <button class="filter-country__close-button button button--close" type="button">Свернуть</button>
+          <button class="filter-country__close-button button button--close button--theme--pale button--border--full-rounded" type="button">Свернуть</button>
         </div>
       </section>
 
