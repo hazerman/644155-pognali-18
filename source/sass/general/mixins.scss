@@ -10,6 +10,11 @@
   list-style: none;
 }
 
+@mixin reset-m-p {
+  margin: 0;
+  padding: 0;
+}
+
 @mixin link-style($color, $f-size, $f-height) {
   color: $color;
   font-size: $f-size;

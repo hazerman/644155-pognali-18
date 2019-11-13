@@ -1,0 +1,13 @@
+.main__item {
+  &--bg--dark {
+    background-color: $night-blue;
+  }
+
+  &--bg--not-so-dark {
+    background-color: $dark-blue;
+  }
+
+  &--bg--light {
+    background-color: $light-grey;
+  }
+}

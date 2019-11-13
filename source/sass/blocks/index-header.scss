@@ -1,0 +1,25 @@
+.index-header {
+  color: $white;
+}
+
+.index-header__tagline {
+  @include reset-m-p;
+
+  font-weight: 700;
+
+  @include font-size-height(36px, 40px);
+}
+
+.index-header__quote {
+  @include reset-m-p;
+  @include font-size-height(16px, 22px);
+}
+
+.index-header__review {
+  font-weight: 300;
+}
+
+.index-header__author {
+  font-weight: 700;
+  font-style: normal;
+}
