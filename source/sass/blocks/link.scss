@@ -1,0 +1,25 @@
+.link {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &--theme--dark {
+    color: $dark-blue;
+  }
+
+  &--theme--not-so-dark {
+    color: $link-color;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}

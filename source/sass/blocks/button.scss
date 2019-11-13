@@ -9,6 +9,11 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
   &--theme--light {
     background-color: $yellow;
   }

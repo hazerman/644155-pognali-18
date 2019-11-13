@@ -1,0 +1,14 @@
+.price__list {
+  @include list;
+}
+
+.price__item {
+  font-weight: 300;
+
+  @include font-size-height(16px, 22px);
+  color: $light-black;
+}
+
+.price__link-show {
+  line-height: 16px;
+}
