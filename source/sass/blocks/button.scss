@@ -16,4 +16,12 @@
   &--border--full-rounded {
     border-radius: 50px;
   }
+
+  &--border--lightly-rounded {
+    border-radius: 8px;
+  }
+
+  &--lowercase {
+    text-transform: none;
+  }
 }
