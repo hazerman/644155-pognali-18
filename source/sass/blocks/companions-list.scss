@@ -1,0 +1,48 @@
+.companions-list {
+  @include list;
+
+  &--align--center {
+    text-align: center;
+  }
+}
+
+.companions-list__item {
+  background-color: $white;
+}
+
+.companion-list__profile-link {
+  font-weight: 700;
+  @include link-style($link-color, 21px, 21px);
+
+  &--smaller {
+    @include font-size-height(20px, 20px);
+  }
+}
+
+.companions-list__hashtags {
+  @include reset-m-p;
+
+  color: $light-black;
+
+  @include font-size-height(16px, 18px);
+
+  &--smaller {
+    font-size: 15px;
+  }
+}
+
+.companions-list__popularity {
+  font-weight: 700;
+
+  @include font-size-height(14px, 21px);
+  color: $night-blue;
+}
+
+.companions-list__title {
+  @include reset-m-p;
+
+  font-weight: 400;
+
+  @include font-size-height(15px, 18px);
+  color: $light-black;
+}

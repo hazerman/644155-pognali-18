@@ -1,0 +1,11 @@
+.country-whish-list {
+  @include list;
+}
+
+.country-whish-list__name {
+  font-weight: 500;
+
+  @include font-size-height(15px, 18px);
+  color: $link-color;
+  text-transform: uppercase;
+}
