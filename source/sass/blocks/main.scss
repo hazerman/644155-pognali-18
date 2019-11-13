@@ -11,3 +11,23 @@
     background-color: $light-grey;
   }
 }
+
+.main__title {
+  @include reset-m-p;
+  color: $dark-orange;
+}
+
+.main__description {
+  @include reset-m-p;
+
+  font-weight: 300;
+  &--contrast--dark {
+    color: $white;
+  }
+  &--contrast--light {
+    color: $light-black;
+  }
+  &--bold {
+    font-weight: 700;
+  }
+}
