@@ -1,0 +1,6 @@
+.page-title {
+  @include reset-m-p;
+
+  @include font-size-height(36px, 40px);
+  color: $white;
+}
