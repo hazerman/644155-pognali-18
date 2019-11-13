@@ -172,55 +172,185 @@
                   </button>
                 </div>
                 <div class="plan__calendar-days">
-                  <span class="plan__weekdays">П</span>
-                  <span class="plan__weekdays">В</span>
-                  <span class="plan__weekdays">С</span>
-                  <span class="plan__weekdays">Ч</span>
-                  <span class="plan__weekdays">П</span>
-                  <span class="plan__weekdays plan__weekdays--ends">С</span>
-                  <span class="plan__weekdays plan__weekdays--ends">В</span>
-                  <button class="plan__button plan__button--days plan__button--disabled">23</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">24</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">25</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">26</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">27</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">28</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">1</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">2</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">3</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">4</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">5</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">6</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">7</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">8</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">9</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">10</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">11</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">12</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">13</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">14</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">15</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">16</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">17</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">18</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">19</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">20</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">21</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">22</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">23</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">24</button>
-                  <button class="plan__button plan__button--days plan__button--disabled">25</button>
-                  <button class="plan__button plan__button--days plan__button--checked">26</button>
-                  <button class="plan__button plan__button--days plan__button--checked">27</button>
-                  <button class="plan__button plan__button--days plan__button--checked">28</button>
-                  <button class="plan__button plan__button--days">29</button>
-                  <button class="plan__button plan__button--days">30</button>
-                  <button class="plan__button plan__button--days">31</button>
-                  <button class="plan__button plan__button--days">1</button>
-                  <button class="plan__button plan__button--days">2</button>
-                  <button class="plan__button plan__button--days">3</button>
-                  <button class="plan__button plan__button--days">4</button>
-                  <button class="plan__button plan__button--days">5</button>
+                  <ul class="plan__list-calendar">
+                    <li class="plan__item-weekdays">П</li>
+                    <li class="plan__item-weekdays">В</li>
+                    <li class="plan__item-weekdays">С</li>
+                    <li class="plan__item-weekdays">Ч</li>
+                    <li class="plan__item-weekdays">П</li>
+                    <li class="plan__item-weekdays plan__item-weekdays--ends">С</li>
+                    <li class="plan__item-weekdays plan__item-weekdays--ends">В</li>
+                  </ul>
+                  <ul class="plan__list-calendar">
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-23" id="feb-day-23" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="feb-day-23">23</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-24" id="feb-day-24" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="feb-day-24">24</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-25" id="feb-day-25" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="feb-day-25">25</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-26" id="feb-day-26" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="feb-day-26">26</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-27" id="feb-day-27" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="feb-day-27">27</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-28" id="feb-day-28" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="feb-day-28">28</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-1" id="march-day-1" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-1">1</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-2" id="march-day-2" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-2">2</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-3" id="march-day-3" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-3">3</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-4" id="march-day-4" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-4">4</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-5" id="march-day-5" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-5">5</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-6" id="march-day-6" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-6">6</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-7" id="march-day-7" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-7">7</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-8" id="march-day-8" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-8">8</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-9" id="march-day-9" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-9">9</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-10" id="march-day-10" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-10">10</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-11" id="march-day-11" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-11">11</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-12" id="march-day-12" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-12">12</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-13" id="march-day-13" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-13">13</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-14" id="march-day-14" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-14">14</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-15" id="march-day-15" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-15">15</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-16" id="march-day-16" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-16">16</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-17" id="march-day-17" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-17">17</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-18" id="march-day-18" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-18">18</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-19" id="march-day-19" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-19">19</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-20" id="march-day-20" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-20">20</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-21" id="march-day-21" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-21">21</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-22" id="march-day-22" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-22">22</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-23" id="march-day-23" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-23">23</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-24" id="march-day-24" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-24">24</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-25" id="march-day-25" disabled>
+                      <label class="form__label-days form__label-days--disabled" for="march-day-25">25</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-26" id="march-day-26" checked>
+                      <label class="form__label-days form__label-days--checked" for="march-day-26">26</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-27" id="march-day-27" checked>
+                      <label class="form__label-days form__label-days--checked" for="march-day-27">27</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-28" id="march-day-28" checked>
+                      <label class="form__label-days form__label-days--checked" for="march-day-28">28</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-" id="march-day-29">
+                      <label class="form__label-days" for="march-day-29">29</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-30" id="march-day-30">
+                      <label class="form__label-days" for="march-day-30">30</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-31" id="march-day-31">
+                      <label class="form__label-days" for="march-day-31">31</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="april-day-1" id="april-day-1">
+                      <label class="form__label-days" for="april-day-1">1</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="april-day-2" id="april-day-2">
+                      <label class="form__label-days" for="april-day-2">2</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="april-day-3" id="april-day-3">
+                      <label class="form__label-days" for="april-day-3">3</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="april-day-4" id="april-day-4">
+                      <label class="form__label-days" for="april-day-4">4</label>
+                    </li>
+                    <li class="plan__item-days">
+                      <input class="visually-hidden form__input-days" type="checkbox" name="april-day-5" id="april-day-5">
+                      <label class="form__label-days" for="april-day-5">5</label>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <a class="button" href="#">Следующий шаг</a>
@@ -253,109 +383,109 @@
                 </span>
                 <div class="filter-country">
                   <ul class="filter-country__country-letter-list">
-                    <li class="filter-country__item filter-country__item--letter filter-country__item--current">
-                      <a class="filter-country__link filter-country__link--letter" href="#">а</a>
+                    <li class="filter-country__item-letter filter-country__item-letter--current">
+                      <a class="filter-country__link-letter" href="#">а</a>
                       <ul class="filter-country__country-name-list">
-                        <li class="filter-country__item filter-country__item--name">
-                          <a class="filter-country__link filter-country__link--name" href="#">Афганистан</a>
+                        <li class="filter-country__item-name">
+                          <a class="filter-country__item-name" href="#">Афганистан</a>
                         </li>
-                        <li class="filter-country__item filter-country__item--name">
-                          <a class="filter-country__link filter-country__link--name" href="#">Албания</a>
+                        <li class="filter-country__item-name">
+                          <a class="filter-country__item-name" href="#">Албания</a>
                         </li>
-                        <li class="filter-country__item filter-country__item--name">
-                          <a class="filter-country__link filter-country__link--name" href="#">Алжир</a>
+                        <li class="filter-country__item-name">
+                          <a class="filter-country__item-name" href="#">Алжир</a>
                         </li>
-                        <li class="filter-country__item filter-country__item--name">
-                          <a class="filter-country__link filter-country__link--name" href="#">Андорра</a>
+                        <li class="filter-country__item-name">
+                          <a class="filter-country__item-name" href="#">Андорра</a>
                         </li>
-                        <li class="filter-country__item filter-country__item--name">
-                          <a class="filter-country__link filter-country__link--name" href="#">Аргентина</a>
+                        <li class="filter-country__item-name">
+                          <a class="filter-country__item-name" href="#">Аргентина</a>
                         </li>
-                        <li class="filter-country__item filter-country__item--name">
-                          <a class="filter-country__link filter-country__link--name" href="#">Армения</a>
+                        <li class="filter-country__item-name">
+                          <a class="filter-country__item-name" href="#">Армения</a>
                         </li>
-                        <li class="filter-country__item filter-country__item--name">
-                          <a class="filter-country__link filter-country__link--name" href="#">Австралия</a>
+                        <li class="filter-country__item-name">
+                          <a class="filter-country__item-name" href="#">Австралия</a>
                         </li>
-                        <li class="filter-country__item filter-country__item--name">
-                          <a class="filter-country__link filter-country__link--name" href="#">Австрия</a>
+                        <li class="filter-country__item-name">
+                          <a class="filter-country__item-name" href="#">Австрия</a>
                         </li>
-                        <li class="filter-country__item filter-country__item--name">
-                          <a class="filter-country__link filter-country__link--name" href="#">Азербайджан</a>
+                        <li class="filter-country__item-name">
+                          <a class="filter-country__item-name" href="#">Азербайджан</a>
                         </li>
                       </ul>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">б</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">б</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">в</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">в</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">г</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">г</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">д</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">д</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">е</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">е</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">з</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">з</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">и</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">и</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">к</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">к</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">л</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">л</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">м</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">м</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">н</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">н</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">о</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">о</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">п</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">п</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">р</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">р</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">с</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">с</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">т</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">т</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">у</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">у</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">ф</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">ф</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">х</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">х</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">ч</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">ч</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">ш</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">ш</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">э</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">э</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">ю</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">ю</a>
                     </li>
-                    <li class="filter-country__item filter-country__item--letter">
-                      <a class="filter-country__link filter-country__link--letter" href="#">я</a>
+                    <li class="filter-country__item-letter">
+                      <a class="filter-country__link-letter" href="#">я</a>
                     </li>
                   </ul>
                 </div>
