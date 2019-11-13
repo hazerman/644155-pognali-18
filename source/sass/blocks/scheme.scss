@@ -1,0 +1,21 @@
+.scheme__list {
+  @include list;
+}
+
+.scheme__item {
+  color: $night-blue;
+
+  @include font-size-height(18px, 18px);
+  &--bg--darker {
+    background-color: $dark-orange;
+  }
+  &--bg--dark {
+    background-color: $orange;
+  }
+  &--bg--light {
+    background-color: $dark-yellow;
+  }
+  &--bg--lighter {
+    background-color: $yellow;
+  }
+}
