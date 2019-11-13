@@ -22,4 +22,9 @@
   &--uppercase {
     text-transform: uppercase;
   }
+
+  &--theme--light {
+    font-weight: 400;
+    color: $light-black;
+  }
 }
