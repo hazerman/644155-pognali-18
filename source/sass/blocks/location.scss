@@ -1,0 +1,8 @@
+.location__address {
+  font-weight: 700;
+  font-style: normal;
+
+  @include font-size-height(16px, 22px);
+  color: $dark-blue;
+
+}
