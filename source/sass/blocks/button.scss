@@ -4,6 +4,7 @@
   padding: 10px;
 
   font-weight: 700;
+  @include font-size-height(17px, 30px);
   color: $night-blue;
   text-align: center;
   text-decoration: none;

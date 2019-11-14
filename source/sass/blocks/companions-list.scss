@@ -8,6 +8,10 @@
 
 .companions-list__item {
   background-color: $white;
+
+  &--profile {
+    background-color: transparent;
+  }
 }
 
 .companion-list__profile-link {
@@ -45,4 +49,11 @@
 
   @include font-size-height(15px, 18px);
   color: $light-black;
+
+  &--profile {
+    font-weight: 700;
+    font-size: 16px;
+    color: $link-color;
+    text-transform: uppercase;
+  }
 }
