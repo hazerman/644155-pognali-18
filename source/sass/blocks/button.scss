@@ -22,6 +22,10 @@
     background-color: $dark-blue-grey;
   }
 
+  &--theme--no {
+    background-color: $white;
+  }
+
   &--border--full-rounded {
     border-radius: 50px;
   }

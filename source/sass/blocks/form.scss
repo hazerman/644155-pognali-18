@@ -1,0 +1,6 @@
+.form__label {
+  &--filters {
+    @include font-size-height(15px, 15px);
+    color: $light-black;
+  }
+}

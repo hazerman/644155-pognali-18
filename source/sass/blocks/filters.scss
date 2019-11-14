@@ -1,0 +1,16 @@
+.filters__button-toggle {
+  font-weight: 700;
+
+  @include font-size-height(16px, 18px);
+  color: $link-color;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.filters__list {
+  @include list;
+}
