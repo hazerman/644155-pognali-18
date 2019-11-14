@@ -9,14 +9,12 @@
 
 .directions-list__title {
   @include reset-m-p;
-
   @include font-size-height(21px, 21px);
   color: $night-blue;
 }
 
 .directions-list__tagline {
   @include reset-m-p;
-
   @include font-size-height(16px, 18px);
 }
 

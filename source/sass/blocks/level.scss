@@ -4,9 +4,11 @@
   font-weight: 700;
 
   border-radius: 50%;
+
   &--style--index {
     @include font-size-height(24px, 24px);
     color: $white;
+
     background-color: rgba($black, 0.6);
   }
 

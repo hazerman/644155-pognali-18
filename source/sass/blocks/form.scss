@@ -6,6 +6,7 @@
 
   &--plan {
     font-weight: 500;
+
     @include font-size-height(16px, 16px);
     color: $link-color;
     text-transform: uppercase;
@@ -13,6 +14,7 @@
 
   &--action {
     font-weight: 500;
+
     @include font-size-height(18px, 18px);
     color: $link-color;
   }

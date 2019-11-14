@@ -10,14 +10,12 @@
 
 .plan__title {
   @include reset-m-p;
-
   @include font-size-height(24px, 24px);
   color: $link-color;
 }
 
 .plan__subtitle {
   @include reset-m-p;
-
   @include font-size-height(20px, 20px);
 }
 
@@ -32,14 +30,15 @@
 
 .plan__country-ready {
   font-weight: 700;
+
   @include font-size-height(16px, 16px);
   color: $link-color;
 }
 
 .plan__info {
   font-weight: 500;
-  @include font-size-height(14px, 14px);
 
+  @include font-size-height(14px, 14px);
   text-transform: uppercase;
 }
 
@@ -49,19 +48,19 @@
 
 .plan__link-prev {
   color: $night-blue;
+
   @include font-size-height(17px, 30px);
 }
 
 .plan__description {
   @include reset-m-p;
-
   @include font-size-height(16px, 22px);
-
   color: $light-black;
 }
 
 .plan__brief {
   font-weight: 500;
+
   @include font-size-height(16px, 16px);
   color: rgba($link-color, 0.3);
   text-transform: uppercase;
@@ -69,6 +68,7 @@
 
 .plan__calendar-month {
   font-weight: 700;
+
   @include font-size-height(20px, 20px);
 }
 

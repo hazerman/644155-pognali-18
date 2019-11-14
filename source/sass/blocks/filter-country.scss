@@ -1,6 +1,5 @@
 .filter-country__title {
   @include reset-m-p;
-
   @include font-size-height(16px, 22px);
   color: $dark-blue;
 }
@@ -11,6 +10,7 @@
 
 .filter-country__link-continent {
   font-weight: 700;
+
   @include link-style($dark-blue, 16px, 22px, 0.3);
 
   text-transform: uppercase;
@@ -31,9 +31,10 @@
   padding: 10px;
 
   font-weight: 500;
-  @include link-style($link-color, 14px, 18px);
 
+  @include link-style($link-color, 14px, 18px);
   text-transform: uppercase;
+
   background-color: $white;
 
   &--current {
