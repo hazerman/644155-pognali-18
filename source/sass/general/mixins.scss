@@ -1,0 +1,28 @@
+@mixin font-size-height($f-size, $f-height) {
+  font-size: $f-size;
+  line-height: $f-height;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin reset-m-p {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin link-style($color, $f-size, $f-height, $c-opacity: 1) {
+  color: rgba($color, $c-opacity);
+  font-size: $f-size;
+  line-height: $f-height;
+  text-decoration: none;
+}
+
+@mixin current {
+  cursor: default;
+  pointer-events: none;
+}

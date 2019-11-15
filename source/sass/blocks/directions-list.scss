@@ -1,0 +1,23 @@
+.directions-list {
+  @include list;
+}
+
+.directions-list__item {
+  font-weight: 500;
+  color: rgba($light-black, 0.3);
+}
+
+.directions-list__title {
+  @include reset-m-p;
+  @include font-size-height(21px, 21px);
+  color: $night-blue;
+}
+
+.directions-list__tagline {
+  @include reset-m-p;
+  @include font-size-height(16px, 18px);
+}
+
+.directions-list__visitors {
+  @include font-size-height(16px, 30px);
+}

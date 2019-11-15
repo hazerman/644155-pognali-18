@@ -1,0 +1,24 @@
+.level {
+  display: inline-block;
+
+  font-weight: 700;
+
+  border-radius: 50%;
+
+  &--style--index {
+    @include font-size-height(24px, 24px);
+    color: $white;
+
+    background-color: rgba($black, 0.6);
+  }
+
+  &--style--companions {
+    @include font-size-height(24px, 18px);
+    color: $link-color;
+  }
+
+  &--style--profile {
+    @include font-size-height(38px, 38px);
+    color: $night-blue;
+  }
+}

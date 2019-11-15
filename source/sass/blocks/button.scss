@@ -1,0 +1,50 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+
+  font-weight: 700;
+
+  @include font-size-height(17px, 30px);
+  color: $night-blue;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &--theme--light {
+    background-color: $yellow;
+  }
+
+  &--theme--pale {
+    background-color: $dark-blue-grey;
+  }
+
+  &--theme--no {
+    background-color: $white;
+  }
+
+  &--theme--location {
+    @include font-size-height(18px, 18px);
+    color: $link-color;
+    text-transform: none;
+
+    border: 3px solid $dark-blue;
+  }
+
+  &--border--full-rounded {
+    border-radius: 50px;
+  }
+
+  &--border--lightly-rounded {
+    border-radius: 8px;
+  }
+
+  &--lowercase {
+    text-transform: none;
+  }
+}

@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Погнали | Попутчики</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="main-header">
-      <a class="site-logo main-header__site-logo">
+      <a class="site-logo main-header__site-logo" href="index.html">
         <img class="site-logo__img" src="#" alt="Логотип Погнали">
       </a>
       <button class="button-toggle main-header__button-toggle" type="button">
@@ -26,7 +27,7 @@
               <a class="site-list__link" href="companions.html">Попутчики</a>
             </li>
           </ul>
-          <a class="main-nav__button button button--bg--yellow" href="#">Авторизация</a>
+          <a class="main-nav__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
         </nav>
         <ul class="contacts main-header__contacts">
           <li class="contacts__item">
@@ -61,142 +62,156 @@
       <h1 class="page-title main-header__page-title">Попутчики</h1>
     </header>
 
-    <main class="main">
+    <main class="main main--bg--inner">
 
       <section class="filter-country main__filter-country main__item">
-        <a class="filter-country__show-button" href="#">
+        <a class="filter-country__show-button button" href="#">
           <h2 class="filter-country__title">Фильтрация по странам</h2>
           <span class="filter-country__toggle"></span>
         </a>
         <div class="filter-country__wrapper">
           <ul class="filter-country__continent-list">
-            <li class="filter-country__item filter-country__item--continent filter-country__item--current">Европа</li>
-            <li class="filter-country__item filter-country__item--continent">Азия</li>
-            <li class="filter-country__item filter-country__item--continent">Америка</li>
-            <li class="filter-country__item filter-country__item--continent">Острова</li>
+            <li class="filter-country__item-continent">
+              <a class="filter-country__link-continent filter-country__link-continent--current" href="#">Европа</a>
+            </li>
+            <li class="filter-country__item-continent">
+              <a class="filter-country__link-continent" href="#">Азия</a>
+            </li>
+            <li class="filter-country__item-continent">
+              <a class="filter-country__link-continent" href="#">Америка</a>
+            </li>
+            <li class="filter-country__item-continent">
+              <a class="filter-country__link-continent" href="#">Острова</a>
+            </li>
           </ul>
           <ul class="filter-country__country-letter-list">
-            <li class="filter-country__item filter-country__item--letter filter-country__item--current">
-              <a class="filter-country__link filter-country__link--letter" href="#">а</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter filter-country__link-letter--current" href="#">а</a>
               <ul class="filter-country__country-name-list">
-                <li class="filter-country__item filter-country__item--name">
-                  <a class="filter-country__link filter-country__link--name" href="#">Афганистан</a>
+                <li class="filter-country__item-name">
+                  <a class="filter-country__link-name" href="#">Афганистан</a>
                 </li>
-                <li class="filter-country__item filter-country__item--name">
-                  <a class="filter-country__link filter-country__link--name" href="#">Албания</a>
+                <li class="filter-country__item-name">
+                  <a class="filter-country__link-name" href="#">Албания</a>
                 </li>
-                <li class="filter-country__item filter-country__item--name">
-                  <a class="filter-country__link filter-country__link--name" href="#">Алжир</a>
+                <li class="filter-country__item-name">
+                  <a class="filter-country__link-name" href="#">Алжир</a>
                 </li>
-                <li class="filter-country__item filter-country__item--name">
-                  <a class="filter-country__link filter-country__link--name" href="#">Андорра</a>
+                <li class="filter-country__item-name">
+                  <a class="filter-country__link-name" href="#">Андорра</a>
                 </li>
-                <li class="filter-country__item filter-country__item--name">
-                  <a class="filter-country__link filter-country__link--name" href="#">Аргентина</a>
+                <li class="filter-country__item-name">
+                  <a class="filter-country__link-name" href="#">Аргентина</a>
                 </li>
-                <li class="filter-country__item filter-country__item--name">
-                  <a class="filter-country__link filter-country__link--name" href="#">Армения</a>
+                <li class="filter-country__item-name">
+                  <a class="filter-country__link-name" href="#">Армения</a>
                 </li>
-                <li class="filter-country__item filter-country__item--name">
-                  <a class="filter-country__link filter-country__link--name" href="#">Австралия</a>
+                <li class="filter-country__item-name">
+                  <a class="filter-country__link-name" href="#">Австралия</a>
                 </li>
-                <li class="filter-country__item filter-country__item--name">
-                  <a class="filter-country__link filter-country__link--name" href="#">Австрия</a>
+                <li class="filter-country__item-name">
+                  <a class="filter-country__link-name" href="#">Австрия</a>
                 </li>
-                <li class="filter-country__item filter-country__item--name">
-                  <a class="filter-country__link filter-country__link--name" href="#">Азербайджан</a>
+                <li class="filter-country__item-name">
+                  <a class="filter-country__link-name" href="#">Азербайджан</a>
                 </li>
               </ul>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">б</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">б</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">в</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">в</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">г</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">г</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">д</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">д</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">е</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">е</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">з</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">з</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">и</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">и</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">к</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">к</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">л</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">л</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">м</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">м</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">н</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">н</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">о</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">о</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">п</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">п</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">р</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">р</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">с</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">с</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">т</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">т</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">у</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">у</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">ф</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">ф</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">х</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">х</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">ч</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">ч</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">ш</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">ш</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">э</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">э</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">ю</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">ю</a>
             </li>
-            <li class="filter-country__item filter-country__item--letter">
-              <a class="filter-country__link filter-country__link--letter" href="#">я</a>
+            <li class="filter-country__item-letter">
+              <a class="filter-country__link-letter" href="#">я</a>
             </li>
           </ul>
-          <button class="filter-country__close-button button button--close" type="button">Свернуть</button>
+          <button class="filter-country__close-button button button--close button--theme--pale button--border--full-rounded" type="button">Свернуть</button>
         </div>
       </section>
 
-      <section class="filters main__filters main__item">
+      <section class="filters main__filters main__item main__item--bg--shine">
         <h2 class="main__title main__title--form">Подберите идеального попутчика</h2>
         <form class="filters__form form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="filters__variant">
-            <legend class="filters__title">
-              <button class="filters__button-toggle" type="button">Хобби</button>
-            </legend>
-          </fieldset>
-          <fieldset class="filters__variant">
-            <legend class="filters__title">
-              <button class="filters__button-toggle filters__button-toggle--expand" type="button">Музыка</button>
-            </legend>
+          <section class="filters__variant">
+            <h3 class="filters__title">
+              <button class="filters__button-toggle" type="button">
+                Хобби
+                <span class="visually-hidden filters__title-toggle">Развернуть категорию</span>
+              </button>
+            </h3>
+          </section>
+          <section class="filters__variant">
+            <h3 class="filters__title">
+              <button class="filters__button-toggle" type="button">
+                Музыка
+                <span class="visually-hidden filters__title-toggle filters__title-toggle--expand">Свернуть категорию</span>
+              </button>
+            </h3>
               <ul class="filters__list">
                 <li class="filters__item">
                   <input class="form__input form__input--filters form__input--type--checkbox" name="music-hard-rock" id="music-hard-rock" type="checkbox" checked>
@@ -211,16 +226,22 @@
                   <label class="form__label form__label--filters" for="music-eurodance">Евроденс</label>
                 </li>
               </ul>
-          </fieldset>
-          <fieldset class="filters__variant">
-            <legend class="filters__title">
-              <button class="filters__button-toggle" type="button">Еда</button>
-            </legend>
-          </fieldset>
-          <fieldset class="filters__variant">
-            <legend class="filters__title">
-              <button class="filters__button-toggle filters__button-toggle--expand" type="button">Транспорт</button>
-            </legend>
+          </section>
+          <section class="filters__variant">
+            <h3 class="filters__title">
+              <button class="filters__button-toggle" type="button">
+                Еда
+                <span class="visually-hidden filters__title-toggle">Развернуть категорию</span>
+              </button>
+            </h3>
+          </section>
+          <section class="filters__variant">
+            <h3 class="filters__title">
+              <button class="filters__button-toggle" type="button">
+                Транспорт
+                <span class="visually-hidden filters__title-toggle filters__title-toggle--expand">Свернуть категорию</span>
+              </button>
+            </h3>
             <ul class="filters__list transport-whish-list">
               <li class="filters__item transport-whish-list__item">
                 <input class="form__input form__input--filters form__input--type--checkbox" name="travel-by-air" id="travel-by-air" type="checkbox" checked>
@@ -247,11 +268,14 @@
                 </label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="filters__variant">
-            <legend class="filters__title">
-              <button class="filters__button-toggle filters__button-toggle--expand" type="button">Левел</button>
-            </legend>
+          </section>
+          <section class="filters__variant">
+            <h3 class="filters__title">
+              <button class="filters__button-toggle" type="button">
+                Левел
+                <span class="visually-hidden filters__title-toggle filters__title-toggle--expand">Свернуть категорию</span>
+              </button>
+            </h3>
             <div class="filters__inputs-range">
               <input class="form__input form__input--filters form__input--type--text" type="text" name="min-level" id="min-level" value="30">
               <input class="form__input form__input--filters form__input--type--text" type="text" name="max-level" id="max-level" value="100">
@@ -265,8 +289,8 @@
                 </button>
               </div>
             </div>
-          </fieldset>
-          <button class="filters__button-submit button button--border--full-rounded" type="submit">Показать</button>
+          </section>
+          <button class="filters__button-submit button button--border--full-rounded button--theme--no" type="submit">Показать</button>
         </form>
       </section>
 
@@ -277,7 +301,7 @@
           <li class="companions-list__item">
             <div class="companions-list__user">
               <div class="companions-list__user-info">
-                <a class="companion-list__profile-link" href="#">
+                <a class="companion-list__profile-link companion-list__profile-link--smaller" href="#">
                   <span class="companions-list__name">Таня Фирсова</span>
                 </a>
                 <span class="companions-list__popularity">1,5 М</span>
@@ -288,7 +312,7 @@
                 </a>
               </div>
             </div>
-            <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <p class="companions-list__hashtags companions-list__hashtags--smaller">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <h3 class="companions-list__title">хочет посетить:</h3>
             <ul class="country-whish-list companions-list__country-whish-list">
               <li class="country-whish-list__item">
@@ -320,16 +344,16 @@
               </li>
             </ul>
             <h3 class="companions-list__title">левел:</h3>
-            <div class="companions-list__level level level--bg-transparent">
+            <div class="companions-list__level level level--style--companions">
               <span class="level__number">99</span>
             </div>
-            <a class="button button--bg--yellow button--border--full-rounded" href="#">Позвать</a>
+            <a class="button button--theme--light button--border--full-rounded" href="#">Позвать</a>
           </li>
 
           <li class="companions-list__item">
             <div class="companions-list__user">
               <div class="companions-list__user-info">
-                <a class="companion-list__profile-link" href="#">
+                <a class="companion-list__profile-link companion-list__profile-link--smaller" href="#">
                   <span class="companions-list__name">Петя Демин</span>
                 </a>
                 <span class="companions-list__popularity">150</span>
@@ -340,7 +364,7 @@
                 </a>
               </div>
             </div>
-            <p class="companions-list__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+            <p class="companions-list__hashtags companions-list__hashtags--smaller">#бургер #бар #футбол #концерт #крафт</p>
             <h3 class="companions-list__title">хочет посетить:</h3>
             <ul class="country-whish-list companions-list__country-whish-list">
               <li class="country-whish-list__item">
@@ -368,16 +392,16 @@
               </li>
             </ul>
             <h3 class="companions-list__title">левел:</h3>
-            <div class="companions-list__level level level--bg-transparent">
+            <div class="companions-list__level level level--style--companions">
               <span class="level__number">80</span>
             </div>
-            <a class="button button--bg--yellow button--border--full-rounded" href="#">Позвать</a>
+            <a class="button button--theme--light button--border--full-rounded" href="#">Позвать</a>
           </li>
 
           <li class="companions-list__item">
             <div class="companions-list__user">
               <div class="companions-list__user-info">
-                <a class="companion-list__profile-link" href="#">
+                <a class="companion-list__profile-link companion-list__profile-link--smaller" href="#">
                   <span class="companions-list__name">Марк Смолов</span>
                 </a>
                 <span class="companions-list__popularity">1700</span>
@@ -388,7 +412,7 @@
                 </a>
               </div>
             </div>
-            <p class="companions-list__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+            <p class="companions-list__hashtags companions-list__hashtags--smaller">#рэп #тату #хайпбист #кроссовки #суприм</p>
             <h3 class="companions-list__title">хочет посетить:</h3>
             <ul class="country-whish-list companions-list__country-whish-list">
               <li class="country-whish-list__item">
@@ -420,16 +444,16 @@
               </li>
             </ul>
             <h3 class="companions-list__title">левел:</h3>
-            <div class="companions-list__level level level--bg-transparent">
+            <div class="companions-list__level level level--style--companions">
               <span class="level__number">25</span>
             </div>
-            <a class="button button--bg--yellow button--border--full-rounded" href="#">Позвать</a>
+            <a class="button button--theme--light button--border--full-rounded" href="#">Позвать</a>
           </li>
 
           <li class="companions-list__item">
             <div class="companions-list__user">
               <div class="companions-list__user-info">
-                <a class="companion-list__profile-link" href="#">
+                <a class="companion-list__profile-link companion-list__profile-link--smaller" href="#">
                   <span class="companions-list__name">Лариса Роговая</span>
                 </a>
                 <span class="companions-list__popularity">23</span>
@@ -440,7 +464,7 @@
                 </a>
               </div>
             </div>
-            <p class="companions-list__hashtags">#образование #карьера #учеба #линкедин</p>
+            <p class="companions-list__hashtags companions-list__hashtags--smaller">#образование #карьера #учеба #линкедин</p>
             <h3 class="companions-list__title">хочет посетить:</h3>
             <ul class="country-whish-list companions-list__country-whish-list">
               <li class="country-whish-list__item">
@@ -468,10 +492,10 @@
               </li>
             </ul>
             <h3 class="companions-list__title">левел:</h3>
-            <div class="companions-list__level level level--bg-transparent">
+            <div class="companions-list__level level level--style--companions">
               <span class="level__number">50</span>
             </div>
-            <a class="button button--bg--yellow button--border--full-rounded" href="#">Позвать</a>
+            <a class="button button--theme--light button--border--full-rounded" href="#">Позвать</a>
           </li>
         </ul>
         <a class="link link--color--dark link--plus link--uppercase" href="#">Показать еще</a>
@@ -511,7 +535,7 @@
           </a>
         </li>
       </ul>
-      <a class="main-footer__link link link--color--grey" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="main-footer__link link link--theme--light" href="https://htmlacademy.ru/intensive/adaptive">
         Разработано
         <span class="visually-hidden">в HTML Academy</span>
       </a>

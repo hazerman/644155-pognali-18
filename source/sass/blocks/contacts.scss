@@ -1,0 +1,23 @@
+.contacts {
+  @include list;
+}
+
+.contacts__link {
+  font-weight: 700;
+
+  @include font-size-height(16px, 22px);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &--color--dark {
+    color: $dark-blue;
+  }
+
+  &--color--light {
+    color: $yellow;
+  }
+}
+
+.contacts__mode {
+  font-style: normal;
+}

@@ -1,0 +1,25 @@
+.form__label {
+  &--filters {
+    @include font-size-height(15px, 15px);
+    color: $light-black;
+  }
+
+  &--plan {
+    font-weight: 500;
+
+    @include font-size-height(16px, 16px);
+    color: $link-color;
+    text-transform: uppercase;
+  }
+
+  &--action {
+    font-weight: 500;
+
+    @include font-size-height(18px, 18px);
+    color: $link-color;
+  }
+}
+
+.form__textarea {
+  display: block;
+}

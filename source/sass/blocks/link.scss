@@ -1,0 +1,35 @@
+.link {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &--theme--dark {
+    color: $dark-blue;
+  }
+
+  &--theme--not-so-dark {
+    color: $link-color;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--theme--light {
+    font-weight: 400;
+    color: $light-black;
+  }
+
+  &--theme--pale {
+    font-weight: 500;
+    color: rgba($black, 0.3);
+  }
+}

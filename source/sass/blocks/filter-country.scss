@@ -1,0 +1,57 @@
+.filter-country__title {
+  @include reset-m-p;
+  @include font-size-height(16px, 22px);
+  color: $dark-blue;
+}
+
+.filter-country__continent-list {
+  @include list;
+}
+
+.filter-country__link-continent {
+  font-weight: 700;
+
+  @include link-style($dark-blue, 16px, 22px, 0.3);
+
+  text-transform: uppercase;
+
+  &--current {
+    color: rgba($dark-blue, 1);
+
+    @include current;
+  }
+}
+
+.filter-country__country-letter-list {
+  @include list;
+}
+
+.filter-country__link-letter {
+  display: inline-block;
+  padding: 10px;
+
+  font-weight: 500;
+
+  @include link-style($link-color, 14px, 18px);
+  text-transform: uppercase;
+
+  background-color: $white;
+
+  &--current {
+    color: $white;
+
+    background-color: $link-color;
+
+    @include current;
+  }
+}
+
+.filter-country__country-name-list {
+  @include list;
+}
+
+.filter-country__link-name {
+  font-weight: 400;
+
+  @include link-style($light-black, 16px, 22px);
+}
