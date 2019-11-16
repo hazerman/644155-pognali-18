@@ -11,6 +11,10 @@
   cursor: pointer;
 }
 
-.filters__list {
+.filters__category-list {
+  @include list;
+}
+
+.filters__inputs-list {
   @include list;
 }
