@@ -5,12 +5,15 @@
 @import "general/common.scss";
 @import "blocks/visually-hidden.scss";
 @import "blocks/button.scss";
-@import "blocks/main.scss";
-@import "blocks/main-header.scss";
-@import "blocks/page-title.scss";
-@import "blocks/social-list.scss";
+@import "blocks/link.scss";
+@import "blocks/w-container.scss";
 @import "blocks/site-list.scss";
 @import "blocks/contacts.scss";
+@import "blocks/social-list.scss";
+@import "blocks/main.scss";
+@import "blocks/main-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page-title.scss";
 @import "blocks/index-header.scss";
 @import "blocks/scheme.scss";
 @import "blocks/about.scss";
@@ -20,7 +23,6 @@
 @import "blocks/transport-whish-list.scss";
 @import "blocks/level.scss";
 @import "blocks/price.scss";
-@import "blocks/link.scss";
 @import "blocks/filter-country.scss";
 @import "blocks/filters.scss";
 @import "blocks/form.scss";

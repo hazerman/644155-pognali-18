@@ -1,0 +1,29 @@
+.main-nav__list {
+  margin-bottom: 58px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__list {
+    margin-bottom: 150px;
+    margin-left: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__list {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+}
+
+.main-nav__button {
+  width: 100%;
+  margin-bottom: 51px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__button {
+    display: none;
+  }
+}

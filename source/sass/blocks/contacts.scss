@@ -17,6 +17,11 @@
     color: $yellow;
   }
 }
+@media (min-width: $tablet-width) {
+  .contacts__link {
+    @include font-size-height(28px, 28px);
+  }
+}
 
 .contacts__mode {
   font-style: normal;
