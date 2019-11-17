@@ -26,6 +26,16 @@
   }
 }
 
+.main__about {
+  padding-top: 278px;
+}
+
+@media (min-width: $tablet-width) {
+  .main__about {
+    padding-top: 200px;
+  }
+}
+
 .main__title {
   @include reset-m-p;
   @include font-size-height(24px, 24px);

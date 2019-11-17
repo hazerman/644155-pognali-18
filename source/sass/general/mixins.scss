@@ -46,3 +46,13 @@
   @include square($side);
   border-radius: 50%;
 }
+
+@mixin pseudo($pos, $top: auto, $right: auto, $bot: auto, $left: auto, $content: "") {
+  content: $content;
+
+  position: $pos;
+  top: $top;
+  right: $right;
+  bottom: $bot;
+  left: $left;
+}
