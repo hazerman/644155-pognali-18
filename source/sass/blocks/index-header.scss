@@ -23,3 +23,29 @@
   font-weight: 700;
   font-style: normal;
 }
+
+.index-header__scheme-list {
+  @include list;
+}
+
+.index-header__scheme-item {
+  color: $night-blue;
+
+  @include font-size-height(18px, 18px);
+
+  &--bg--darker {
+    background-color: $dark-orange;
+  }
+
+  &--bg--dark {
+    background-color: $orange;
+  }
+
+  &--bg--light {
+    background-color: $dark-yellow;
+  }
+
+  &--bg--lighter {
+    background-color: $yellow;
+  }
+}
