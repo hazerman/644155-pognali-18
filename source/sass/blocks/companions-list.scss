@@ -7,14 +7,33 @@
 }
 
 .companions-list__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
   background-color: $white;
+  border-radius: 8px;
 
   &--profile {
     background-color: transparent;
   }
+
+  &--center {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .companions-list__item {
+    width: 285px;
+    margin-bottom: 80px;
+  }
 }
 
 .companion-list__profile-link {
+  margin-bottom: 16px;
+
   font-weight: 700;
 
   @include link-style($link-color, 21px, 21px);
@@ -24,8 +43,21 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .companion-list__profile-link {
+    margin-bottom: 24px;
+
+    @include font-size-height(24px, 24px);
+  }
+}
+
+.companions-list__img {
+  order: -1;
+}
+
 .companions-list__hashtags {
   @include reset-m-p;
+  margin-bottom: 17px;
 
   color: $light-black;
 
@@ -33,6 +65,14 @@
 
   &--smaller {
     font-size: 15px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .companions-list__hashtags {
+    margin-bottom: 27px;
+
+    @include font-size-height(20px, 24px);
   }
 }
 

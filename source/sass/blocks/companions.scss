@@ -1,0 +1,29 @@
+.companions__button {
+  width: 100%;
+}
+
+@media (min-width: $desktop-width) {
+  .companions__button {
+    width: 300px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .companions__companions-list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions__companions-list {
+    width: 630px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions__w-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
