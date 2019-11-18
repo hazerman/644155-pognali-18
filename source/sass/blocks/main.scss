@@ -5,6 +5,9 @@
 }
 
 .main__item {
+  padding-top: 96px;
+  padding-bottom: 30px;
+
   &--bg--dark {
     background-color: $night-blue;
   }
@@ -45,6 +48,17 @@
 @media (min-width: $desktop-width) {
   .main__about {
     padding-top: 125px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main__text-wrapper {
+    width: 430px;
+
+    &--right {
+      order: 2;
+      margin-left: auto;
+    }
   }
 }
 
@@ -122,9 +136,19 @@
       width: 415px;
       margin-bottom: 86px;
     }
+
+    &--full {
+      width: 100%;
+    }
   }
 }
 
 .main__filter-country {
   background-color: $blue-grey;
+}
+
+@media (min-width: $desktop-width) {
+  .main__item-button {
+    order: 20;
+  }
 }
