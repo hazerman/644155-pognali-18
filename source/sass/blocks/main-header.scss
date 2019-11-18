@@ -52,6 +52,13 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .main-header__page-title {
+    order: 3;
+    width: 100%;
+  }
+}
+
 .main-header__nav-wrapper {
   width: 100%;
 }

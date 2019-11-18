@@ -9,58 +9,61 @@
   <body>
 
     <header class="main-header">
-      <a class="site-logo main-header__site-logo" href="index.html">
-        <img class="site-logo__img" src="#" alt="Логотип Погнали">
-      </a>
-      <button class="button-toggle main-header__button-toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-header__nav-wrapper">
-        <nav class="main-nav">
-          <ul class="site-list main-nav__list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">О сервисе</a>
+      <div class="w-container main-header__w-container">
+        <a class="site-logo main-header__site-logo" href="index.html">
+          <img class="site-logo__img" src="#" alt="Логотип Погнали">
+        </a>
+        <button class="button-toggle main-header__button-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <a class="main-header__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
+        <div class="main-header__nav-wrapper">
+          <nav class="main-nav main-header__main-nav">
+            <ul class="site-list main-nav__list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">О сервисе</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link">Направления</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="companions.html">Попутчики</a>
+              </li>
+            </ul>
+            <a class="main-nav__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
+          </nav>
+          <ul class="contacts main-header__contacts">
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--color--dark" href="#">
+                <address class="contacts__mode contacts__mode--phone">8 800 555-86-28</address>
+              </a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="directions.html">Направления</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="companions.html">Попутчики</a>
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--color--dark" href="#">
+                <address class="contacts__mode contacts__mode--mail">mail@htmlacademy.ru</address>
+              </a>
             </li>
           </ul>
-          <a class="main-nav__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
-        </nav>
-        <ul class="contacts main-header__contacts">
-          <li class="contacts__item">
-            <a class="contacts__link contacts__link--color--dark" href="#">
-              <address class="contacts__mode contacts__mode--phone">8 800 555-86-28</address>
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link contacts__link--color--dark" href="#">
-              <address class="contacts__mode contacts__mode--mail">mail@htmlacademy.ru</address>
-            </a>
-          </li>
-        </ul>
-        <ul class="social-list main-header__social-list">
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--icon--light social-list__link--fb" href="#">
-              <span class="visually-hidden">Погнали в Фэйсбуке</span>
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--icon--light social-list__link--vk" href="#">
-              <span class="visually-hidden">Погнали во Вконтакте </span>
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--icon--light social-list__link--in" href="#">
-              <span class="visually-hidden">Погнали в Инстаграме</span>
-            </a>
-          </li>
-        </ul>
+          <ul class="social-list main-header__social-list">
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--icon--light social-list__link--fb" href="#">
+                <span class="visually-hidden">Погнали в Фэйсбуке</span>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--icon--light social-list__link--vk" href="#">
+                <span class="visually-hidden">Погнали во Вконтакте </span>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--icon--light social-list__link--in" href="#">
+                <span class="visually-hidden">Погнали в Инстаграме</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h1 class="page-title main-header__page-title">Направления</h1>
       </div>
-      <h1 class="page-title main-header__page-title">Направления</h1>
     </header>
 
     <main class="main main--bg--inner">
