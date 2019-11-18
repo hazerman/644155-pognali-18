@@ -1,1 +1,9 @@
-// about
+.about__button {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .about__button {
+    display: inline-block;
+  }
+}

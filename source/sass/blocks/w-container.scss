@@ -10,6 +10,10 @@
     width: $tablet-width;
 
     @include padding-center(40px);
+
+    &--plus-padding {
+      @include padding-center(75px);
+    }
   }
 }
 
@@ -18,5 +22,10 @@
     width: $desktop-width;
 
     @include padding-center(60px);
+
+    &--plus-padding {
+      @include padding-center(60px);
+      padding-left: 130px;
+    }
   }
 }

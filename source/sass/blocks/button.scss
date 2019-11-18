@@ -29,8 +29,6 @@
   }
 
   &--theme--location {
-    @include font-size-height(18px, 18px);
-    color: $link-color;
     text-transform: none;
 
     border: 3px solid $dark-blue;
@@ -45,6 +43,18 @@
   }
 
   &--lowercase {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include font-size-height(18px, 18px);
+    color: $link-color;
     text-transform: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    &--lowercase {
+      @include font-size-height(24px, 24px);
+    }
   }
 }
