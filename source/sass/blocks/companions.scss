@@ -12,6 +12,7 @@
   .companions__companions-list {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 80px;
   }
 }
 
@@ -26,4 +27,16 @@
     display: flex;
     flex-wrap: wrap;
   }
+}
+
+.companions__link {
+  @include center;
+  margin-bottom: 27px;
+}
+
+.companions__pagination-wrapper {
+  width: 100%;
+  min-height: 50px;
+
+  background-color: $white;
 }

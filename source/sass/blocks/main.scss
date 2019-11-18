@@ -34,9 +34,51 @@
   }
 }
 
+.main__items-wrapper {
+  padding-top: 77px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: $desktop-width) {
+  .main__items-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .main__about {
   padding-top: 278px;
   padding-bottom: 50px;
+}
+
+.main__filters {
+  margin-bottom: 28px;
+}
+
+@media (min-width: $desktop-width) {
+  .main__filters {
+    width: 285px;
+    align-self: flex-start;
+    order: 1;
+  }
+}
+
+.main__companions {
+  display: flex;
+  flex-direction: column;
+
+  &--inner .companions-list__item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main__companions {
+    &--inner {
+      width: 950px;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
