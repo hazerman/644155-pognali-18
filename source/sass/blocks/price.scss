@@ -24,6 +24,7 @@
 @media (min-width: $tablet-width) {
   .price__title {
     width: 500px;
+
     @include center;
   }
 }
@@ -67,7 +68,7 @@
   @include reset-m-p;
 }
 
-@media (min-width: $tablet-width)  {
+@media (min-width: $tablet-width) {
   .price__service {
     margin-right: auto;
   }
@@ -75,6 +76,7 @@
 
 .price__link-show {
   line-height: 16px;
+
   @include padding-center(24px);
 }
 

@@ -45,6 +45,7 @@
   &--lowercase {
     padding-top: 20px;
     padding-bottom: 20px;
+
     @include font-size-height(18px, 18px);
     color: $link-color;
     text-transform: none;

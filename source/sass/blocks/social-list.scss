@@ -6,6 +6,7 @@
 
 .social-list__link {
   display: block;
+
   @include circle(45px);
 
   background-color: $light-black;

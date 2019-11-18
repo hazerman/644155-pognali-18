@@ -39,6 +39,7 @@
     }
   }
 }
+
 @media (min-width: $tablet-width) {
   .contacts__link {
     @include font-size-height(28px, 28px);
