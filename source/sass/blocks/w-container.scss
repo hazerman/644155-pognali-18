@@ -3,27 +3,25 @@
 
   @include center;
   @include padding-center(25px);
-}
 
-@media (min-width: $tablet-width) {
-  .w-container {
+  @media (min-width: $tablet-width) {
     width: $tablet-width;
 
     @include padding-center(40px);
-
-    &--plus-padding {
-      @include padding-center(75px);
-    }
   }
-}
 
-@media (min-width: $desktop-width) {
-  .w-container {
+  @media (min-width: $desktop-width) {
     width: $desktop-width;
 
     @include padding-center(60px);
+  }
 
-    &--plus-padding {
+  &--plus-padding {
+    @media (min-width: $tablet-width) {
+      @include padding-center(75px);
+    }
+
+    @media (min-width: $desktop-width) {
       @include padding-center(60px);
       padding-left: 130px;
     }

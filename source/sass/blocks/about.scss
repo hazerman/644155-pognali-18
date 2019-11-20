@@ -1,9 +1,7 @@
 .about__button {
   display: none;
-}
 
-@media (min-width: $tablet-width) {
-  .about__button {
+  @media (min-width: $tablet-width) {
     display: inline-block;
   }
 }

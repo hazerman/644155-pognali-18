@@ -49,12 +49,8 @@
     @include font-size-height(18px, 18px);
     color: $link-color;
     text-transform: none;
-  }
-}
 
-@media (min-width: $tablet-width) {
-  .button {
-    &--lowercase {
+    @media (min-width: $tablet-width) {
       @include font-size-height(24px, 24px);
     }
   }

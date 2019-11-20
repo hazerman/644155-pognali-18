@@ -1,11 +1,17 @@
 .site-list {
   @include list;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
 }
 
-@media (min-width: $tablet-width) {
-  .site-list {
-    text-align: left;
+.site-list__item {
+  &:not(:last-child) {
+    @media (min-width: $desktop-width) {
+      margin-right: 37px;
+    }
   }
 }
 
@@ -14,22 +20,12 @@
 
   @include link-style($dark-blue, 30px, 36px);
   text-transform: uppercase;
-}
 
-@media (min-width: $tablet-width) {
-  .site-list__link {
+  @media (min-width: $tablet-width) {
     @include font-size-height(60px, 71px);
   }
-}
 
-@media (min-width: $desktop-width) {
-  .site-list__link {
+  @media (min-width: $desktop-width) {
     @include link-style($white, 20px, 30px);
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .site-list__item:not(:last-child) {
-    margin-right: 37px;
   }
 }

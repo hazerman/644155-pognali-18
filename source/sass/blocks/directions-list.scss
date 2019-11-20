@@ -22,20 +22,16 @@
   @include reset-m-p;
   @include font-size-height(21px, 21px);
   color: $night-blue;
-}
 
-@media (min-width: $tablet-width) {
-  .directions-list__title {
+  @media (min-width: $tablet-width) {
     @include font-size-height(24px, 24px);
   }
 }
 
 .directions-list__img {
   order: -1;
-}
 
-@media (min-width: $tablet-width) {
-  .directions-list__img {
+  @media (min-width: $tablet-width) {
     order: 0;
   }
 }
@@ -43,10 +39,8 @@
 .directions-list__tagline {
   @include reset-m-p;
   @include font-size-height(16px, 18px);
-}
 
-@media (min-width: $tablet-width) {
-  .directions-list__tagline {
+  @media (min-width: $tablet-width) {
     @include font-size-height(20px, 22px);
   }
 }
@@ -61,10 +55,8 @@
 
   background-color: $white;
   border-radius: 9px;
-}
 
-@media (min-width: $tablet-width) {
-  .directions-list__text-wrapper {
+  @media (min-width: $tablet-width) {
     flex-direction: column;
     flex-grow: 1;
   }

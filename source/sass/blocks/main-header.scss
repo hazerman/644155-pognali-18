@@ -4,10 +4,8 @@
   color: $dark-blue;
 
   background-color: $white;
-}
 
-@media (min-width: $desktop-width) {
-  .main-header {
+  @media (min-width: $desktop-width) {
     color: $white;
 
     background-color: $night-blue;
@@ -26,34 +24,30 @@
   margin-bottom: 79px;
 }
 
-@media (min-width: $desktop-width) {
-  .main-header__button-toggle {
+.main-header__button-toggle {
+  @media (min-width: $desktop-width) {
     display: none;
   }
 }
 
 .main-header__button {
   display: none;
-}
 
-@media (min-width: $tablet-width) {
-  .main-header__button {
+  @media (min-width: $tablet-width) {
     display: inline-block;
     margin-left: auto;
 
     font-size: 20px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .main-header__button {
+  @media (min-width: $desktop-width) {
     order: 2;
     margin-left: 0;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .main-header__page-title {
+.main-header__page-title {
+  @media (min-width: $desktop-width) {
     order: 3;
     width: 100%;
   }
@@ -61,34 +55,28 @@
 
 .main-header__nav-wrapper {
   width: 100%;
-}
 
-@media (min-width: $desktop-width) {
-  .main-header__nav-wrapper {
+  @media (min-width: $desktop-width) {
     display: flex;
     width: 790px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .main-header__main-nav {
+.main-header__main-nav {
+  @media (min-width: $desktop-width) {
     margin-right: auto;
   }
 }
 
 .main-header__contacts {
   margin-bottom: 42px;
-}
 
-@media (min-width: $tablet-width) {
-  .main-header__contacts {
+  @media (min-width: $tablet-width) {
     margin-bottom: 116px;
     margin-left: 60px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .main-header__contacts {
+  @media (min-width: $desktop-width) {
     margin-bottom: 0;
     margin-left: 0;
   }
@@ -97,18 +85,14 @@
 .main-header__social-list {
   justify-content: center;
   margin-bottom: 33px;
-}
 
-@media (min-width: $tablet-width) {
-  .main-header__social-list {
+  @media (min-width: $tablet-width) {
     justify-content: flex-start;
     margin-bottom: 74px;
     margin-left: 60px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .main-header__social-list {
+  @media (min-width: $desktop-width) {
     display: none;
   }
 }

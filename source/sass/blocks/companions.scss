@@ -1,29 +1,25 @@
 .companions__button {
   width: 100%;
-}
 
-@media (min-width: $desktop-width) {
-  .companions__button {
+  @media (min-width: $desktop-width) {
     width: 300px;
   }
 }
 
-@media (min-width: $tablet-width) {
-  .companions__companions-list {
+.companions__companions-list {
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .companions__companions-list {
+  @media (min-width: $desktop-width) {
     width: 630px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .companions__w-container {
+.companions__w-container {
+  @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
   }
