@@ -20,6 +20,12 @@
   }
 }
 
+.form__input {
+  &--type--email {
+    flex-grow: 1;
+  }
+}
+
 .form__textarea {
   display: block;
 }
