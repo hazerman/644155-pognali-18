@@ -1,3 +1,19 @@
 .social-list {
+  display: flex;
+
   @include list;
+}
+
+.social-list__link {
+  display: block;
+
+  @include circle(45px);
+
+  background-color: $light-black;
+}
+
+@media (min-width: $tablet-width) {
+  .social-list__link {
+    @include circle(60px);
+  }
 }

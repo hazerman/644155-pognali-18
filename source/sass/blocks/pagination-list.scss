@@ -1,0 +1,16 @@
+.pagination-list {
+  @include list;
+  display: flex;
+
+  &--numbers {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .pagination-list {
+    &--numbers {
+      display: flex;
+    }
+  }
+}

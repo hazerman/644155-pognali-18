@@ -1,5 +1,12 @@
 .site-list {
   @include list;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    text-align: left;
+  }
 }
 
 .site-list__link {
@@ -7,4 +14,22 @@
 
   @include link-style($dark-blue, 30px, 36px);
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .site-list__link {
+    @include font-size-height(60px, 71px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list__link {
+    @include link-style($white, 20px, 30px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list__item:not(:last-child) {
+    margin-right: 37px;
+  }
 }

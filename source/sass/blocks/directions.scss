@@ -1,0 +1,22 @@
+.directions__button {
+  width: 100%;
+}
+
+@media (min-width: $desktop-width) {
+  .directions__button {
+    width: 300px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .directions__w-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .directions__directions-list {
+    width: 560px;
+  }
+}

@@ -1,0 +1,31 @@
+.w-container {
+  width: $mobile-width;
+
+  @include center;
+  @include padding-center(25px);
+}
+
+@media (min-width: $tablet-width) {
+  .w-container {
+    width: $tablet-width;
+
+    @include padding-center(40px);
+
+    &--plus-padding {
+      @include padding-center(75px);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .w-container {
+    width: $desktop-width;
+
+    @include padding-center(60px);
+
+    &--plus-padding {
+      @include padding-center(60px);
+      padding-left: 130px;
+    }
+  }
+}

@@ -3,6 +3,12 @@
 }
 
 .contacts__link {
+  position: relative;
+
+  display: flex;
+  justify-content: flex-start;
+
+
   font-weight: 700;
 
   @include font-size-height(16px, 22px);
@@ -15,6 +21,28 @@
 
   &--color--light {
     color: $yellow;
+  }
+
+  &--phone {
+    &::before {
+      @include pseudo(relative, 0, auto, auto, 0);
+      @include circle(40px);
+      background-color: $dark-orange;
+    }
+  }
+
+  &--mail {
+    &::before {
+      @include pseudo(relative, 0, auto, auto, 0);
+      @include circle(40px);
+      background-color: $dark-yellow;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__link {
+    @include font-size-height(28px, 28px);
   }
 }
 

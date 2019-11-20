@@ -9,5 +9,7 @@ html {
 }
 
 body {
+  min-width: $mobile-width;
+
   font-family: $font-stack;
 }

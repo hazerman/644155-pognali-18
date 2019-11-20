@@ -1,14 +1,94 @@
 .price__list {
   @include list;
+  margin-left: 24px;
+  margin-bottom: 31px;
+}
+
+@media (min-width: $tablet-width) {
+  .price__list {
+    margin-left: 90px;
+    margin-bottom: 59px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price__list {
+    margin-left: 160px;
+  }
+}
+
+.price__title {
+  width: 125px;
+}
+
+@media (min-width: $tablet-width) {
+  .price__title {
+    width: 500px;
+
+    @include center;
+  }
 }
 
 .price__item {
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   font-weight: 300;
 
   @include font-size-height(16px, 22px);
   color: $light-black;
+
+  border-top: 1px solid rgba($light-black, 0.05);
+  border-bottom: 1px solid rgba($light-black, 0.05);
+
+  &:not(:first-child) {
+    margin-top: -1px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .price__item {
+    display: flex;
+    width: 565px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @include font-size-height(28px, 33px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price__item {
+    width: 815px;
+  }
+}
+
+.price__service {
+  @include reset-m-p;
+}
+
+@media (min-width: $tablet-width) {
+  .price__service {
+    margin-right: auto;
+  }
 }
 
 .price__link-show {
   line-height: 16px;
+
+  @include padding-center(24px);
+}
+
+@media (min-width: $tablet-width) {
+  .price__link-show {
+    @include padding-center(0);
+    margin-left: 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price__link-show {
+    margin-left: 160px;
+  }
 }
