@@ -28,7 +28,7 @@
 
   &::after {
     @media (min-width: $desktop-width) {
-      @include pseudo(relative, auto, auto, auto, auto, ":")
+      @include pseudo(relative, auto, auto, auto, auto, ":");
     }
   }
 }
@@ -163,6 +163,7 @@
 
   @media (min-width: $desktop-width) {
     color: rgba($dark-blue, 1);
+
     @include current;
   }
 

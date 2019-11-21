@@ -120,6 +120,7 @@
 .plan__info {
   display: flex;
   flex-direction: column;
+
   @include reset-m-p;
   margin-bottom: 20px;
 
@@ -234,7 +235,6 @@
 }
 
 .plan__button {
-
   &--minus,
   &--plus {
     width: 40px;

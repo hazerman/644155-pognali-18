@@ -19,7 +19,7 @@
 .filters__button-title {
   &::after {
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      @include pseudo(relative, auto, auto, auto, auto, ":")
+      @include pseudo(relative, auto, auto, auto, auto, ":");
     }
   }
 }
