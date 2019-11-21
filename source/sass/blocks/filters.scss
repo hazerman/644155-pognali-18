@@ -1,4 +1,5 @@
 .filters__button-toggle {
+  padding: 13px 0 10px 0;
   font-weight: 700;
 
   @include font-size-height(16px, 18px);
@@ -9,12 +10,76 @@
   border: none;
 
   cursor: pointer;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    @include current;
+  }
+}
+
+.filters__button-title {
+  &::after {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      @include pseudo(relative, auto, auto, auto, auto, ":")
+    }
+  }
 }
 
 .filters__category-list {
   @include list;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 36px;
+
+    border-top: 1px solid #f3c72b;
+    border-bottom: 1px solid #f3c72b;
+  }
+}
+
+.filters__category-item {
+  border-top: 1px solid #f3c72b;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    display: flex;
+    align-items: center;
+    border-top: none;
+  }
+}
+
+.filters__title {
+  @include reset-m-p;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    width: 120px;
+  }
 }
 
 .filters__inputs-list {
   @include list;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    display: flex;
+  }
+}
+
+.filters__wrapper {
+  display: none;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    display: flex;
+  }
+
+  &--show {
+    display: block;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      display: flex;
+    }
+  }
+}
+
+.filters__button-submit {
+  width: 100%;
 }

@@ -730,49 +730,77 @@
               <li class="filters__category-item">
                 <h3 class="filters__title">
                   <button class="filters__button-toggle" type="button">
-                    Хобби
+                    <span class="filters__button-title">Хобби</span>
                     <span class="visually-hidden filters__title-toggle">Развернуть категорию</span>
                   </button>
                 </h3>
+                <ul class="filters__inputs-list filters__wrapper">
+                  <li class="filters__inputs-item">
+                    <input class="form__input form__input--filters form__input--type--checkbox" name="hobby-sport" id="hobby-sport" type="checkbox" checked>
+                    <label class="form__label form__label--filters" for="hobby-sport">Спортзал</label>
+                  </li>
+                  <li class="filters__inputs-item">
+                    <input class="form__input form__input--filters form__input--type--checkbox" name="hobby-hookah" id="hobby-hookah" type="checkbox">
+                    <label class="form__label form__label--filters" for="hobby-hookah">Кальян</label>
+                  </li>
+                  <li class="filters__inputs-item">
+                    <input class="form__input form__input--filters form__input--type--checkbox" name="hobby-couch" id="hobby-couch" type="checkbox">
+                    <label class="form__label form__label--filters" for="hobby-couch">Диван</label>
+                  </li>
+                </ul>
               </li>
               <li class="filters__category-item">
                 <h3 class="filters__title">
                   <button class="filters__button-toggle" type="button">
-                    Музыка
+                    <span class="filters__button-title">Музыка</span>
                     <span class="visually-hidden filters__title-toggle filters__title-toggle--expand">Свернуть категорию</span>
                   </button>
                 </h3>
-                  <ul class="filters__inputs-list">
-                    <li class="filters__inputs-item">
-                      <input class="form__input form__input--filters form__input--type--checkbox" name="music-hard-rock" id="music-hard-rock" type="checkbox" checked>
-                      <label class="form__label form__label--filters" for="music-hard-rock">Тяжелый рок</label>
-                    </li>
-                    <li class="filters__inputs-item">
-                      <input class="form__input form__input--filters form__input--type--checkbox" name="music-rus-rap" id="music-rus-rap" type="checkbox">
-                      <label class="form__label form__label--filters" for="music-rus-rap">Русский рэп</label>
-                    </li>
-                    <li class="filters__inputs-item">
-                      <input class="form__input form__input--filters form__input--type--checkbox" name="music-eurodance" id="music-eurodance" type="checkbox">
-                      <label class="form__label form__label--filters" for="music-eurodance">Евроденс</label>
-                    </li>
-                  </ul>
+                <ul class="filters__inputs-list filters__wrapper filters__wrapper--show">
+                  <li class="filters__inputs-item">
+                    <input class="form__input form__input--filters form__input--type--checkbox" name="music-hard-rock" id="music-hard-rock" type="checkbox" checked>
+                    <label class="form__label form__label--filters" for="music-hard-rock">Тяжелый рок</label>
+                  </li>
+                  <li class="filters__inputs-item">
+                    <input class="form__input form__input--filters form__input--type--checkbox" name="music-rus-rap" id="music-rus-rap" type="checkbox">
+                    <label class="form__label form__label--filters" for="music-rus-rap">Русский рэп</label>
+                  </li>
+                  <li class="filters__inputs-item">
+                    <input class="form__input form__input--filters form__input--type--checkbox" name="music-eurodance" id="music-eurodance" type="checkbox">
+                    <label class="form__label form__label--filters" for="music-eurodance">Евроденс</label>
+                  </li>
+                </ul>
               </li>
               <li class="filters__category-item">
                 <h3 class="filters__title">
                   <button class="filters__button-toggle" type="button">
-                    Еда
+                    <span class="filters__button-title">Еда</span>
                     <span class="visually-hidden filters__title-toggle">Развернуть категорию</span>
                   </button>
                 </h3>
+                <ul class="filters__inputs-list filters__wrapper">
+                  <li class="filters__inputs-item">
+                    <input class="form__input form__input--filters form__input--type--checkbox" name="food-meat" id="food-meat" type="checkbox" checked>
+                    <label class="form__label form__label--filters" for="food-meat">Мясоед</label>
+                  </li>
+                  <li class="filters__inputs-item">
+                    <input class="form__input form__input--filters form__input--type--checkbox" name="food-pn" id="food-pn" type="checkbox">
+                    <label class="form__label form__label--filters" for="food-pn">Сидит на ПП</label>
+                  </li>
+                  <li class="filters__inputs-item">
+                    <input class="form__input form__input--filters form__input--type--checkbox" name="food-veg" id="food-veg" type="checkbox">
+                    <label class="form__label form__label--filters" for="food-veg">Веган-сыроед</label>
+                  </li>
+                </ul>
               </li>
               <li class="filters__category-item">
                 <h3 class="filters__title">
                   <button class="filters__button-toggle" type="button">
-                    Транспорт
+                    <span class="filters__button-title">Транспорт</span>
                     <span class="visually-hidden filters__title-toggle filters__title-toggle--expand">Свернуть категорию</span>
                   </button>
                 </h3>
-                <ul class="filters__inputs-list transport-whish-list">
+                <ul class="filters__inputs-list filters__wrapper filters__wrapper--show transport-whish-list">
                   <li class="filters__inputs-item transport-whish-list__item">
                     <input class="form__input form__input--filters form__input--type--checkbox" name="travel-by-air" id="travel-by-air" type="checkbox" checked>
                     <label class="form__label form__label--filters" for="travel-by-air">
@@ -802,11 +830,11 @@
               <li class="filters__category-item">
                 <h3 class="filters__title">
                   <button class="filters__button-toggle" type="button">
-                    Левел
+                    <span class="filters__button-title">Левел</span>
                     <span class="visually-hidden filters__title-toggle filters__title-toggle--expand">Свернуть категорию</span>
                   </button>
                 </h3>
-                <div class="filters__inputs-range">
+                <div class="filters__inputs-range filters__wrapper filters__wrapper--show">
                   <input class="form__input form__input--filters form__input--type--text" type="text" name="min-level" id="min-level" value="30">
                   <input class="form__input form__input--filters form__input--type--text" type="text" name="max-level" id="max-level" value="100">
                   <div class="filters__range-wrapper">

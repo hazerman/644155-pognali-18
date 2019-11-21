@@ -59,6 +59,8 @@
 
 .main__filters {
   margin-bottom: 28px;
+  padding: 26px 20px 22px 20px;
+  border-radius: 18px;
 
   @media (min-width: $desktop-width) {
     width: 285px;
@@ -119,6 +121,7 @@
   }
 
   &--form {
+    @include padding-center(0);
     @include font-size-height(22.5px, 22.5px);
     color: $link-color;
   }
