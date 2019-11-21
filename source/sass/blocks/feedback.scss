@@ -29,7 +29,10 @@
 
 .feedback__contacts {
   @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
     width: 870px;
+
     @include center;
   }
 }
