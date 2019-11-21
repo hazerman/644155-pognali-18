@@ -108,427 +108,455 @@
         </div>
       </section>
 
-      <section class="plan plan--ready">
-        <h2 class="plan__title">Мои планы:</h2>
-        <ol class="plan__list">
-          <li class="plan__item">
-            <span class="plan__country-ready">Франция, Италия</span>
-            <p class="plan__info">
-              <span class="plan__info-item">3 попутчика</span>
-              <span class="plan__info-item">26 мар — 29 мар</span>
-            </p>
-            <a class="plan__link link link--uppercase link--theme--pale" href="#">Изменить</a>
-          </li>
-          <li class="plan__item">
-            <span class="plan__country-ready">Таиланд, Индонезия</span>
-            <p class="plan__info">
-              <span class="plan__info-item">1 попутчик</span>
-              <span class="plan__info-item">1 июл — 15 июл</span>
-            </p>
-            <a class="plan__link link link--uppercase link--theme--pale" href="#">Изменить</a>
-          </li>
-        </ol>
-      </section>
-
-      <section class="plan plan--add">
-        <h2 class="plan__title">Добавить план:</h2>
-        <form class="plan__form form" action="https://echo.htmlacademy.ru" method="post">
+      <section class="main__plan plan plan--ready">
+        <div class="w-container plan__w-container">
+          <h2 class="plan__title">Мои планы:</h2>
           <ol class="plan__list">
-            <li class="plan__item">
-              <h3 class="plan__subtitle">Шаг 1. Даты пребывания</h3>
-              <p class="plan__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-              <div class="plan__input-wrapper">
-                <label class="form__label form__label--plan" for="count-companions">Ищу попутчиков:</label>
-                <span class="plan__brief">Чел.</span>
-                <div class="plan__count-wrapper">
-                  <button class="plan__button plan__button--minus" type="button">
-                    <span class="visually-hidden">Уменьшить значение</span>
-                  </button>
-                  <input class="form__input form__input--plan form__input--type--text" name="count-companions" id="count-companions" type="text" value="2">
-                  <button class="plan__button plan__button--plus" type="button">
-                    <span class="visually-hidden">Увеличить значение</span>
-                  </button>
-                </div>
+            <li class="plan__item plan__item--ready">
+              <div class="plan__country-ready">
+                <span class="plan__item-count">1.</span>
+                Франция, Италия
               </div>
-              <div class="plan__input-wrapper">
-                <label class="form__label form__label--plan" for="count-days">Длительность:</label>
-                <span class="plan__brief">Дн.</span>
-                <div class="plan__count-wrapper">
-                  <button class="plan__button plan__button--minus" type="button">
-                    <span class="visually-hidden">Уменьшить значение</span>
-                  </button>
-                  <input class="form__input form__input--plan form__input--type--text" name="count-days" id="count-days" type="text" value="2">
-                  <button class="plan__button plan__button--plus" type="button">
-                    <span class="visually-hidden">Увеличить значение</span>
-                  </button>
-                </div>
-              </div>
-              <p class="plan__input-wrapper">
-                <input class="form__input form__input--plan form__input--type--checkbox" name="children" id="children" type="checkbox" checked>
-                <label class="form__label form__label--filters" for="children">Можно с детьми</label>
+              <p class="plan__info">
+                <span class="plan__info-item">3 попутчика</span>
+                <span class="plan__info-item">26 мар — 29 мар</span>
               </p>
-              <div class="plan__calendar-wrapper">
-                <div class="plan__calendar-month">
-                  <button class="plan__button plan__button--prev" type="button">
-                    <span class="visually-hidden">Предыдущий месяц</span>
-                  </button>
-                  Март 2019
-                  <button class="plan__button plan__button--next" type="button">
-                    <span class="visually-hidden">Следующий месяц</span>
-                  </button>
-                </div>
-                <div class="plan__calendar-days">
-                  <ul class="plan__list-calendar">
-                    <li class="plan__item-weekdays">П</li>
-                    <li class="plan__item-weekdays">В</li>
-                    <li class="plan__item-weekdays">С</li>
-                    <li class="plan__item-weekdays">Ч</li>
-                    <li class="plan__item-weekdays">П</li>
-                    <li class="plan__item-weekdays plan__item-weekdays--ends">С</li>
-                    <li class="plan__item-weekdays plan__item-weekdays--ends">В</li>
-                  </ul>
-                  <ul class="plan__list-calendar">
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-23" id="feb-day-23" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="feb-day-23">23</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-24" id="feb-day-24" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="feb-day-24">24</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-25" id="feb-day-25" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="feb-day-25">25</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-26" id="feb-day-26" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="feb-day-26">26</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-27" id="feb-day-27" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="feb-day-27">27</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-28" id="feb-day-28" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="feb-day-28">28</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-1" id="march-day-1" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-1">1</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-2" id="march-day-2" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-2">2</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-3" id="march-day-3" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-3">3</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-4" id="march-day-4" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-4">4</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-5" id="march-day-5" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-5">5</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-6" id="march-day-6" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-6">6</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-7" id="march-day-7" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-7">7</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-8" id="march-day-8" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-8">8</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-9" id="march-day-9" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-9">9</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-10" id="march-day-10" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-10">10</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-11" id="march-day-11" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-11">11</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-12" id="march-day-12" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-12">12</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-13" id="march-day-13" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-13">13</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-14" id="march-day-14" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-14">14</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-15" id="march-day-15" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-15">15</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-16" id="march-day-16" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-16">16</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-17" id="march-day-17" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-17">17</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-18" id="march-day-18" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-18">18</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-19" id="march-day-19" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-19">19</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-20" id="march-day-20" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-20">20</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-21" id="march-day-21" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-21">21</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-22" id="march-day-22" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-22">22</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-23" id="march-day-23" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-23">23</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-24" id="march-day-24" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-24">24</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-25" id="march-day-25" disabled>
-                      <label class="form__label-days form__label-days--disabled" for="march-day-25">25</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-26" id="march-day-26" checked>
-                      <label class="form__label-days form__label-days--checked" for="march-day-26">26</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-27" id="march-day-27" checked>
-                      <label class="form__label-days form__label-days--checked" for="march-day-27">27</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-28" id="march-day-28" checked>
-                      <label class="form__label-days form__label-days--checked" for="march-day-28">28</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-" id="march-day-29">
-                      <label class="form__label-days" for="march-day-29">29</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-30" id="march-day-30">
-                      <label class="form__label-days" for="march-day-30">30</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="march-day-31" id="march-day-31">
-                      <label class="form__label-days" for="march-day-31">31</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="april-day-1" id="april-day-1">
-                      <label class="form__label-days" for="april-day-1">1</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="april-day-2" id="april-day-2">
-                      <label class="form__label-days" for="april-day-2">2</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="april-day-3" id="april-day-3">
-                      <label class="form__label-days" for="april-day-3">3</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="april-day-4" id="april-day-4">
-                      <label class="form__label-days" for="april-day-4">4</label>
-                    </li>
-                    <li class="plan__item-days">
-                      <input class="visually-hidden form__input-days" type="checkbox" name="april-day-5" id="april-day-5">
-                      <label class="form__label-days" for="april-day-5">5</label>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <a class="button button--theme--light button--border--full-rounded" href="#">Следующий шаг</a>
+              <a class="plan__link link link--uppercase link--theme--pale" href="#">Изменить</a>
             </li>
-            <li class="plan__item">
-              <h3 class="plan__subtitle">Шаг 2. Маршрут</h3>
-              <p class="plan__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
-              <div class="plan__country-wrapper plan__country-wrapper--change plan__country-wrapper--delete">
-                <span class="plan__country-name">
-                  Босния и Герцеговина
-                  <button class="plan__button plan__button--select">Раскрыть список</button>
-                </span>
-                <span class="plan__flag-wrapper">
-                  <img class="flag-img" src="#" alt="Босния и Герцеговина">
-                </span>
+            <li class="plan__item plan__item--ready">
+              <div class="plan__country-ready">
+                <span class="plan__item-count">2.</span>
+                Таиланд, Индонезия
               </div>
-              <div class="plan__country-wrapper plan__country-wrapper--change plan__country-wrapper--delete">
-                <span class="plan__country-name">
-                  Чехия
-                  <button class="plan__button plan__button--select">Раскрыть список</button>
-                </span>
-                <span class="plan__flag-wrapper">
-                  <img class="flag-img" src="#" alt="Чехия">
-                </span>
-              </div>
-              <div class="plan__country-wrapper plan__country-wrapper--add plan__country-wrapper--delete">
-                <span class="plan__country-name">
-                  Выберите страну
-                  <button class="plan__button plan__button--select">Раскрыть список</button>
-                </span>
-                <div class="filter-country">
-                  <ul class="filter-country__country-letter-list">
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter filter-country__link-letter--current" href="#">а</a>
-                      <ul class="filter-country__country-name-list">
-                        <li class="filter-country__item-name">
-                          <a class="filter-country__link-name" href="#">Афганистан</a>
-                        </li>
-                        <li class="filter-country__item-name">
-                          <a class="filter-country__link-name" href="#">Албания</a>
-                        </li>
-                        <li class="filter-country__item-name">
-                          <a class="filter-country__link-name" href="#">Алжир</a>
-                        </li>
-                        <li class="filter-country__item-name">
-                          <a class="filter-country__link-name" href="#">Андорра</a>
-                        </li>
-                        <li class="filter-country__item-name">
-                          <a class="filter-country__link-name" href="#">Аргентина</a>
-                        </li>
-                        <li class="filter-country__item-name">
-                          <a class="filter-country__link-name" href="#">Армения</a>
-                        </li>
-                        <li class="filter-country__item-name">
-                          <a class="filter-country__link-name" href="#">Австралия</a>
-                        </li>
-                        <li class="filter-country__item-name">
-                          <a class="filter-country__link-name" href="#">Австрия</a>
-                        </li>
-                        <li class="filter-country__item-name">
-                          <a class="filter-country__link-name" href="#">Азербайджан</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">б</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">в</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">г</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">д</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">е</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">з</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">и</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">к</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">л</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">м</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">н</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">о</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">п</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">р</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">с</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">т</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">у</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">ф</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">х</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">ч</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">ш</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">э</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">ю</a>
-                    </li>
-                    <li class="filter-country__item-letter">
-                      <a class="filter-country__link-letter" href="#">я</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="plan__country-wrapper plan__country-wrapper--add">
-                <span class="plan__country-name">
-                  Добавить страну
-                  <button class="plan__button plan__button--plus">Добавить</button>
-                </span>
-              </div>
-              <a class="button button--theme--light button--border--full-rounded" href="#">Следующий шаг</a>
-              <a class="link link--uppercase plan__link-prev" href="#">На шаг назад</a>
-            </li>
-            <li class="plan__item">
-              <h3 class="plan__subtitle">Шаг 3. Развлечения</h3>
-              <p class="plan__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-              <div class="plan__action-wrapper">
-                <div class="plan__action">
-                  <label class="form__label form__label--action" for="action-country-bosnia">Босния и Герцеговина</label>
-                  <span class="plan__flag-wrapper">
-                    <img class="flag-img" src="#" alt="Босния и Герцеговина">
-                  </span>
-                  <textarea class="form__textarea" name="action-country-bosnia" id="action-country-bosnia" cols="30" rows="10" placeholder="План действий"></textarea>
-                </div>
-                <div class="plan__action">
-                  <label class="form__label form__label--action" for="action-country-czech">Чехия</label>
-                  <span class="plan__flag-wrapper">
-                    <img class="flag-img" src="#" alt="Чехия">
-                  </span>
-                  <textarea class="form__textarea" name="action-country-czech" id="action-country-czech" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-                </div>
-              </div>
-              <button class="button button--theme--light button--border--full-rounded" type="submit">Отправить</button>
-              <a class="link link--uppercase plan__link-prev" href="#">На шаг назад</a>
+              <p class="plan__info">
+                <span class="plan__info-item">1 попутчик</span>
+                <span class="plan__info-item">1 июл — 15 июл</span>
+              </p>
+              <a class="plan__link link link--uppercase link--theme--pale" href="#">Изменить</a>
             </li>
           </ol>
-        </form>
+        </div>
+      </section>
+
+      <section class="main__plan plan plan--append">
+        <div class="w-container plan__w-container">
+          <h2 class="plan__title">Добавить план:</h2>
+          <form class="plan__form form" action="https://echo.htmlacademy.ru" method="post">
+            <ol class="plan__list">
+              <li class="plan__item plan__item--append">
+                <h3 class="plan__subtitle">Шаг 1.<br>Даты пребывания</h3>
+                <p class="plan__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                <div class="plan__inputs-wrapper">
+                  <div class="plan__input-wrapper plan__input-wrapper--count">
+                    <label class="form__label form__label--plan" for="count-companions">Ищу попутчиков:</label>
+                    <span class="plan__brief">Чел.</span>
+                    <div class="plan__count-wrapper">
+                      <button class="plan__button plan__button--minus" type="button">
+                        <span class="visually-hidden">Уменьшить значение</span>
+                      </button>
+                      <input class="form__input form__input--plan form__input--type--text" name="count-companions" id="count-companions" type="text" value="2">
+                      <button class="plan__button plan__button--plus" type="button">
+                        <span class="visually-hidden">Увеличить значение</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="plan__input-wrapper plan__input-wrapper--count">
+                    <label class="form__label form__label--plan" for="count-days">Длительность:</label>
+                    <span class="plan__brief">Дн.</span>
+                    <div class="plan__count-wrapper">
+                      <button class="plan__button plan__button--minus" type="button">
+                        <span class="visually-hidden">Уменьшить значение</span>
+                      </button>
+                      <input class="form__input form__input--plan form__input--type--text" name="count-days" id="count-days" type="text" value="2">
+                      <button class="plan__button plan__button--plus" type="button">
+                        <span class="visually-hidden">Увеличить значение</span>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="plan__input-wrapper plan__input-wrapper--checkbox">
+                    <input class="form__input form__input--type--checkbox" name="children" id="children" type="checkbox" checked>
+                    <label class="form__label form__label--children" for="children">Можно с детьми</label>
+                  </p>
+                </div>
+                <div class="plan__calendar-wrapper">
+                  <div class="plan__calendar-month">
+                    <button class="plan__button plan__button--prev" type="button">
+                      <span class="visually-hidden">Предыдущий месяц</span>
+                    </button>
+                    Март 2019
+                    <button class="plan__button plan__button--next" type="button">
+                      <span class="visually-hidden">Следующий месяц</span>
+                    </button>
+                  </div>
+                  <div class="plan__calendar-days">
+                    <ul class="plan__list-calendar">
+                      <li class="plan__item-weekdays">П</li>
+                      <li class="plan__item-weekdays">В</li>
+                      <li class="plan__item-weekdays">С</li>
+                      <li class="plan__item-weekdays">Ч</li>
+                      <li class="plan__item-weekdays">П</li>
+                      <li class="plan__item-weekdays plan__item-weekdays--ends">С</li>
+                      <li class="plan__item-weekdays plan__item-weekdays--ends">В</li>
+                    </ul>
+                    <ul class="plan__list-calendar">
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-23" id="feb-day-23" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="feb-day-23">23</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-24" id="feb-day-24" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="feb-day-24">24</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-25" id="feb-day-25" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="feb-day-25">25</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-26" id="feb-day-26" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="feb-day-26">26</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-27" id="feb-day-27" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="feb-day-27">27</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="feb-day-28" id="feb-day-28" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="feb-day-28">28</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-1" id="march-day-1" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-1">1</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-2" id="march-day-2" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-2">2</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-3" id="march-day-3" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-3">3</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-4" id="march-day-4" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-4">4</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-5" id="march-day-5" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-5">5</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-6" id="march-day-6" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-6">6</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-7" id="march-day-7" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-7">7</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-8" id="march-day-8" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-8">8</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-9" id="march-day-9" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-9">9</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-10" id="march-day-10" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-10">10</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-11" id="march-day-11" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-11">11</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-12" id="march-day-12" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-12">12</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-13" id="march-day-13" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-13">13</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-14" id="march-day-14" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-14">14</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-15" id="march-day-15" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-15">15</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-16" id="march-day-16" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-16">16</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-17" id="march-day-17" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-17">17</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-18" id="march-day-18" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-18">18</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-19" id="march-day-19" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-19">19</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-20" id="march-day-20" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-20">20</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-21" id="march-day-21" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-21">21</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-22" id="march-day-22" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-22">22</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-23" id="march-day-23" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-23">23</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-24" id="march-day-24" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-24">24</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-25" id="march-day-25" disabled>
+                        <label class="form__label-days form__label-days--disabled" for="march-day-25">25</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-26" id="march-day-26" checked>
+                        <label class="form__label-days form__label-days--checked" for="march-day-26">26</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-27" id="march-day-27" checked>
+                        <label class="form__label-days form__label-days--checked" for="march-day-27">27</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-28" id="march-day-28" checked>
+                        <label class="form__label-days form__label-days--checked" for="march-day-28">28</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-" id="march-day-29">
+                        <label class="form__label-days" for="march-day-29">29</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-30" id="march-day-30">
+                        <label class="form__label-days" for="march-day-30">30</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="march-day-31" id="march-day-31">
+                        <label class="form__label-days" for="march-day-31">31</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="april-day-1" id="april-day-1">
+                        <label class="form__label-days" for="april-day-1">1</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="april-day-2" id="april-day-2">
+                        <label class="form__label-days" for="april-day-2">2</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="april-day-3" id="april-day-3">
+                        <label class="form__label-days" for="april-day-3">3</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="april-day-4" id="april-day-4">
+                        <label class="form__label-days" for="april-day-4">4</label>
+                      </li>
+                      <li class="plan__item-days">
+                        <input class="visually-hidden form__input-days" type="checkbox" name="april-day-5" id="april-day-5">
+                        <label class="form__label-days" for="april-day-5">5</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="plan__steps-wrapper">
+                  <a class="plan__button-step button button--theme--light button--border--full-rounded" href="#">Следующий шаг</a>
+                </div>
+              </li>
+              <li class="plan__item plan__item--append">
+                <h3 class="plan__subtitle">Шаг 2.<br>Маршрут</h3>
+                <p class="plan__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+                <div class="plan__countries-wrapper">
+                  <div class="plan__country-wrapper plan__country-wrapper--change plan__country-wrapper--delete">
+                    <span class="plan__country-name">
+                      Босния и Герцеговина
+                      <button class="plan__button plan__button--select">
+                        <span class="visually-hidden">Раскрыть список</span>
+                      </button>
+                    </span>
+                    <span class="plan__flag-wrapper">
+                      <img class="flag-img" src="#" alt="Босния и Герцеговина">
+                    </span>
+                  </div>
+                  <div class="plan__country-wrapper plan__country-wrapper--change plan__country-wrapper--delete">
+                    <span class="plan__country-name">
+                      Чехия
+                      <button class="plan__button plan__button--select">
+                        <span class="visually-hidden">Раскрыть список</span>
+                      </button>
+                    </span>
+                    <span class="plan__flag-wrapper">
+                      <img class="flag-img" src="#" alt="Чехия">
+                    </span>
+                  </div>
+                  <div class="plan__country-wrapper plan__country-wrapper--append plan__country-wrapper--delete">
+                    <span class="plan__country-name">
+                      Выберите страну
+                      <button class="plan__button plan__button--select">
+                        <span class="visually-hidden">Раскрыть список</span>
+                      </button>
+                    </span>
+                    <div class="filter-country plan__filter-country">
+                      <ul class="filter-country__country-letter-list">
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter filter-country__link-letter--current" href="#">а</a>
+                          <ul class="filter-country__country-name-list">
+                            <li class="filter-country__item-name">
+                              <a class="filter-country__link-name" href="#">Афганистан</a>
+                            </li>
+                            <li class="filter-country__item-name">
+                              <a class="filter-country__link-name" href="#">Албания</a>
+                            </li>
+                            <li class="filter-country__item-name">
+                              <a class="filter-country__link-name" href="#">Алжир</a>
+                            </li>
+                            <li class="filter-country__item-name">
+                              <a class="filter-country__link-name" href="#">Андорра</a>
+                            </li>
+                            <li class="filter-country__item-name">
+                              <a class="filter-country__link-name" href="#">Аргентина</a>
+                            </li>
+                            <li class="filter-country__item-name">
+                              <a class="filter-country__link-name" href="#">Армения</a>
+                            </li>
+                            <li class="filter-country__item-name">
+                              <a class="filter-country__link-name" href="#">Австралия</a>
+                            </li>
+                            <li class="filter-country__item-name">
+                              <a class="filter-country__link-name" href="#">Австрия</a>
+                            </li>
+                            <li class="filter-country__item-name">
+                              <a class="filter-country__link-name" href="#">Азербайджан</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">б</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">в</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">г</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">д</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">е</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">з</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">и</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">к</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">л</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">м</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">н</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">о</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">п</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">р</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">с</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">т</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">у</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">ф</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">х</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">ч</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">ш</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">э</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">ю</a>
+                        </li>
+                        <li class="filter-country__item-letter">
+                          <a class="filter-country__link-letter" href="#">я</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="plan__country-wrapper plan__country-wrapper--append">
+                    <span class="plan__country-name">
+                      Добавить страну
+                      <button class="plan__button plan__button--plus">
+                        <span class="visually-hidden">Добавить</span>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+                <div class="plan__steps-wrapper">
+                  <a class="plan__button-step button button--theme--light button--border--full-rounded" href="#">Следующий шаг</a>
+                  <a class="link link--uppercase plan__link-step" href="#">На шаг назад</a>
+                </div>
+              </li>
+              <li class="plan__item plan__item--append">
+                <h3 class="plan__subtitle">Шаг 3.<br>Развлечения</h3>
+                <p class="plan__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                <div class="plan__action-wrapper">
+                  <div class="plan__action">
+                    <label class="form__label form__label--action" for="action-country-bosnia">Босния и Герцеговина</label>
+                    <span class="plan__flag-wrapper plan__flag-wrapper--action">
+                      <img class="flag-img" src="#" alt="Босния и Герцеговина">
+                    </span>
+                    <textarea class="form__textarea form__textarea--action" name="action-country-bosnia" id="action-country-bosnia" cols="30" rows="10" placeholder="План действий"></textarea>
+                  </div>
+                  <div class="plan__action">
+                    <label class="form__label form__label--action" for="action-country-czech">Чехия</label>
+                    <span class="plan__flag-wrapper plan__flag-wrapper--action">
+                      <img class="flag-img" src="#" alt="Чехия">
+                    </span>
+                    <textarea class="form__textarea form__textarea--action" name="action-country-czech" id="action-country-czech" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  </div>
+                </div>
+                <div class="plan__steps-wrapper">
+                  <button class="plan__button-step button button--theme--light button--border--full-rounded" type="submit">Отправить</button>
+                  <a class="link link--uppercase plan__link-step" href="#">На шаг назад</a>
+                </div>
+              </li>
+            </ol>
+          </form>
+        </div>
       </section>
 
     </main>

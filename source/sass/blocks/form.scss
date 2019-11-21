@@ -1,22 +1,57 @@
 .form__label {
-  &--filters {
+  &--filters,
+  &--children {
     @include font-size-height(15px, 15px);
     color: $light-black;
   }
 
+  &--children {
+    @media (min-width: $tablet-width) {
+      font-weight: 500;
+
+      @include font-size-height(20px, 20px);
+      color: $link-color;
+      text-transform: uppercase;
+    }
+  }
+
   &--plan {
+    margin-right: auto;
     font-weight: 500;
 
     @include font-size-height(16px, 16px);
     color: $link-color;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      @include font-size-height(20px, 20px);
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 220px;
+      margin-right: 0;
+    }
   }
 
   &--action {
+    width: 184px;
+    margin-bottom: 16px;
+
     font-weight: 500;
 
     @include font-size-height(18px, 18px);
     color: $link-color;
+
+    @media (min-width: $tablet-width) {
+      width: 420px;
+      margin-bottom: 37px;
+
+      @include font-size-height(30px, 30px);
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: auto;
+    }
   }
 }
 
@@ -24,8 +59,27 @@
   &--type--email {
     flex-grow: 1;
   }
+
+  &--plan {
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      flex-grow: 1;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-grow: 0;
+    }
+  }
 }
 
 .form__textarea {
   display: block;
+
+  &--action {
+    width: 100%;
+
+    @media (min-width: $desktop-width) {
+      width: 730px;
+    }
+  }
 }
