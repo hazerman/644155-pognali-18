@@ -2,8 +2,8 @@
   color: $white;
 }
 
-@media (min-width: $desktop-width) {
-  .index-header__w-container {
+.index-header__w-container {
+  @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -20,10 +20,8 @@
   text-align: center;
 
   @include font-size-height(36px, 40px);
-}
 
-@media (min-width: $tablet-width) {
-  .index-header__tagline {
+  @media (min-width: $tablet-width) {
     @include padding-center(145px);
     margin-right: auto;
     margin-bottom: 96px;
@@ -32,10 +30,8 @@
 
     @include font-size-height(60px, 70px);
   }
-}
 
-@media (min-width: $desktop-width) {
-  .index-header__tagline {
+  @media (min-width: $desktop-width) {
     @include padding-center(0);
     margin-bottom: 96px;
     margin-left: 70px;
@@ -47,10 +43,8 @@
 .index-header__wrapper {
   display: flex;
   margin-bottom: 30px;
-}
 
-@media (min-width: $tablet-width) {
-  .index-header__wrapper {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
@@ -70,19 +64,14 @@
   margin-left: 23px;
 
   @include font-size-height(16px, 22px);
-}
 
-@media (min-width: $tablet-width) {
-  .index-header__quote {
+  @media (min-width: $tablet-width) {
     width: 262px;
     margin-bottom: 213px;
     margin-left: 34px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .index-header__quote {
-    width: 262px;
+  @media (min-width: $desktop-width) {
     margin-right: 25px;
     margin-bottom: 0;
     margin-left: 0;
@@ -94,10 +83,8 @@
   margin-bottom: 20px;
 
   font-weight: 300;
-}
 
-@media (min-width: $tablet-width) {
-  .index-header__review {
+  @media (min-width: $tablet-width) {
     margin-bottom: 52px;
 
     @include font-size-height(28px, 33px);
@@ -110,10 +97,8 @@
 
   font-weight: 700;
   font-style: normal;
-}
 
-@media (min-width: $tablet-width) {
-  .index-header__author {
+  @media (min-width: $tablet-width) {
     @include font-size-height(21px, 25px);
   }
 }
@@ -125,18 +110,14 @@
   margin-bottom: -270px;
   border-radius: 10px;
   overflow: hidden;
-}
 
-@media (min-width: $tablet-width) {
-  .index-header__scheme-list {
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: -138px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .index-header__scheme-list {
+  @media (min-width: $desktop-width) {
     margin-bottom: 123px;
   }
 }
@@ -151,6 +132,20 @@
 
   @include font-size-height(18px, 18px);
   border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 50%;
+
+    @include font-size-height(24px, 24px);
+    border-radius: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 25%;
+    flex-grow: 1;
+
+    border-radius: 10px;
+  }
 
   &--bg--darker {
     background-color: $dark-orange;
@@ -170,43 +165,33 @@
 
   &:not(:first-child) {
     margin-top: -16px;
-  }
-}
 
-@media (min-width: $tablet-width) {
-  .index-header__scheme-item {
-    flex-basis: 50%;
-
-    @include font-size-height(24px, 24px);
-    border-radius: 0;
-
-    &:not(:first-child) {
+    @media (min-width: $tablet-width) {
       margin-top: 0;
     }
+  }
 
-    &:nth-child(2) {
+  &:nth-child(2) {
+    @media (min-width: $tablet-width) {
       border-top-left-radius: 10px;
     }
+  }
 
-    &:last-child {
+  &:last-child {
+    @media (min-width: $tablet-width) {
       border-bottom-left-radius: 10px;
     }
+  }
 
-    &:nth-child(2n) {
+  &:nth-child(2n) {
+    @media (min-width: $tablet-width) {
       margin-left: -16px;
       flex-grow: 1;
     }
   }
-}
 
-@media (min-width: $desktop-width) {
-  .index-header__scheme-item {
-    flex-basis: 25%;
-    flex-grow: 1;
-
-    border-radius: 10px;
-
-    &:not(:nth-child(4n+1)) {
+  &:not(:nth-child(4n+1)) {
+    @media (min-width: $desktop-width) {
       margin-left: -16px;
     }
   }
@@ -218,19 +203,15 @@
   right: 25px;
 
   color: $white;
-}
 
-@media (min-width: $tablet-width) {
-  .index-header__scheme-count {
+  @media (min-width: $tablet-width) {
     position: static;
 
     display: block;
     margin-top: 10px;
   }
-}
 
-@media (min-width: $tablet-width) {
-  .index-header__scheme-count {
+  @media (min-width: $desktop-width) {
     position: absolute;
     top: 23px;
     right: 45px;

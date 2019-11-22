@@ -15,6 +15,10 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  @media (min-width: $tablet-width) {
+    @include font-size-height(28px, 28px);
+  }
+
   &--color--dark {
     color: $dark-blue;
   }
@@ -37,12 +41,6 @@
       @include circle(40px);
       background-color: $dark-yellow;
     }
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .contacts__link {
-    @include font-size-height(28px, 28px);
   }
 }
 

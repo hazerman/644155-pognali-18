@@ -4,12 +4,8 @@
 
   &--numbers {
     display: none;
-  }
-}
 
-@media (min-width: $tablet-width) {
-  .pagination-list {
-    &--numbers {
+    @media (min-width: $tablet-width) {
       display: flex;
     }
   }

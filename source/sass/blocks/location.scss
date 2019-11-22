@@ -1,7 +1,37 @@
+.location__w-container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .location__address {
+  width: 145px;
+  margin-bottom: 35px;
+
   font-weight: 700;
   font-style: normal;
 
   @include font-size-height(16px, 22px);
   color: $dark-blue;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+
+    @include font-size-height(28px, 28px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 140px;
+    margin-bottom: 0;
+  }
+}
+
+.location__button {
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 320px;
+  }
 }

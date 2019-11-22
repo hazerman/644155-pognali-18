@@ -1,3 +1,39 @@
+.feedback__w-container {
+  @media (min-width: $tablet-width) {
+    @include padding-center(75px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include padding-center(130px);
+  }
+}
+
 .feedback__link {
   color: $yellow;
+}
+
+.feedback__description {
+  width: 188px;
+
+  @include center;
+  @include padding-center(0);
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.feedback__form {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.feedback__contacts {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 870px;
+
+    @include center;
+  }
 }
