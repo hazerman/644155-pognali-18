@@ -71,6 +71,18 @@
   border-radius: 50%;
 }
 
+@mixin triangle-right($color, $width, $height) {
+  width: 0;
+  height: 0;
+
+  border: $width solid $color;
+  border-right-width: 0;
+  border-top-color: transparent;
+  border-top-width: $height / 2;
+  border-bottom-color: transparent;
+  border-bottom-width: $height / 2;
+}
+
 @mixin rounding-bottom($mob, $tab, $desk) {
   border-bottom-left-radius: $mob;
   border-bottom-right-radius: $mob;
@@ -87,18 +99,53 @@
 }
 
 @mixin index-description {
-  font-weight: 300;
+  @include reset-m-p;
+  margin-bottom: 23px;
+
+  @include padding-center(23px);
   @include font-size-height(16px, 22px);
   @media (min-width: $tablet-width) {
     @include font-size-height(28px, 33px);
+    @include padding-center(0);
+    margin-bottom: 38px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 44px;
+  }
+  font-weight: 300;
 }
 
 @mixin index-description-bold {
-  font-weight: 700;
+  @include reset-m-p;
+  margin-bottom: 20px;
+
+  @include padding-center(23px);
   @include font-size-height(16px, 22px);
   @media (min-width: $tablet-width) {
     @include font-size-height(21px, 25px);
+    @include padding-center(0);
+  }
+
+  font-weight: 700;
+}
+
+@mixin index-headings {
+  @include reset-m-p;
+  @include padding-center(23px);
+  margin-bottom: 23px;
+
+  @include font-size-height(24px, 24px);
+  color: $dark-orange;
+
+  @media (min-width: $tablet-width) {
+    @include padding-center(0);
+    @include font-size-height(45px, 45px);
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 61px;
   }
 }
 

@@ -52,16 +52,15 @@
 }
 
 .main__about {
-  padding-top: 278px;
-  padding-bottom: 50px;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 200px;
-  }
+  position: relative;
+  z-index: 10;
+  @include rounding-bottom(30px, 60px, 60px);
 
   @media (min-width: $desktop-width) {
-    padding-top: 125px;
+    top: -60px;
+    margin-bottom: -60px;
   }
+
 }
 
 .main__filters {
