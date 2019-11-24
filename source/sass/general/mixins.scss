@@ -37,14 +37,53 @@
   padding-right: $pad;
 }
 
+@mixin container($p-left-tablet: 0, $p-right-tablet: 0, $p-left-desktop: 0, $p-right-desktop: 0) {
+  width: $mobile-width;
+
+  @include center;
+  @include padding-center(25px);
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding-left: 40px + $p-left-tablet;
+    padding-right: 40px + $p-right-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding-left: 60px + $p-left-desktop;
+    padding-right: 60px + $p-right-desktop;
+  }
+}
+
 @mixin square($side) {
   width: $side;
   height: $side;
 }
 
+@mixin rectangle($w, $h) {
+  width: $w;
+  height: $h;
+}
+
 @mixin circle($side) {
   @include square($side);
   border-radius: 50%;
+}
+
+@mixin rounding-bottom($mob, $tab) {
+  border-bottom-left-radius: $mob;
+  border-bottom-right-radius: $mob;
+
+  @media (min-width: $tablet-width) {
+    border-bottom-left-radius: $tab;
+    border-bottom-right-radius: $tab;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-bottom-left-radius: $tab;
+    border-bottom-right-radius: $tab;
+  }
 }
 
 @mixin pseudo($pos, $top: auto, $right: auto, $bot: auto, $left: auto, $content: "") {

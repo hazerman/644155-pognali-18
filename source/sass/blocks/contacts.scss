@@ -2,6 +2,20 @@
   @include list;
 }
 
+.contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 23px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .contacts__link {
   position: relative;
 
@@ -27,23 +41,74 @@
     color: $yellow;
   }
 
-  &--phone {
+  &--phone,
+  &--phone-header,
+  &--mail,
+  &--mail-header {
     &::before {
       @include pseudo(relative, 0, auto, auto, 0);
+    }
+  }
+
+  &--phone,
+  &--mail {
+    &::before {
       @include circle(40px);
+    }
+  }
+
+  &--phone-header,
+  &--mail-header {
+    &::before {
+      display: none;
+
+      @include circle(50px);
+
+      @media (min-width: $desktop-width) {
+        display: block;
+      }
+    }
+  }
+
+  &--phone,
+  &--phone-header {
+    &::before {
       background-color: $dark-orange;
     }
   }
 
-  &--mail {
+  &--mail,
+  &--mail-header {
     &::before {
-      @include pseudo(relative, 0, auto, auto, 0);
-      @include circle(40px);
       background-color: $dark-yellow;
     }
   }
 }
 
 .contacts__mode {
+  position: relative;
+
+  padding-left: 60px;
+
   font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+
+  &::before {
+    @include pseudo(absolute, -14px, auto, auto, 0);
+    @include circle(45px);
+    background-color: #121936;
+
+    @media (min-width: $tablet-width) {
+      top: -22px;
+
+      @include circle(68px);
+    }
+  }
 }
