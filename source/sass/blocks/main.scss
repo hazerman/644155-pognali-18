@@ -34,6 +34,13 @@
   }
 }
 
+.main__index-header {
+  position: relative;
+  z-index: 11;
+
+  @include rounding-bottom(0, 0, 60px);
+}
+
 .main__items-wrapper {
   padding-top: 77px;
   padding-bottom: 60px;

@@ -71,7 +71,7 @@
   border-radius: 50%;
 }
 
-@mixin rounding-bottom($mob, $tab) {
+@mixin rounding-bottom($mob, $tab, $desk) {
   border-bottom-left-radius: $mob;
   border-bottom-right-radius: $mob;
 
@@ -81,8 +81,24 @@
   }
 
   @media (min-width: $desktop-width) {
-    border-bottom-left-radius: $tab;
-    border-bottom-right-radius: $tab;
+    border-bottom-left-radius: $desk;
+    border-bottom-right-radius: $desk;
+  }
+}
+
+@mixin index-description {
+  font-weight: 300;
+  @include font-size-height(16px, 22px);
+  @media (min-width: $tablet-width) {
+    @include font-size-height(28px, 33px);
+  }
+}
+
+@mixin index-description-bold {
+  font-weight: 700;
+  @include font-size-height(16px, 22px);
+  @media (min-width: $tablet-width) {
+    @include font-size-height(21px, 25px);
   }
 }
 

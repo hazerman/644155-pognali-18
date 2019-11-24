@@ -13,7 +13,7 @@
   }
 
   &--inner {
-    @include rounding-bottom(20px, 60px);
+    @include rounding-bottom(20px, 60px, 60px);
 
     .main-header__nav-wrapper {
       top: 40%;
