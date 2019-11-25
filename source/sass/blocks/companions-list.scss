@@ -7,10 +7,14 @@
 }
 
 .companions-list__item {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
   padding: 16px 20px 22px 20px;
+
+  color: $dark-blue;
 
   background-color: $white;
   border-radius: 8px;
@@ -29,7 +33,12 @@
   }
 }
 
+.companions-list__content-wrapper {
+  position: relative;
+}
+
 .companion-list__profile-link {
+  display: block;
   margin-bottom: 16px;
 
   font-weight: 700;
@@ -47,8 +56,26 @@
   }
 }
 
-.companions-list__img {
+.companions-list__name {
+  position: relative;
+
+  &::before {
+    @include pseudo(absolute, 7px, auto, auto, -16px);
+    @include circle(5px);
+
+    background-color: #f97676;
+  }
+
+  &--online {
+    &::before {
+      background-color: #81e31e;
+    }
+  }
+}
+
+.companions-list__img-wrapper {
   order: -1;
+  min-height: 270px;
 }
 
 .companions-list__hashtags {
@@ -91,4 +118,21 @@
     color: $link-color;
     text-transform: uppercase;
   }
+}
+
+.companions-list__country-whish-list {
+  position: absolute;
+  top:-50px;
+
+  display: flex;
+}
+
+.companions-list__transport-whish-list {
+  display: flex;
+}
+
+.companions-list__level {
+  position: absolute;
+  top: 16px;
+  left: 16px;
 }

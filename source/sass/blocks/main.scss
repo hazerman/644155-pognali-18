@@ -85,17 +85,13 @@
 }
 
 .main__companions {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  top: -60px;
+  z-index: 8;
 
-  &--inner .companions-list__item {
-    width: 100%;
-    margin-bottom: 40px;
+  margin-bottom: -60px;
 
-    @media (min-width: $desktop-width) {
-      width: 950px;
-    }
-  }
+  @include rounding-bottom(30px, 60px, 60px);
 }
 
 .main__text-wrapper {

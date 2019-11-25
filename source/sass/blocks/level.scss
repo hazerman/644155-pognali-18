@@ -1,24 +1,86 @@
 .level {
-  display: inline-block;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   font-weight: 700;
+  @include font-size-height(24px, 24px);
 
   border-radius: 50%;
+  box-shadow: 0 0 0 3px $dark-orange inset;
+
+  &::after {
+    @include pseudo(relative, auto, auto, auto, auto, "level");
+
+    padding-top: 3px;
+    @include padding-center(5%);
+    @include font-size-height(14px, 14px);
+    font-weight: 400;
+
+    border-top: 1px solid rgba($white, 0.3);
+  }
 
   &--style--index {
-    @include font-size-height(24px, 24px);
+    width: 60px;
+    height: 60px;
     color: $white;
 
     background-color: rgba($black, 0.6);
   }
 
   &--style--companions {
-    @include font-size-height(24px, 18px);
+    width: 45px;
+    height: 45px;
+
     color: $link-color;
+
+    &::after {
+      color: rgba($light-black, 0.4);
+
+      border-color: rgba($black, 0.1);
+      @media (max-width: $tablet-width - 1) {
+        display: none;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   &--style--profile {
+    width: 100px;
+    height: 100px;
     @include font-size-height(38px, 38px);
     color: $night-blue;
+
+    &::after {
+      @include font-size-height(18px, 18px);
+      color: $light-black;
+
+      border-color: #cbced9;
+      border-width: 2px;
+
+      @media (min-width: $tablet-width) {
+        border-color: $light-black;
+      }
+
+      @media (min-width: $desktop-width) {
+        color: $white;
+        border-color: rgba($white, 0.3);
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 94px;
+      height: 94px;
+    }
+
+    @media (min-width: $desktop-width) {
+      color: $white;
+    }
   }
 }
