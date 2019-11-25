@@ -60,7 +60,16 @@
     top: -60px;
     margin-bottom: -60px;
   }
+}
 
+.main__directions {
+  position: relative;
+  top: -60px;
+  z-index: 9;
+
+  margin-bottom: -60px;
+
+  @include rounding-bottom(30px, 60px, 60px);
 }
 
 .main__filters {
