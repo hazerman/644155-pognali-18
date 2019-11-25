@@ -15,16 +15,43 @@
     font-size: 20px;
   }
 
-  &--theme--dark {
-    color: $dark-blue;
-  }
-
   &--theme--not-so-dark {
     color: $link-color;
   }
 
   &--uppercase {
+    @include font-size-height(17px, 30px);
+    color: $link-color;
     text-transform: uppercase;
+  }
+
+  &--plus {
+    position: relative;
+
+    padding-left: 33px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 52px;
+
+      font-size: 20px;
+    }
+
+    &::before,
+    &::after {
+      @include pseudo(absolute, 11px, auto, auto, 0);
+      @include rectangle(18px, 2px);
+
+      background-color: $link-color;
+
+      @media (min-width: $tablet-width) {
+        @include rectangle(27px, 3px);
+      }
+    }
+
+    &::after {
+      transform-origin: center center;
+      transform: rotate(90deg);
+    }
   }
 
   &--theme--light {

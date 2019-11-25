@@ -4,9 +4,82 @@
 
   &--numbers {
     display: none;
+    margin-right: auto;
 
     @media (min-width: $tablet-width) {
       display: flex;
+    }
+  }
+
+  &--arrows {
+    position: relative;
+
+    width: 100%;
+
+    &::before {
+      @include pseudo(absolute, 0, auto, 0, 50%);
+      width: 1px;
+      margin-left: 1px;
+
+      background-color: $light-grey;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+    }
+  }
+}
+
+.pagination-list__item-number {
+  @include circle(50px);
+  overflow: hidden;
+}
+
+.pagination-list__link-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  @include font-size-height(20px, 30px);
+  font-weight: 700;
+  color: $night-blue;
+
+  text-decoration: none;
+
+  &--current {
+    background-color: $yellow;
+
+    @include current;
+  }
+}
+
+.pagination-list__item-arrow {
+  width: 50%;
+}
+
+.pagination-list__link-arrow {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+
+  &::before {
+    @include pseudo(relative);
+    @include triangle-right($dark-blue, 10px, 20px);
+  }
+
+  &--prev {
+    &::before {
+      transform: rotate(180deg);
     }
   }
 }

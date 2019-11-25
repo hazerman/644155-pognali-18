@@ -42,12 +42,19 @@
 }
 
 .main__items-wrapper {
-  padding-top: 77px;
-  padding-bottom: 60px;
+  @include container;
+  padding-top: 24px;
+  padding-bottom: 106px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 46px;
+  }
 
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+    padding-top: 150px;
+    padding-bottom: 137px;
   }
 }
 
@@ -81,6 +88,7 @@
     width: 285px;
     align-self: flex-start;
     order: 1;
+    margin-bottom: 40px;
   }
 }
 

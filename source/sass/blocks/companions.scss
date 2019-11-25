@@ -2,6 +2,18 @@
   color: $white;
 
   background-color: $dark-blue;
+
+  &--inner {
+    display: flex;
+    flex-direction: column;
+    color: $dark-blue;
+
+    background-color: $light-grey;
+
+    @media (min-width: $desktop-width) {
+      width: 950px;
+    }
+  }
 }
 
 .companions__container {
@@ -88,4 +100,10 @@
   min-height: 50px;
 
   background-color: $white;
+  border-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    padding: 25px 28px;
+  }
 }
