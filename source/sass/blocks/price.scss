@@ -1,3 +1,35 @@
+.price {
+  color: $light-black;
+
+  background-color: $light-grey;
+}
+
+.price__container {
+  @include container(0, 0, 70, 70);
+  padding-top: 111px;
+  padding-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 132px;
+    padding-bottom: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 165px;
+    padding-bottom: 187px;
+  }
+}
+
+.price__heading {
+  @include index-headings;
+  width: 150px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .price__list {
   @include list;
   margin-left: 24px;
@@ -7,23 +39,11 @@
     margin-left: 90px;
     margin-bottom: 59px;
   }
-
-  @media (min-width: $desktop-width) {
-    margin-left: 160px;
-  }
-}
-
-.price__title {
-  width: 125px;
-
-  @media (min-width: $tablet-width) {
-    width: 500px;
-
-    @include center;
-  }
 }
 
 .price__item {
+  position: relative;
+
   width: 200px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -39,8 +59,8 @@
   @media (min-width: $tablet-width) {
     display: flex;
     width: 565px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 16px;
+    padding-bottom: 17px;
 
     @include font-size-height(28px, 33px);
   }
@@ -51,6 +71,47 @@
 
   &:not(:first-child) {
     margin-top: -1px;
+  }
+
+  &:nth-child(3n+1) {
+    .price__count {
+      background-color: $orange;
+    }
+  }
+
+  &:nth-child(3n+2) {
+    .price__count {
+      background-color: $dark-yellow;
+    }
+  }
+
+  &:nth-child(3n+3) {
+    .price__count {
+      background-color: $yellow;
+    }
+  }
+}
+
+.price__count {
+  position: absolute;
+  top: 0;
+  right: -44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include circle(34px);
+  @include font-size-height(16px, 16px);
+  color: $white;
+  font-weight: 300;
+
+  @media (min-width: $tablet-width) {
+    right: auto;
+    left: -91px;
+
+    @include square(67px);
+    @include font-size-height(28px, 28px);
   }
 }
 
@@ -68,11 +129,19 @@
   @include padding-center(24px);
 
   @media (min-width: $tablet-width) {
+    position: relative;
+
     @include padding-center(0);
     margin-left: 90px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin-left: 160px;
+  &::before {
+    @media (min-width: $tablet-width) {
+      @include pseudo(absolute, -27px, auto, auto, -91px);
+
+      @include circle(67px);
+
+      background-color: $blue-grey;
+    }
   }
 }
