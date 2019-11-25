@@ -6,6 +6,7 @@
   align-items: center;
 
   font-weight: 700;
+
   @include font-size-height(24px, 24px);
 
   border-radius: 50%;
@@ -15,6 +16,7 @@
     @include pseudo(relative, auto, auto, auto, auto, "level");
 
     padding-top: 3px;
+
     @include padding-center(5%);
     @include font-size-height(14px, 14px);
     font-weight: 400;
@@ -40,6 +42,7 @@
       color: rgba($light-black, 0.4);
 
       border-color: rgba($black, 0.1);
+
       @media (max-width: $tablet-width - 1) {
         display: none;
       }
@@ -54,6 +57,7 @@
   &--style--profile {
     width: 100px;
     height: 100px;
+
     @include font-size-height(38px, 38px);
     color: $night-blue;
 

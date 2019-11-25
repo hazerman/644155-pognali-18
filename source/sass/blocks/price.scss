@@ -138,7 +138,6 @@
   &::before {
     @media (min-width: $tablet-width) {
       @include pseudo(absolute, -27px, auto, auto, -91px);
-
       @include circle(67px);
 
       background-color: $blue-grey;

@@ -26,6 +26,7 @@
 
 .about__description {
   @include index-description;
+
   @media (min-width: $tablet-width) {
     width: 310px;
   }
@@ -37,6 +38,7 @@
 
 .about__subdescription {
   @include index-description-bold;
+
   @media (min-width: $tablet-width) {
     width: 260px;
     margin-bottom: 53px;
