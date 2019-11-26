@@ -28,6 +28,38 @@
     background-color: $dark-blue-grey;
   }
 
+  &--arrow {
+    position: relative;
+
+    @include link-style($link-color, 18px, 18px);
+    padding: 23px 43px 21px 23px;
+
+    text-transform: none;
+    text-align: left;
+    background-color: $yellow;
+    border-radius: 10px;
+
+    @media (min-width: $tablet-width) {
+      @include font-size-height(24px, 24px);
+      padding: 29px 53px 27px 34px;
+
+      border-radius: 20px;
+    }
+
+    &::after {
+      @include pseudo(absolute);
+      top: 24px;
+      right: 23px;
+
+      @include triangle-right($link-color, 10px, 14px);
+
+      @media (min-width: $tablet-width) {
+        top: 34px;
+        right: 36px;
+      }
+    }
+  }
+
   &--theme--no {
     background-color: $white;
   }

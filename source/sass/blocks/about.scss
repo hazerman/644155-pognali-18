@@ -1,7 +1,60 @@
+.about {
+  color: $white;
+
+  background-color: $dark-blue;
+}
+
+.about__container {
+  @include container(35, 35, 70, 70);
+  padding-top: 300px;
+  padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 270px;
+    padding-bottom: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 185px;
+    padding-bottom: 163px;
+  }
+}
+
+.about__heading {
+  @include index-headings;
+}
+
+.about__description {
+  @include index-description;
+
+  @media (min-width: $tablet-width) {
+    width: 310px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 620px;
+  }
+}
+
+.about__subdescription {
+  @include index-description-bold;
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 420px;
+    margin-bottom: 86px;
+  }
+}
+
 .about__button {
   display: none;
 
   @media (min-width: $tablet-width) {
-    display: inline-block;
+    display: block;
+    width: 274px;
   }
 }

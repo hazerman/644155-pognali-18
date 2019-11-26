@@ -1,20 +1,55 @@
+.directions {
+  color: $light-black;
+
+  background-color: $light-grey;
+}
+
+.directions__container {
+  @include container(35, 35, 70, 70);
+  padding-top: 129px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 220px;
+  }
+}
+
+.directions__heading {
+  @include index-headings;
+}
+
+.directions__description {
+  @include index-description;
+  padding-right: 47px;
+  margin-bottom: 66px;
+
+  @media (min-width: $tablet-width) {
+    width: 344px;
+    margin-bottom: 113px;
+  }
+}
+
 .directions__button {
   width: 100%;
 
   @media (min-width: $desktop-width) {
-    width: 300px;
-  }
-}
-
-.directions__w-container {
-  @media (min-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
+    position: relative;
+    top: -45px;
+    left: 735px;
+    width: 275px;
   }
 }
 
 .directions__directions-list {
   @media (min-width: $desktop-width) {
+    order: -1;
     width: 560px;
+    margin-right: 170px;
   }
 }

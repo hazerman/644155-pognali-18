@@ -8,12 +8,12 @@
   </head>
   <body>
 
-    <header class="main-header">
-      <div class="w-container main-header__w-container">
+    <header class="main-header main-header--inner main-header--nojs">
+      <div class="main-header__container">
         <a class="site-logo main-header__site-logo" href="index.html">
           <img class="site-logo__img" src="#" alt="Логотип Погнали">
         </a>
-        <button class="button-toggle main-header__button-toggle" type="button">
+        <button class="main-header__button-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <a class="main-header__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
@@ -34,12 +34,12 @@
           </nav>
           <ul class="contacts main-header__contacts">
             <li class="contacts__item">
-              <a class="contacts__link contacts__link--color--dark" href="#">
+              <a class="contacts__link contacts__link--phone-header contacts__link--color--dark" href="#">
                 <address class="contacts__mode contacts__mode--phone">8 800 555-86-28</address>
               </a>
             </li>
             <li class="contacts__item">
-              <a class="contacts__link contacts__link--color--dark" href="#">
+              <a class="contacts__link contacts__link--mail-header contacts__link--color--dark" href="#">
                 <address class="contacts__mode contacts__mode--mail">mail@htmlacademy.ru</address>
               </a>
             </li>
@@ -62,7 +62,8 @@
             </li>
           </ul>
         </div>
-        <h1 class="page-title main-header__page-title">Попутчики</h1>
+        <h1 class="main-header__page-title">Попутчики</h1>
+        <a class="main-header__home-link link" href="index.html">На главную</a>
       </div>
     </header>
 
@@ -722,7 +723,7 @@
         </div>
       </section>
 
-      <div class="main__items-wrapper w-container">
+      <div class="main__items-wrapper">
         <section class="filters main__filters main__item main__item--bg--shine">
           <h2 class="main__title main__title--form">Подберите идеального попутчика</h2>
           <form class="filters__form form" action="https://echo.htmlacademy.ru" method="post">
@@ -853,234 +854,277 @@
           </form>
         </section>
 
-        <section class="main__companions main__companions--inner companions companions--bg--transparent">
+        <section class="companions companions--inner">
           <h2 class="visually-hidden">Найденные попутчики</h2>
-          <ul class="companions-list">
+          <ul class="companions-list companions-list--inner">
 
-            <li class="companions-list__item">
-              <div class="companions-list__user">
+            <li class="companions-list__item companions-list__item--inner">
+              <a class="companions-list__avatar-wrapper" href="#">
+                <img class="companions-list__avatar" src="#" alt="Таня Фирсова">
+              </a>
+              <div class="companions-list__content-wrapper">
                 <div class="companions-list__user-info">
                   <a class="companion-list__profile-link companion-list__profile-link--smaller" href="#">
                     <span class="companions-list__name">Таня Фирсова</span>
                   </a>
-                  <span class="companions-list__popularity">1,5 М</span>
+                  <p class="companions-list__hashtags companions-list__hashtags--smaller">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 </div>
-                <div class="companions-list__avatar-wrapper companions-list__favorites companions-list__favorites--heart">
-                  <a class="companion-list__profile-link" href="#">
-                    <img class="companions-list__avatar" src="#" alt="Таня Фирсова">
-                  </a>
+                <div class="companions-list__country-wrapper">
+                  <h3 class="companions-list__title">хочет посетить:</h3>
+                  <ul class="country-whish-list country-whish-list--inner companions-list__country-whish-list">
+                    <li class="country-whish-list__item">
+                      <span class="country-whish-list__name">Шри-ланка</span>
+                    </li>
+                    <li class="country-whish-list__item">
+                      <span class="country-whish-list__name">Таиланд</span>
+                    </li>
+                    <li class="country-whish-list__item">
+                      <span class="country-whish-list__name">Сейшелы</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="companions-list__trans-level-wrapper">
+                  <div class="companions-list__transport-wrapper">
+                    <h3 class="companions-list__title">транспорт:</h3>
+                    <ul class="transport-whish-list transport-whish-list--inner companions-list__transport-whish-list">
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Автотранспорт</span>
+                      </li>
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Авиаперелет</span>
+                      </li>
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Велосипед</span>
+                      </li>
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Пешком</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="companions-list__level-wrapper">
+                    <h3 class="companions-list__title">левел:</h3>
+                    <div class="companions-list__level level level--style--companions">
+                      <span class="level__number">99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="companions-list__action-wrapper">
+                  <a class="button button--theme--light button--border--full-rounded companions-list__action-button" href="#">Позвать</a>
+                  <div class="companions-list__actions">
+                    <button class="companions-list__fav-button" type="button">
+                      <span class="visually-hidden">Добавить/убрать из избранного</span>
+                    </button>
+                    <span class="companions-list__popularity">1,5 М</span>
+                  </div>
                 </div>
               </div>
-              <p class="companions-list__hashtags companions-list__hashtags--smaller">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-              <h3 class="companions-list__title">хочет посетить:</h3>
-              <ul class="country-whish-list companions-list__country-whish-list">
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Шри-ланка">
-                  <span class="country-whish-list__name">Шри-ланка</span>
-                </li>
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Таиланд">
-                  <span class="country-whish-list__name">Таиланд</span>
-                </li>
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Сейшелы">
-                  <span class="country-whish-list__name">Сейшелы</span>
-                </li>
-              </ul>
-              <h3 class="companions-list__title">транспорт:</h3>
-              <ul class="transport-whish-list companions-list__transport-whish-list">
-                <li class="transport-whish-list__item transport-whish-list__item--active">
-                  <img class="transport-whish-list__img" src="#" alt="На самолёте">
-                </li>
-                <li class="transport-whish-list__item">
-                  <img class="transport-whish-list__img" src="#" alt="На автобусе">
-                </li>
-                <li class="transport-whish-list__item">
-                  <img class="transport-whish-list__img" src="#" alt="На велосипеде">
-                </li>
-                <li class="transport-whish-list__item">
-                  <img class="transport-whish-list__img" src="#" alt="Пешком">
-                </li>
-              </ul>
-              <h3 class="companions-list__title">левел:</h3>
-              <div class="companions-list__level level level--style--companions">
-                <span class="level__number">99</span>
-              </div>
-              <a class="button button--theme--light button--border--full-rounded" href="#">Позвать</a>
             </li>
 
-            <li class="companions-list__item">
-              <div class="companions-list__user">
+            <li class="companions-list__item companions-list__item--inner">
+              <a class="companions-list__avatar-wrapper" href="#">
+                <img class="companions-list__avatar" src="#" alt="Петя Демин">
+              </a>
+              <div class="companions-list__content-wrapper">
                 <div class="companions-list__user-info">
                   <a class="companion-list__profile-link companion-list__profile-link--smaller" href="#">
                     <span class="companions-list__name">Петя Демин</span>
                   </a>
-                  <span class="companions-list__popularity">150</span>
+                  <p class="companions-list__hashtags companions-list__hashtags--smaller">#бургер #бар #футбол #концерт #крафт</p>
                 </div>
-                <div class="companions-list__avatar-wrapper companions-list__favorites">
-                  <a class="companion-list__profile-link" href="#">
-                    <img class="companions-list__avatar" src="#" alt="Петя Демин">
-                  </a>
+                <div class="companions-list__country-wrapper">
+                  <h3 class="companions-list__title">хочет посетить:</h3>
+                  <ul class="country-whish-list country-whish-list--inner companions-list__country-whish-list">
+                    <li class="country-whish-list__item">
+                      <span class="country-whish-list__name">Бельгия</span>
+                    </li>
+                    <li class="country-whish-list__item">
+                      <span class="country-whish-list__name">Чехия</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="companions-list__trans-level-wrapper">
+                  <div class="companions-list__transport-wrapper">
+                    <h3 class="companions-list__title">транспорт:</h3>
+                    <ul class="transport-whish-list transport-whish-list--inner companions-list__transport-whish-list">
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Автотранспорт</span>
+                      </li>
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Авиаперелет</span>
+                      </li>
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Велосипед</span>
+                      </li>
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Пешком</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="companions-list__level-wrapper">
+                    <h3 class="companions-list__title">левел:</h3>
+                    <div class="companions-list__level level level--style--companions">
+                      <span class="level__number">80</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="companions-list__action-wrapper">
+                  <a class="button button--theme--light button--border--full-rounded companions-list__action-button" href="#">Позвать</a>
+                  <div class="companions-list__actions">
+                    <button class="companions-list__fav-button" type="button">
+                      <span class="visually-hidden">Добавить/убрать из избранного</span>
+                    </button>
+                    <span class="companions-list__popularity">150</span>
+                  </div>
                 </div>
               </div>
-              <p class="companions-list__hashtags companions-list__hashtags--smaller">#бургер #бар #футбол #концерт #крафт</p>
-              <h3 class="companions-list__title">хочет посетить:</h3>
-              <ul class="country-whish-list companions-list__country-whish-list">
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Бельгия">
-                  <span class="country-whish-list__name">Бельгия</span>
-                </li>
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Чехия">
-                  <span class="country-whish-list__name">Чехия</span>
-                </li>
-              </ul>
-              <h3 class="companions-list__title">транспорт:</h3>
-              <ul class="transport-whish-list companions-list__transport-whish-list">
-                <li class="transport-whish-list__item transport-whish-list__item--active">
-                  <img class="transport-whish-list__img" src="#" alt="На самолёте">
-                </li>
-                <li class="transport-whish-list__item transport-whish-list__item--active">
-                  <img class="transport-whish-list__img" src="#" alt="На автобусе">
-                </li>
-                <li class="transport-whish-list__item">
-                  <img class="transport-whish-list__img" src="#" alt="На велосипеде">
-                </li>
-                <li class="transport-whish-list__item transport-whish-list__item--active">
-                  <img class="transport-whish-list__img" src="#" alt="Пешком">
-                </li>
-              </ul>
-              <h3 class="companions-list__title">левел:</h3>
-              <div class="companions-list__level level level--style--companions">
-                <span class="level__number">80</span>
-              </div>
-              <a class="button button--theme--light button--border--full-rounded" href="#">Позвать</a>
             </li>
 
-            <li class="companions-list__item">
-              <div class="companions-list__user">
+            <li class="companions-list__item companions-list__item--inner">
+              <a class="companions-list__avatar-wrapper" href="#">
+                <img class="companions-list__avatar" src="#" alt="Марк Смолов">
+              </a>
+              <div class="companions-list__content-wrapper">
                 <div class="companions-list__user-info">
                   <a class="companion-list__profile-link companion-list__profile-link--smaller" href="#">
                     <span class="companions-list__name">Марк Смолов</span>
                   </a>
-                  <span class="companions-list__popularity">1700</span>
+                  <p class="companions-list__hashtags companions-list__hashtags--smaller">#рэп #тату #хайпбист #кроссовки #суприм</p>
                 </div>
-                <div class="companions-list__avatar-wrapper companions-list__favorites">
-                  <a class="companion-list__profile-link" href="#">
-                    <img class="companions-list__avatar" src="#" alt="Марк Смолов">
-                  </a>
+                <div class="companions-list__country-wrapper">
+                  <h3 class="companions-list__title">хочет посетить:</h3>
+                  <ul class="country-whish-list country-whish-list--inner companions-list__country-whish-list">
+                    <li class="country-whish-list__item">
+                      <span class="country-whish-list__name">США</span>
+                    </li>
+                    <li class="country-whish-list__item">
+                      <span class="country-whish-list__name">Австралия</span>
+                    </li>
+                    <li class="country-whish-list__item">
+                      <span class="country-whish-list__name">Доминика</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="companions-list__trans-level-wrapper">
+                  <div class="companions-list__transport-wrapper">
+                    <h3 class="companions-list__title">транспорт:</h3>
+                    <ul class="transport-whish-list transport-whish-list--inner companions-list__transport-whish-list">
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Автотранспорт</span>
+                      </li>
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Авиаперелет</span>
+                      </li>
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Велосипед</span>
+                      </li>
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Пешком</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="companions-list__level-wrapper">
+                    <h3 class="companions-list__title">левел:</h3>
+                    <div class="companions-list__level level level--style--companions">
+                      <span class="level__number">25</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="companions-list__action-wrapper">
+                  <a class="button button--theme--light button--border--full-rounded companions-list__action-button" href="#">Позвать</a>
+                  <div class="companions-list__actions">
+                    <button class="companions-list__fav-button" type="button">
+                      <span class="visually-hidden">Добавить/убрать из избранного</span>
+                    </button>
+                    <span class="companions-list__popularity">1700</span>
+                  </div>
                 </div>
               </div>
-              <p class="companions-list__hashtags companions-list__hashtags--smaller">#рэп #тату #хайпбист #кроссовки #суприм</p>
-              <h3 class="companions-list__title">хочет посетить:</h3>
-              <ul class="country-whish-list companions-list__country-whish-list">
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="США">
-                  <span class="country-whish-list__name">США</span>
-                </li>
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Австралия">
-                  <span class="country-whish-list__name">Австралия</span>
-                </li>
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Доминикана">
-                  <span class="country-whish-list__name">Доминикана</span>
-                </li>
-              </ul>
-              <h3 class="companions-list__title">транспорт:</h3>
-              <ul class="transport-whish-list companions-list__transport-whish-list">
-                <li class="transport-whish-list__item transport-whish-list__item--active">
-                  <img class="transport-whish-list__img" src="#" alt="На самолёте">
-                </li>
-                <li class="transport-whish-list__item">
-                  <img class="transport-whish-list__img" src="#" alt="На автобусе">
-                </li>
-                <li class="transport-whish-list__item transport-whish-list__item--active">
-                  <img class="transport-whish-list__img" src="#" alt="На велосипеде">
-                </li>
-                <li class="transport-whish-list__item">
-                  <img class="transport-whish-list__img" src="#" alt="Пешком">
-                </li>
-              </ul>
-              <h3 class="companions-list__title">левел:</h3>
-              <div class="companions-list__level level level--style--companions">
-                <span class="level__number">25</span>
-              </div>
-              <a class="button button--theme--light button--border--full-rounded" href="#">Позвать</a>
             </li>
 
-            <li class="companions-list__item">
-              <div class="companions-list__user">
+            <li class="companions-list__item companions-list__item--inner">
+              <a class="companions-list__avatar-wrapper" href="#">
+                <img class="companions-list__avatar" src="#" alt="Лариса Роговая">
+              </a>
+              <div class="companions-list__content-wrapper">
                 <div class="companions-list__user-info">
                   <a class="companion-list__profile-link companion-list__profile-link--smaller" href="#">
-                    <span class="companions-list__name">Лариса Роговая</span>
+                    <span class="companions-list__name companions-list__name--online">Лариса Роговая</span>
                   </a>
-                  <span class="companions-list__popularity">23</span>
+                  <p class="companions-list__hashtags companions-list__hashtags--smaller">#образование #карьера #учеба #линкедин</p>
                 </div>
-                <div class="companions-list__avatar-wrapper companions-list__favorites">
-                  <a class="companion-list__profile-link" href="#">
-                    <img class="companions-list__avatar" src="#" alt="Лариса Роговая">
-                  </a>
+                <div class="companions-list__country-wrapper">
+                  <h3 class="companions-list__title">хочет посетить:</h3>
+                  <ul class="country-whish-list country-whish-list--inner companions-list__country-whish-list">
+                    <li class="country-whish-list__item">
+                      <span class="country-whish-list__name">Великобритания</span>
+                    </li>
+                    <li class="country-whish-list__item">
+                      <span class="country-whish-list__name">Германия</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="companions-list__trans-level-wrapper">
+                  <div class="companions-list__transport-wrapper">
+                    <h3 class="companions-list__title">транспорт:</h3>
+                    <ul class="transport-whish-list transport-whish-list--inner companions-list__transport-whish-list">
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Автотранспорт</span>
+                      </li>
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Авиаперелет</span>
+                      </li>
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Велосипед</span>
+                      </li>
+                      <li class="transport-whish-list__item">
+                        <span class="visually-hidden">Пешком</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="companions-list__level-wrapper">
+                    <h3 class="companions-list__title">левел:</h3>
+                    <div class="companions-list__level level level--style--companions">
+                      <span class="level__number">50</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="companions-list__action-wrapper">
+                  <a class="button button--theme--light button--border--full-rounded companions-list__action-button" href="#">Позвать</a>
+                  <div class="companions-list__actions">
+                    <button class="companions-list__fav-button" type="button">
+                      <span class="visually-hidden">Добавить/убрать из избранного</span>
+                    </button>
+                    <span class="companions-list__popularity">23</span>
+                  </div>
                 </div>
               </div>
-              <p class="companions-list__hashtags companions-list__hashtags--smaller">#образование #карьера #учеба #линкедин</p>
-              <h3 class="companions-list__title">хочет посетить:</h3>
-              <ul class="country-whish-list companions-list__country-whish-list">
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Великобритания">
-                  <span class="country-whish-list__name">Великобритания</span>
-                </li>
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Германия">
-                  <span class="country-whish-list__name">Германия</span>
-                </li>
-              </ul>
-              <h3 class="companions-list__title">транспорт:</h3>
-              <ul class="transport-whish-list companions-list__transport-whish-list">
-                <li class="transport-whish-list__item transport-whish-list__item--active">
-                  <img class="transport-whish-list__img" src="#" alt="На самолёте">
-                </li>
-                <li class="transport-whish-list__item transport-whish-list__item--active">
-                  <img class="transport-whish-list__img" src="#" alt="На автобусе">
-                </li>
-                <li class="transport-whish-list__item">
-                  <img class="transport-whish-list__img" src="#" alt="На велосипеде">
-                </li>
-                <li class="transport-whish-list__item">
-                  <img class="transport-whish-list__img" src="#" alt="Пешком">
-                </li>
-              </ul>
-              <h3 class="companions-list__title">левел:</h3>
-              <div class="companions-list__level level level--style--companions">
-                <span class="level__number">50</span>
-              </div>
-              <a class="button button--theme--light button--border--full-rounded" href="#">Позвать</a>
             </li>
+
           </ul>
-          <a class="companions__link link link--color--dark link--plus link--uppercase" href="#">Показать еще</a>
+          <a class="companions__link link link--plus link--uppercase" href="#">Показать еще</a>
           <div class="companions__pagination-wrapper">
             <ul class="pagination-list pagination-list--numbers">
-              <li class="pagination-list__item">
-                <a class="pagination-list__link">1</a>
+              <li class="pagination-list__item-number">
+                <a class="pagination-list__link-number pagination-list__link-number--current">1</a>
               </li>
-              <li class="pagination-list__item">
-                <a class="pagination-list__link" href="#">2</a>
+              <li class="pagination-list__item-number">
+                <a class="pagination-list__link-number" href="#">2</a>
               </li>
-              <li class="pagination-list__item">
-                <a class="pagination-list__link" href="#">3</a>
+              <li class="pagination-list__item-number">
+                <a class="pagination-list__link-number" href="#">3</a>
               </li>
-              <li class="pagination-list__item">
-                <a class="pagination-list__link" href="#">4</a>
+              <li class="pagination-list__item-number">
+                <a class="pagination-list__link-number" href="#">4</a>
               </li>
             </ul>
             <ul class="pagination-list pagination-list--arrows">
-              <li class="pagination-list__item">
-                <a class="pagination-list__link pagination-list__link--prev" href="#">
+              <li class="pagination-list__item-arrow">
+                <a class="pagination-list__link-arrow pagination-list__link-arrow--prev" href="#">
                   <span class="visually-hidden">Предыдущая страница</span>
                 </a>
               </li>
-              <li class="pagination-list__item">
-                <a class="pagination-list__link pagination-list__link--next" href="#">
+              <li class="pagination-list__item-arrow">
+                <a class="pagination-list__link-arrow" href="#">
                   <span class="visually-hidden">Следующая страница</span>
                 </a>
               </li>

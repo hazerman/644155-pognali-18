@@ -8,12 +8,12 @@
   </head>
   <body>
 
-    <header class="main-header">
-      <div class="w-container main-header__w-container">
+    <header class="main-header main-header--nojs">
+      <div class="main-header__container">
         <a class="site-logo main-header__site-logo">
           <img class="site-logo__img" src="#" alt="Логотип Погнали">
         </a>
-        <button class="button-toggle main-header__button-toggle" type="button">
+        <button class="main-header__button-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <a class="main-header__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
@@ -34,12 +34,12 @@
           </nav>
           <ul class="contacts main-header__contacts">
             <li class="contacts__item">
-              <a class="contacts__link contacts__link--color--dark" href="#">
+              <a class="contacts__link contacts__link--phone-header contacts__link--color--dark" href="#">
                 <address class="contacts__mode contacts__mode--phone">8 800 555-86-28</address>
               </a>
             </li>
             <li class="contacts__item">
-              <a class="contacts__link contacts__link--color--dark" href="#">
+              <a class="contacts__link contacts__link--mail-header contacts__link--color--dark" href="#">
                 <address class="contacts__mode contacts__mode--mail">mail@htmlacademy.ru</address>
               </a>
             </li>
@@ -69,8 +69,8 @@
 
       <h1 class="visually-hidden">Погнали - сервис поиска попутчиков</h1>
 
-      <header class="index-header main__index-header main__item main__item--theme--header main__item--bg--dark">
-        <div class="w-container index-header__w-container">
+      <header class="index-header main__index-header">
+        <div class="index-header__container">
           <p class="index-header__tagline">В путешествие с крутыми попутчиками!</p>
           <div class="index-header__wrapper">
             <ul class="contacts index-header__contacts">
@@ -92,19 +92,19 @@
             <cite class="index-header__author">Мурат Эльтазин<br>главный редактор газеты «гаджетлайф»</cite>
           </p>
           <ol class="index-header__scheme-list">
-            <li class="index-header__scheme-item index-header__scheme-item--bg--darker">
+            <li class="index-header__scheme-item">
               Выберите направление
               <span class="index-header__scheme-count">1</span>
             </li>
-            <li class="index-header__scheme-item index-header__scheme-item--bg--dark">
+            <li class="index-header__scheme-item">
               Изучите идеи путешественников
               <span class="index-header__scheme-count">2</span>
             </li>
-            <li class="index-header__scheme-item index-header__scheme-item--bg--light">
+            <li class="index-header__scheme-item">
               Находите тех, кто похож на вас
               <span class="index-header__scheme-count">3</span>
             </li>
-            <li class="index-header__scheme-item index-header__scheme-item--bg--lighter">
+            <li class="index-header__scheme-item">
               Путешествуйте вместе!
               <span class="index-header__scheme-count">4</span>
             </li>
@@ -112,20 +112,20 @@
         </div>
       </header>
 
-      <section class="about main__about main__item main__item--rounded main__item--bg--not-so-dark main__item--theme--service">
-        <div class="w-container w-container--plus-padding about__w-container">
-          <h2 class="main__title">О сервисе</h2>
-          <p class="main__description main__description--contrast--dark">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-          <p class="main__description main__description--contrast--dark main__description--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-          <a class="about__button button button--theme--light button--arrow button--lowercase button--border--lightly-rounded" href="#">Подробнее</a>
+      <section class="about main__about">
+        <div class="about__container">
+          <h2 class="about__heading">О сервисе</h2>
+          <p class="about__description">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+          <p class="about__subdescription">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+          <a class="about__button button button--arrow" href="#">Подробнее</a>
         </div>
       </section>
 
-      <section class="directions main__directions main__item main__item--rounded main__item--bg--light">
-        <div class="w-container w-container--plus-padding directions__w-container">
-          <div class="main__text-wrapper main__text-wrapper--right">
-            <h2 class="main__title">Направления</h2>
-            <p class="main__description main__description--full main__description--contrast--light">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+      <section class="directions main__directions">
+        <div class="directions__container">
+          <div class="directions__text-wrapper">
+            <h2 class="directions__heading">Направления</h2>
+            <p class="directions__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
           </div>
           <ul class="directions-list directions__directions-list">
             <li class="directions-list__item">
@@ -159,109 +159,120 @@
               <img class="directions-list__img" src="#" alt="Виды Чехии">
             </li>
           </ul>
-          <a class="directions__button main__item-button button button--theme--light button--arrow button--lowercase button--border--lightly-rounded" href="directions.html">Показать все</a>
+          <a class="directions__button button button--arrow" href="directions.html">Показать все</a>
         </div>
       </section>
 
-      <section class="companions main__companions main__item main__item--rounded main__item--theme--companions main__item--bg--not-so-dark">
-        <div class="w-container w-container--plus-padding companions__w-container">
-          <div class="main__text-wrapper main__text-wrapper--left">
-            <h2 class="main__title">Попутчики</h2>
-            <p class="main__description main__description--full main__description--contrast--dark">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-            <p class="main__description main__description--contrast--dark main__description--bold">Теперь можно легко найти единомышленников!</p>
+      <section class="companions main__companions">
+        <div class="companions__container">
+          <div class="companions__text-wrapper">
+            <h2 class="companions__heading">Попутчики</h2>
+            <p class="companions__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен&nbsp;пляж и коктейль, а&nbsp;другому маршрут для хайкинга.</p>
+            <p class="companions__subdescription">Теперь можно легко найти единомышленников!</p>
           </div>
           <ul class="companions-list companions__companions-list">
             <li class="companions-list__item companions-list__item--center">
-              <a class="companion-list__profile-link" href="#">
-                <span class="companions-list__name">Таня Фирсова</span>
-              </a>
-              <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-              <img class="companions-list__img" src="#" alt="Таня Фирсова">
-              <h3 class="visually-hidden">хочет посетить:</h3>
-              <ul class="country-whish-list companions-list__country-whish-list">
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Шри-ланка">
-                </li>
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Таиланд">
-                </li>
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Сейшелы">
-                </li>
-              </ul>
-              <h3 class="visually-hidden">транспорт:</h3>
-              <ul class="transport-whish-list companions-list__transport-whish-list">
-                <li class="transport-whish-list__item transport-whish-list__item--active">
-                  <img class="transport-whish-list__img" src="#" alt="На самолёте">
-                </li>
-                <li class="transport-whish-list__item">
-                  <img class="transport-whish-list__img" src="#" alt="На автобусе">
-                </li>
-                <li class="transport-whish-list__item">
-                  <img class="transport-whish-list__img" src="#" alt="На велосипеде">
-                </li>
-                <li class="transport-whish-list__item">
-                  <img class="transport-whish-list__img" src="#" alt="Пешком">
-                </li>
-              </ul>
+              <div class="companions-list__content-wrapper">
+                <a class="companion-list__profile-link" href="#">
+                  <span class="companions-list__name">Таня Фирсова</span>
+                </a>
+                <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                <h3 class="visually-hidden">хочет посетить:</h3>
+                <ul class="country-whish-list companions-list__country-whish-list">
+                  <li class="country-whish-list__item">
+                    <img class="flag-img" src="#" alt="Шри-ланка">
+                  </li>
+                  <li class="country-whish-list__item">
+                    <img class="flag-img" src="#" alt="Таиланд">
+                  </li>
+                  <li class="country-whish-list__item">
+                    <img class="flag-img" src="#" alt="Сейшелы">
+                  </li>
+                </ul>
+                <h3 class="visually-hidden">транспорт:</h3>
+                <ul class="transport-whish-list companions-list__transport-whish-list">
+                  <li class="transport-whish-list__item transport-whish-list__item--active">
+                    <img class="transport-whish-list__img" src="#" alt="На самолёте">
+                  </li>
+                  <li class="transport-whish-list__item">
+                    <img class="transport-whish-list__img" src="#" alt="На автобусе">
+                  </li>
+                  <li class="transport-whish-list__item">
+                    <img class="transport-whish-list__img" src="#" alt="На велосипеде">
+                  </li>
+                  <li class="transport-whish-list__item">
+                    <img class="transport-whish-list__img" src="#" alt="Пешком">
+                  </li>
+                </ul>
+              </div>
               <h3 class="visually-hidden">уровень:</h3>
               <div class="level level--style--index companions-list__level">
                 <span class="level__number level__number--sub">99</span>
               </div>
+              <div class="companions-list__img-wrapper">
+                <img class="companions-list__img" src="#" alt="Таня Фирсова">
+              </div>
             </li>
             <li class="companions-list__item companions-list__item--center">
-              <a class="companion-list__profile-link" href="#">
-                <span class="companions-list__name">Петя Демин</span>
-              </a>
-              <p class="companions-list__hashtags">#бургер #бар #футбол #концерт #крафт</p>
-              <img class="companions-list__img" src="#" alt="Петя Демин">
-              <h3 class="visually-hidden">хочет посетить:</h3>
-              <ul class="country-whish-list companions-list__country-whish-list">
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Бельгия">
-                </li>
-                <li class="country-whish-list__item">
-                  <img class="flag-img" src="#" alt="Чехия">
-                </li>
-              </ul>
-              <h3 class="visually-hidden">транспорт:</h3>
-              <ul class="transport-whish-list companions-list__transport-whish-list">
-                <li class="transport-whish-list__item transport-whish-list__item--active">
-                  <img class="transport-whish-list__img" src="#" alt="На самолёте">
-                </li>
-                <li class="transport-whish-list__item transport-whish-list__item--active">
-                  <img class="transport-whish-list__img" src="#" alt="На автобусе">
-                </li>
-                <li class="transport-whish-list__item">
-                  <img class="transport-whish-list__img" src="#" alt="На велосипеде">
-                </li>
-                <li class="transport-whish-list__item transport-whish-list__item--active">
-                  <img class="transport-whish-list__img" src="#" alt="Пешком">
-                </li>
-              </ul>
+              <div class="companions-list__content-wrapper">
+                <a class="companion-list__profile-link" href="#">
+                  <span class="companions-list__name companions-list__name--online">Петя Демин</span>
+                </a>
+                <p class="companions-list__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+                <h3 class="visually-hidden">хочет посетить:</h3>
+                <ul class="country-whish-list companions-list__country-whish-list">
+                  <li class="country-whish-list__item">
+                    <img class="flag-img" src="#" alt="Бельгия">
+                  </li>
+                  <li class="country-whish-list__item">
+                    <img class="flag-img" src="#" alt="Чехия">
+                  </li>
+                </ul>
+                <h3 class="visually-hidden">транспорт:</h3>
+                <ul class="transport-whish-list companions-list__transport-whish-list">
+                  <li class="transport-whish-list__item transport-whish-list__item--active">
+                    <img class="transport-whish-list__img" src="#" alt="На самолёте">
+                  </li>
+                  <li class="transport-whish-list__item transport-whish-list__item--active">
+                    <img class="transport-whish-list__img" src="#" alt="На автобусе">
+                  </li>
+                  <li class="transport-whish-list__item">
+                    <img class="transport-whish-list__img" src="#" alt="На велосипеде">
+                  </li>
+                  <li class="transport-whish-list__item transport-whish-list__item--active">
+                    <img class="transport-whish-list__img" src="#" alt="Пешком">
+                  </li>
+                </ul>
+              </div>
               <h3 class="visually-hidden">уровень:</h3>
               <div class="level level--style--index companions-list__level">
                 <span class="level__number level__number--sub">80</span>
               </div>
+              <div class="companions-list__img-wrapper">
+                <img class="companions-list__img" src="#" alt="Петя Демин">
+              </div>
             </li>
           </ul>
-          <a class="companions__button main__item-button button button--theme--light button--arrow button--lowercase button--border--lightly-rounded" href="companions.html">Показать всех</a>
+          <a class="companions__button button button--arrow" href="companions.html">Показать всех</a>
         </div>
       </section>
 
-      <section class="price main__price main__item main__item--rounded main__item--bg--light">
-        <div class="w-container price__w-container">
-          <h2 class="main__title price__title">Добавьте свой профиль</h2>
+      <section class="price main__price">
+        <div class="price__container">
+          <h2 class="price__heading">Добавьте свой профиль</h2>
           <ol class="price__list">
-            <li class="price__item price__count">
+            <li class="price__item ">
+              <span class="price__count">1</span>
               <p class="price__service">Базовое размещение</p>
               Бесплатно
             </li>
-            <li class="price__item price__count">
+            <li class="price__item ">
+              <span class="price__count">2</span>
               <p class="price__service">Вывод на первых позициях</p>
               99 руб./мес
             </li>
-            <li class="price__item price__count">
+            <li class="price__item ">
+              <span class="price__count">3</span>
               <p class="price__service">Кастомный цвет карточки</p>
               59 руб./мес
             </li>

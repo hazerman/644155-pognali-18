@@ -1,11 +1,27 @@
 .country-whish-list {
   @include list;
+
+  &--inner {
+    .country-whish-list__item {
+      margin-bottom: 16px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .country-whish-list__name {
+  padding-left: 40px;
+
   font-weight: 500;
 
   @include font-size-height(15px, 18px);
   color: $link-color;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include font-size-height(20px, 30px);
+  }
 }
