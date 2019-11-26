@@ -58,6 +58,49 @@
 .form__input {
   &--type--email {
     flex-grow: 1;
+    padding: 22px 65px 22px 24px;
+
+    font-weight: 700;
+
+    @include font-size-height(18px, 18px);
+    border: none;
+    border-radius: 10px;
+
+    @media (min-width: $tablet-width) {
+      padding: 30px 35px 30px 35px;
+
+      @include font-size-height(24px, 24px);
+      border-radius: 20px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &::placeholder {
+      color: rgba($light-black, 0.3);
+    }
+
+    &:hover {
+      background-color: $light-grey;
+
+      &::placeholder {
+        color: rgba($light-black, 0.5);
+      }
+    }
+
+    &:focus {
+      color: $white;
+
+      background-color: transparent;
+      box-shadow: 0 0 0 4px $white inset;
+      outline: none;
+    }
+
+    &:invalid {
+      color: #ff0000;
+
+      background-color: #ffefef;
+      box-shadow: none;
+    }
   }
 
   &--plan {

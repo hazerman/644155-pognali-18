@@ -39,6 +39,12 @@
 
   &--color--light {
     color: $yellow;
+
+    .contacts__mode {
+      @media (min-width: $desktop-width) {
+        display: block;
+      }
+    }
   }
 
   &--phone,

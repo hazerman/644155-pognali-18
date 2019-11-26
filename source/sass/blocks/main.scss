@@ -113,6 +113,16 @@
   @include rounding-bottom(30px, 60px, 60px);
 }
 
+.main__feedback {
+  position: relative;
+  top: -60px;
+  z-index: 6;
+
+  margin-bottom: -60px;
+
+  @include rounding-bottom(30px, 60px, 60px);
+}
+
 .main__text-wrapper {
   @media (min-width: $desktop-width) {
     width: 430px;
