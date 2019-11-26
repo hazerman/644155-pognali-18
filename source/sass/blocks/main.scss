@@ -123,6 +123,22 @@
   @include rounding-bottom(30px, 60px, 60px);
 }
 
+.main__location-wrapper {
+  position: relative;
+  top: -60px;
+  z-index: 5;
+
+  margin-bottom: -60px;
+  padding-bottom: 1px;
+}
+
+.main__location {
+  position: relative;
+  z-index: 3;
+
+  @include rounding-bottom(30px, 60px, 60px);
+}
+
 .main__text-wrapper {
   @media (min-width: $desktop-width) {
     width: 430px;
