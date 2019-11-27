@@ -69,7 +69,7 @@
 
     <main class="main main--bg--inner">
 
-      <section class="filter-country filter-country--show main__filter-country">
+      <section class="filter-country filter-country--show1 main__filter-country">
         <div class="filter-country__position">
           <div class="filter-country__container">
             <h2 class="filter-country__title">Фильтрация по странам</h2>
@@ -711,50 +711,50 @@
       </section>
 
       <div class="main__items-wrapper">
-        <section class="filters main__filters main__item main__item--bg--shine">
-          <h2 class="main__title main__title--form">Подберите идеального попутчика</h2>
+        <section class="filters main__filters">
+          <h2 class="filters__heading">Подберите идеального попутчика</h2>
           <form class="filters__form form" action="https://echo.htmlacademy.ru" method="post">
             <ul class="filters__category-list">
               <li class="filters__category-item">
                 <h3 class="filters__title">
                   <button class="filters__button-toggle" type="button">
-                    <span class="filters__button-title">Хобби</span>
-                    <span class="visually-hidden filters__title-toggle">Развернуть категорию</span>
+                    Хобби
+                    <span class="visually-hidden">Развернуть категорию</span>
                   </button>
                 </h3>
                 <ul class="filters__inputs-list filters__wrapper">
                   <li class="filters__inputs-item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="hobby-sport" id="hobby-sport" type="checkbox" checked>
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="hobby-sport" id="hobby-sport" type="checkbox" checked>
                     <label class="form__label form__label--filters" for="hobby-sport">Спортзал</label>
                   </li>
                   <li class="filters__inputs-item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="hobby-hookah" id="hobby-hookah" type="checkbox">
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="hobby-hookah" id="hobby-hookah" type="checkbox">
                     <label class="form__label form__label--filters" for="hobby-hookah">Кальян</label>
                   </li>
                   <li class="filters__inputs-item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="hobby-couch" id="hobby-couch" type="checkbox">
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="hobby-couch" id="hobby-couch" type="checkbox">
                     <label class="form__label form__label--filters" for="hobby-couch">Диван</label>
                   </li>
                 </ul>
               </li>
               <li class="filters__category-item">
                 <h3 class="filters__title">
-                  <button class="filters__button-toggle" type="button">
-                    <span class="filters__button-title">Музыка</span>
-                    <span class="visually-hidden filters__title-toggle filters__title-toggle--expand">Свернуть категорию</span>
+                  <button class="filters__button-toggle filters__button-toggle--expanded" type="button">
+                    Музыка
+                    <span class="visually-hidden">Свернуть категорию</span>
                   </button>
                 </h3>
                 <ul class="filters__inputs-list filters__wrapper filters__wrapper--show">
                   <li class="filters__inputs-item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="music-hard-rock" id="music-hard-rock" type="checkbox" checked>
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="music-hard-rock" id="music-hard-rock" type="checkbox" checked>
                     <label class="form__label form__label--filters" for="music-hard-rock">Тяжелый рок</label>
                   </li>
                   <li class="filters__inputs-item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="music-rus-rap" id="music-rus-rap" type="checkbox">
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="music-rus-rap" id="music-rus-rap" type="checkbox">
                     <label class="form__label form__label--filters" for="music-rus-rap">Русский рэп</label>
                   </li>
                   <li class="filters__inputs-item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="music-eurodance" id="music-eurodance" type="checkbox">
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="music-eurodance" id="music-eurodance" type="checkbox">
                     <label class="form__label form__label--filters" for="music-eurodance">Евроденс</label>
                   </li>
                 </ul>
@@ -762,53 +762,53 @@
               <li class="filters__category-item">
                 <h3 class="filters__title">
                   <button class="filters__button-toggle" type="button">
-                    <span class="filters__button-title">Еда</span>
-                    <span class="visually-hidden filters__title-toggle">Развернуть категорию</span>
+                    Еда
+                    <span class="visually-hidden">Развернуть категорию</span>
                   </button>
                 </h3>
                 <ul class="filters__inputs-list filters__wrapper">
                   <li class="filters__inputs-item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="food-meat" id="food-meat" type="checkbox" checked>
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="food-meat" id="food-meat" type="checkbox" checked>
                     <label class="form__label form__label--filters" for="food-meat">Мясоед</label>
                   </li>
                   <li class="filters__inputs-item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="food-pn" id="food-pn" type="checkbox">
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="food-pn" id="food-pn" type="checkbox">
                     <label class="form__label form__label--filters" for="food-pn">Сидит на ПП</label>
                   </li>
                   <li class="filters__inputs-item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="food-veg" id="food-veg" type="checkbox">
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="food-veg" id="food-veg" type="checkbox">
                     <label class="form__label form__label--filters" for="food-veg">Веган-сыроед</label>
                   </li>
                 </ul>
               </li>
               <li class="filters__category-item">
                 <h3 class="filters__title">
-                  <button class="filters__button-toggle" type="button">
-                    <span class="filters__button-title">Транспорт</span>
-                    <span class="visually-hidden filters__title-toggle filters__title-toggle--expand">Свернуть категорию</span>
+                  <button class="filters__button-toggle filters__button-toggle--expanded" type="button">
+                    Транспорт
+                    <span class="visually-hidden">Свернуть категорию</span>
                   </button>
                 </h3>
                 <ul class="filters__inputs-list filters__wrapper filters__wrapper--show transport-whish-list">
                   <li class="filters__inputs-item transport-whish-list__item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="travel-by-air" id="travel-by-air" type="checkbox" checked>
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="travel-by-air" id="travel-by-air" type="checkbox" checked>
                     <label class="form__label form__label--filters" for="travel-by-air">
                       <img class="transport-whish-list__img" src="#" alt="На самолёте">
                     </label>
                   </li>
                   <li class="filters__inputs-item transport-whish-list__item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="travel-by-bus" id="travel-by-bus" type="checkbox" checked>
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="travel-by-bus" id="travel-by-bus" type="checkbox" checked>
                     <label class="form__label form__label--filters" for="travel-by-bus">
                       <img class="transport-whish-list__img" src="#" alt="На автобусе">
                     </label>
                   </li>
                   <li class="filters__inputs-item transport-whish-list__item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="travel-by-bike" id="travel-by-bike" type="checkbox">
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="travel-by-bike" id="travel-by-bike" type="checkbox">
                     <label class="form__label form__label--filters" for="travel-by-bike">
                       <img class="transport-whish-list__img" src="#" alt="На велосипеде">
                     </label>
                   </li>
                   <li class="filters__inputs-item transport-whish-list__item">
-                    <input class="form__input form__input--filters form__input--type--checkbox" name="travel-by-foot" id="travel-by-foot" type="checkbox" checked>
+                    <input class="form__input form__input--type--checkbox visually-hidden" name="travel-by-foot" id="travel-by-foot" type="checkbox" checked>
                     <label class="form__label form__label--filters" for="travel-by-foot">
                       <img class="transport-whish-list__img" src="#" alt="Пешком">
                     </label>
@@ -817,14 +817,16 @@
               </li>
               <li class="filters__category-item">
                 <h3 class="filters__title">
-                  <button class="filters__button-toggle" type="button">
-                    <span class="filters__button-title">Левел</span>
-                    <span class="visually-hidden filters__title-toggle filters__title-toggle--expand">Свернуть категорию</span>
+                  <button class="filters__button-toggle filters__button-toggle--expanded" type="button">
+                    Левел
+                    <span class="visually-hidden">Свернуть категорию</span>
                   </button>
                 </h3>
                 <div class="filters__inputs-range filters__wrapper filters__wrapper--show">
-                  <input class="form__input form__input--filters form__input--type--text" type="text" name="min-level" id="min-level" value="30">
-                  <input class="form__input form__input--filters form__input--type--text" type="text" name="max-level" id="max-level" value="100">
+                  <div class="filters__inputs-wrapper">
+                    <input class="form__input form__input--filters form__input--type--text" type="text" name="min-level" id="min-level" value="30">
+                    <input class="form__input form__input--filters form__input--type--text" type="text" name="max-level" id="max-level" value="100">
+                  </div>
                   <div class="filters__range-wrapper">
                     <button class="filters__button-range" type="button">
                       <span class="visually-hidden">Меньшее значение</span>

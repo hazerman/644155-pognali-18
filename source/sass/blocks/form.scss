@@ -3,13 +3,15 @@
   &--children {
     @include font-size-height(15px, 15px);
     color: $light-black;
+
+    @media (min-width: $tablet-width) {
+      @include font-size-height(20px, 20px);
+    }
   }
 
   &--children {
     @media (min-width: $tablet-width) {
       font-weight: 500;
-
-      @include font-size-height(20px, 20px);
       color: $link-color;
       text-transform: uppercase;
     }
@@ -111,6 +113,48 @@
 
     @media (min-width: $desktop-width) {
       flex-grow: 0;
+    }
+  }
+
+  &--filters {
+    width: 50%;
+    padding: 10px 7px 8px 7px;
+
+    text-align: center;
+
+    border: 1px solid $input-border-color;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 13px;
+      padding-bottom: 10px;
+    }
+
+    &:hover {
+      border-color: #959bb2;
+    }
+
+    &:focus {
+      border-color: $night-blue;
+      outline: none;
+    }
+
+    &:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+
+  &--type--text {
+    @include link-style($link-color, 15px, 15px);
+    font-weight: 500;
+
+    @media (min-width: $tablet-width) {
+      @include font-size-height(20px, 20px);
     }
   }
 }
