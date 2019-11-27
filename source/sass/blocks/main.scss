@@ -187,6 +187,18 @@
   }
 }
 
+.main__profile {
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
+  }
+}
+
 .main__plan {
   border-top-left-radius: 29px;
   border-top-right-radius: 29px;

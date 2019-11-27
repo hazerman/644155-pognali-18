@@ -6,9 +6,9 @@
     <title>HTML Academy: Погнали | Направления</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="body body--bg--inner">
 
-    <header class="main-header main-header--inner main-header--nojs">
+    <header class="main-header main-header--inner main-header--nojs main-header--norel">
       <div class="main-header__container">
         <a class="site-logo main-header__site-logo" href="index.html">
           <img class="site-logo__img" src="#" alt="Логотип Погнали">
@@ -66,41 +66,43 @@
       </div>
     </header>
 
-    <main class="main main--bg--inner">
+    <main class="main">
 
-      <section class="companions-list">
-        <div class="w-container">
+      <section class="profile main__profile">
+        <div class="profile__container">
           <h2 class="visually-hidden">Ваш профиль</h2>
-          <div class="companions-list__item companions-list__item--profile">
-            <div class="level level--style--profile companions-list__level">
-              <span class="level__number level__number--sub">80</span>
-            </div>
-            <div class="companions-list__avatar-wrapper">
-              <img class="companions-list__avatar" src="#" alt="Петя Демин">
-            </div>
-            <button class="button button--border--full-rounded button--theme--pale" type="button">Сменить фото</button>
-            <h3 class="companions-list__title companions-list__title--profile">Тэги</h3>
-            <textarea class="companions-list__hashtags">#бургер #бар #футбол #концерт #крафт</textarea>
-            <h3 class="companions-list__title companions-list__title--profile">Транспорт</h3>
-            <ul class="transport-whish-list companions-list__transport-whish-list">
-              <li class="transport-whish-list__item transport-whish-list__item--active">
+          <div class="level level--style--profile profile__level">
+            <span class="level__number level__number--sub">80</span>
+          </div>
+          <div class="profile__avatar-wrapper">
+            <img class="profile__avatar" src="#" alt="Петя Демин">
+          </div>
+          <button class="profile__button button button--border--full-rounded button--theme--pale" type="button"><span>Сменить </span>фото</button>
+          <div class="profile__wrapper profile__wrapper--tags">
+            <h3 class="profile__title">Тэги</h3>
+            <textarea class="profile__hashtags">#бургер #бар #футбол #концерт #крафт</textarea>
+          </div>
+          <div class="profile__wrapper profile__wrapper--transport">
+            <h3 class="profile__title">Транспорт</h3>
+            <ul class="transport-whish-list profile__transport-whish-list">
+              <li class="transport-whish-list__item">
                 <button class="transport-whish-list__button-toggle" type="button">
-                  <img class="transport-whish-list__img" src="#" alt="На самолёте">
-                </button>
-              </li>
-              <li class="transport-whish-list__item transport-whish-list__item--active">
-                <button class="transport-whish-list__button-toggle" type="button">
-                  <img class="transport-whish-list__img" src="#" alt="На автобусе">
+                  <span class="visually-hidden">Авиаперелет</span>
                 </button>
               </li>
               <li class="transport-whish-list__item">
                 <button class="transport-whish-list__button-toggle" type="button">
-                  <img class="transport-whish-list__img" src="#" alt="На велосипеде">
+                  <span class="visually-hidden">Автотранспорт</span>
                 </button>
               </li>
-              <li class="transport-whish-list__item transport-whish-list__item--active">
+              <li class="transport-whish-list__item">
                 <button class="transport-whish-list__button-toggle" type="button">
-                  <img class="transport-whish-list__img" src="#" alt="Пешком">
+                  <span class="visually-hidden">Велосипед</span>
+                </button>
+              </li>
+              <li class="transport-whish-list__item">
+                <button class="transport-whish-list__button-toggle" type="button">
+                  <span class="visually-hidden">Пешком</span>
                 </button>
               </li>
             </ul>

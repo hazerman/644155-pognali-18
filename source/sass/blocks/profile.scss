@@ -1,0 +1,176 @@
+.profile {
+  color: $link-color;
+
+  background-color: inherit;
+}
+
+.profile__container {
+  position: relative;
+
+  @include container(35, 35, 64, 0);
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 23px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    justify-content: flex-end;
+  }
+}
+
+.profile__level {
+  margin-left: 20px;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    order: -2;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: -147px;
+    right: 390px;
+  }
+}
+
+.profile__avatar-wrapper {
+  @include circle(98px);
+  margin-right: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+    @include square(94px);
+    border-radius: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: -190px;
+    right: 155px;
+
+    @include square(190px);
+  }
+}
+
+.profile__button {
+  width: 100%;
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 52px;
+    margin-bottom: 51px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+
+    font-weight: 500;
+
+    border-radius: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 190px;
+    margin-top: 0;
+    margin-right: 95px;
+    margin-bottom: 26px;
+    margin-left: 900px;
+    padding-top: 9px;
+    padding-bottom: 7px;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  span {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.profile__wrapper {
+  position: relative;
+
+  width: 100%;
+
+  &--tags {
+    margin-bottom: 25px;
+
+    @media (min-width: $desktop-width) {
+      width: 730px;
+      margin-bottom: 0;
+    }
+  }
+
+  &--transport {
+    @media (min-width: $tablet-width) {
+      order: -1;
+      width: 308px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 0;
+      width: 385px;
+      margin-right: 0;
+    }
+  }
+}
+
+.profile__title {
+  position: absolute;
+  top: -7px;
+  left: 50%;
+
+  @include reset-m-p;
+  @include padding-center(17px);
+  @include font-size-height(16px, 18px);
+  text-transform: uppercase;
+
+  background-color: $light-grey;
+
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    top: auto;
+    bottom: -9px;
+
+    @include font-size-height(20px, 20px);
+    font-weight: 500;
+  }
+}
+
+.profile__hashtags {
+  width: 100%;
+  padding: 25px;
+
+  @include font-size-height(16px, 22px);
+  color: $light-black;
+
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid $input-border-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 37px;
+    height: 100px;
+    @include font-size-height(20px, 24px);
+  }
+}
+
+.profile__transport-whish-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+
+  border-radius: 10px;
+  border: 1px solid $input-border-color;
+}
