@@ -14,4 +14,8 @@
   @media (min-width: $tablet-width) {
     @include circle(60px);
   }
+
+  &--bg--footer {
+    background-color: $yellow;
+  }
 }
