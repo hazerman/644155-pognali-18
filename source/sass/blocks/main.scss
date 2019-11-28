@@ -4,36 +4,6 @@
   }
 }
 
-.main__item {
-  padding-top: 96px;
-  padding-bottom: 30px;
-
-  &--bg--dark {
-    background-color: $night-blue;
-  }
-
-  &--bg--not-so-dark {
-    background-color: $dark-blue;
-  }
-
-  &--bg--light {
-    background-color: $light-grey;
-  }
-
-  &--bg--shine {
-    background-color: $yellow;
-  }
-
-  &--align--center {
-    text-align: center;
-  }
-
-  &--rounded {
-    border-bottom-left-radius: 29px;
-    border-bottom-right-radius: 29px;
-  }
-}
-
 .main__index-header {
   position: relative;
   z-index: 11;
@@ -162,31 +132,6 @@
   }
 }
 
-.main__title {
-  @include reset-m-p;
-  @include padding-center(24px);
-  margin-bottom: 23px;
-
-  @include font-size-height(24px, 24px);
-  color: $dark-orange;
-
-  @media (min-width: $tablet-width) {
-    @include padding-center(0);
-    @include font-size-height(45px, 45px);
-    margin-bottom: 43px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 61px;
-  }
-
-  &--form {
-    @include padding-center(0);
-    @include font-size-height(22.5px, 22.5px);
-    color: $link-color;
-  }
-}
-
 .main__profile {
   margin-bottom: 33px;
 
@@ -209,57 +154,6 @@
   }
 }
 
-.main__description {
-  @include reset-m-p;
-  @include padding-center(24px);
-  margin-bottom: 25px;
-
-  font-weight: 300;
-
-  @include font-size-height(16px, 22px);
-
-  @media (min-width: $tablet-width) {
-    width: 300px;
-
-    @include padding-center(0);
-    margin-bottom: 38px;
-
-    @include font-size-height(28px, 33px);
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 620px;
-    margin-bottom: 44px;
-  }
-
-  &--contrast--dark {
-    color: $white;
-  }
-
-  &--contrast--light {
-    color: $light-black;
-  }
-
-  &--bold {
-    font-weight: 700;
-
-    @media (min-width: $tablet-width) {
-      @include font-size-height(21px, 25px);
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 415px;
-      margin-bottom: 86px;
-    }
-  }
-
-  &--full {
-    @media (min-width: $desktop-width) {
-      width: 100%;
-    }
-  }
-}
-
 .main__filter-country {
   position: relative;
   top: -60px;
@@ -272,11 +166,5 @@
 
   @media (min-width: $tablet-width) {
     min-height: 190px;
-  }
-}
-
-.main__item-button {
-  @media (min-width: $desktop-width) {
-    order: 20;
   }
 }
