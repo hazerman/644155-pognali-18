@@ -662,6 +662,40 @@
       background-color: $light-grey;
     }
   }
+
+  &--show {
+    color: $white;
+
+    background-color: $link-color;
+
+    &::after {
+      @media (max-width: $tablet-width - 1) {
+        display: none;
+      }
+    }
+
+    .plan__country-action {
+      &--unfold {
+        background-color: transparent;
+        box-shadow: none;
+
+        &::before,
+        &::after {
+          top: 47%;
+          width: 13px;
+          transform-origin: center center;
+        }
+
+        &::after {
+          left: 0;
+        }
+      }
+    }
+
+    .plan__filter-country {
+      display: block;
+    }
+  }
 }
 
 .plan__country-action {
@@ -776,7 +810,48 @@
 }
 
 .plan__filter-country {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+
   display: none;
+
+  background-color: $white;
+  border: 1px solid $input-border-color;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 20px 50px 0 rgba($link-color, 0.1);
+
+  @media (min-width: $tablet-width) {
+    width: 575px;
+    padding: 34px 27px 96px 27px;
+
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding-bottom: 19px;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      @include pseudo(absolute);
+      top: 0;
+      left: 367px;
+      bottom: 0;
+
+      width: 1px;
+
+      background-color: $input-border-color;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 489px;
+    }
+  }
 }
 
 .plan__steps-wrapper {

@@ -39,6 +39,87 @@
       display: block;
     }
   }
+
+  &--plan {
+    .filter-country__country-letter-list {
+      @include reset-m-p;
+      margin-bottom: 270px;
+
+      @media (min-width: $tablet-width) {
+        width: 262px;
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 390px;
+      }
+    }
+
+    .filter-country__item-letter {
+      @media (min-width: $tablet-width) {
+        height: 70px;
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        flex-basis: auto;
+        width: 60px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .filter-country__link-letter {
+      @media (min-width: $tablet-width) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        @include font-size-height(20px, 20px);
+        font-weight: 500;
+        color: $link-color;
+
+        border: 1px solid $input-border-color;
+      }
+
+      @media (min-width: $desktop-width) {
+        border-radius: 3px;
+      }
+
+      &--current {
+        color: $link-color;
+
+        background-color: $light-grey;
+        border: 1px solid $input-border-color;
+
+        @media (min-width: $tablet-width) {
+          color: $white;
+
+          background-color: $link-color;
+        }
+      }
+    }
+
+    .filter-country__country-name-list {
+      @media (min-width: $tablet-width) {
+        left: 370px;
+      }
+
+      @media (min-width: $desktop-width) {
+        position: absolute;
+        top: 0;
+        left: 486px;
+
+        padding-top: 0;
+      }
+    }
+
+    .filter-country__link-name {
+      text-transform: none;
+    }
+  }
 }
 
 .filter-country__position {
@@ -250,7 +331,7 @@
   text-align: center;
 
   background-color: $white;
-  border: 1px solid #cbced9;
+  border: 1px solid $input-border-color;
 
   @media (min-width: $tablet-width) {
     display: inline;
@@ -283,6 +364,10 @@
 
       background-color: transparent;
     }
+
+    + .filter-country__country-name-list {
+      display: block;
+    }
   }
 }
 
@@ -303,10 +388,6 @@
 
     display: block;
     padding-top: 45px;
-  }
-
-  &--show {
-    display: block;
   }
 }
 
