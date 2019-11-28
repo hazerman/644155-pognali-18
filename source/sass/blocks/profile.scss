@@ -45,6 +45,7 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 0;
+
     @include square(94px);
     border-radius: 5px;
   }
@@ -160,6 +161,7 @@
   @media (min-width: $tablet-width) {
     padding: 37px;
     height: 100px;
+
     @include font-size-height(20px, 24px);
   }
 }

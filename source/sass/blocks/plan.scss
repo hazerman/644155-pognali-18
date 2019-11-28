@@ -301,6 +301,7 @@
     &::after {
       @include pseudo(absolute, 49%);
       left: 34%;
+
       @include rectangle(14px, 2px);
 
       background-color: #cfcfcf;
@@ -342,6 +343,7 @@
     &::after {
       @include pseudo(absolute, 43%);
       left: 3px;
+
       @include rectangle(12px, 2px);
 
       background-color: #b2b2b2;
@@ -490,6 +492,7 @@
 
 .plan__countries-wrapper {
   position: relative;
+
   @media (min-width: $tablet-width) {
     padding-top: 41px;
     margin-bottom: 49px;
@@ -782,7 +785,7 @@
   }
 
   &::before {
-    transform: rotate(-45deg)
+    transform: rotate(-45deg);
   }
 
   &::after {
