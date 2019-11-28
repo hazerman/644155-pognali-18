@@ -200,8 +200,13 @@
 }
 
 .main__plan {
-  border-top-left-radius: 29px;
-  border-top-right-radius: 29px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  @media (min-width: $desktop-width) {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
 }
 
 .main__description {
