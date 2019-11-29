@@ -1,30 +1,46 @@
 .main-footer {
-  padding-top: 38px;
-  padding-bottom: 24px;
-
-  border-top-right-radius: 28px;
-  border-top-left-radius: 28px;
-
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    padding-top: 48px;
-    padding-bottom: 46px;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
   }
 
   &--pos {
-    margin-top: -28px;
+    position: relative;
+    z-index: 20;
+    top: -30px;
+
+    margin-bottom: -30px;
+
+    @media (min-width: $tablet-width) {
+      top: -60px;
+
+      margin-bottom: -60px;
+    }
+  }
+
+  &--norel {
+    margin-top: -60px;
   }
 }
 
-.main-footer__w-container {
+.main-footer__container {
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  @include container;
+  padding-top: 38px;
+  padding-bottom: 14px;
+
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 48px;
+    padding-bottom: 46px;
   }
 }
 

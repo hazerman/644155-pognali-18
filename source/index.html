@@ -279,19 +279,41 @@
           </ol>
           <a class="link link--theme--dark price__link-show" href="#">Показать тарифы для бизнеса</a>
         </div>
+        <section class="popup price__popup price--theme--business">
+          <h2 class="price__heading price__heading--popup">Бизнес-тарифы</h2>
+          <ul class="price__list price__list--popup">
+            <li class="price__item">
+              <p class="price__service">Реклама у блоггера</p>
+              300 000 руб./пост
+            </li>
+            <li class="price__item">
+              <p class="price__service">Накрутка подписчиков</p>
+              от 1 руб./шт.
+            </li>
+            <li class="price__item">
+              <p class="price__service">Лайки от ботов</p>
+              от 20 коп./лайк
+            </li>
+            <li class="price__item">
+              <p class="price__service">Ваш продакт-плейсмент</p>
+              Индивидуально
+            </li>
+          </ul>
+          <button class="price__close-button" type="button">Закрыть окно</button>
+        </section>
       </section>
 
-      <section class="feedback main__feedback main__item main__item--rounded main__item--bg--not-so-dark main__item--align--center">
-        <div class="w-container feedback__w-container">
-          <h2 class="main__title">Заинтересовались?</h2>
-          <p class="feedback__description main__description main__description--contrast--dark">Зарегистрируйтесь, это&nbsp;быстро&nbsp;и бесплатно!<br>Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь.</a></p>
+      <section class="feedback main__feedback">
+        <div class="feedback__container">
+          <h2 class="feedback__heading">Заинтересовались?</h2>
+          <p class="feedback__description">Зарегистрируйтесь, это&nbsp;быстро&nbsp;и бесплатно!<br>Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь.</a></p>
           <form class="form feedback__form" action="https://echo.htmlacademy.ru" method="post">
             <input class="form__input form__input--type--email" type="email" name="feedback-email" id="feedback-email" placeholder="E-mail">
-            <button class="button button--theme--light button--border--lightly-rounded button--arrow" type="submit">
-              <span class="visually-hidden">Отправить</span>
+            <button class="feedback__button button button--arrow" type="submit">
+              Регистрация
             </button>
           </form>
-          <p class="feedback__description main__description main__description--contrast--dark">Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!</p>
+          <p class="feedback__description feedback__description--sub">Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!</p>
           <ul class="contacts feedback__contacts">
             <li class="contacts__item">
               <a class="contacts__link contacts__link--color--light" href="#">
@@ -307,21 +329,22 @@
         </div>
       </section>
 
-      <div class="location">
-        <div class="main__location main__item main__item--rounded main__item--bg--shine">
-          <div class="w-container w-container--plus-padding location__w-container">
+      <div class="main__location-wrapper">
+        <div class="location main__location">
+          <div class="location__container">
             <address class="location__address">ул. Большая Конюшенная, 19/8</address>
-            <a class="location__button button button--lowercase button--theme--location button--border--lightly-rounded button--arrow" href="">Проложить маршрут</a>
+            <a class="location__button button button--arrow" href="">Проложить маршрут</a>
           </div>
         </div>
         <div class="location__map-wrapper">
-          <img class="location__map-img" src="#" alt="ул. Большая Конюшенная, 19/8">
+          <img class="location__map-img" src="img/map-mobile.png" width="320" alt="ул. Большая Конюшенная, 19/8">
+          <iframe class="location__map-interactive" src="https://yandex.ru/map-widget/v1/-/CGXtRQKd" width="320" height="375"></iframe>
         </div>
       </div>
     </main>
 
     <footer class="main-footer main-footer--pos">
-      <div class="w-container main-footer__w-container">
+      <div class="main-footer__container">
         <a class="site-logo main-footer__site-logo">
           <img class="site-logo__img" src="#" alt="Логотип Погнали">
         </a>
@@ -351,27 +374,5 @@
       </div>
     </footer>
 
-    <section class="popup price price--theme--business">
-      <h2 class="main__title">Бизнес-тарифы</h2>
-      <ul class="price__list">
-        <li class="price__item">
-          <p class="price__service">Реклама у блоггера</p>
-          300 000 руб./пост
-        </li>
-        <li class="price__item">
-          <p class="price__service">Накрутка подписчиков</p>
-          от 1 руб./шт.
-        </li>
-        <li class="price__item">
-          <p class="price__service">Лайки от ботов</p>
-          от 20 коп./лайк
-        </li>
-        <li class="price__item">
-          <p class="price__service">Ваш продакт-плейсмент</p>
-          Индивидуально
-        </li>
-      </ul>
-      <button class="link link--theme--not-so-dark link--uppercase" type="button">Закрыть окно</button>
-    </section>
   </body>
 </html>

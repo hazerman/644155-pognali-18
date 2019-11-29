@@ -9,14 +9,18 @@
   }
 }
 
-.plan__w-container {
+.plan__container {
+  @include container(35, 35, 0, 0);
   padding-top: 29px;
-  padding-bottom: 59px;
+  padding-bottom: 105px;
 
   @media (min-width: $tablet-width) {
-    @include padding-center(75px);
     padding-top: 58px;
-    padding-bottom: 75px;
+    padding-bottom: 123px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 132px;
   }
 }
 
@@ -30,6 +34,10 @@
   @media (min-width: $tablet-width) {
     @include font-size-height(36px, 50px);
     margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 64px;
   }
 }
 
@@ -50,7 +58,6 @@
 
 .plan__item {
   padding: 25px;
-  margin-bottom: 10px;
 
   background-color: $white;
   color: $link-color;
@@ -58,6 +65,10 @@
 
   @media (min-width: $tablet-width) {
     padding: 40px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
   }
 
   &--ready {
@@ -68,12 +79,40 @@
 
     @media (min-width: $desktop-width) {
       align-items: center;
+      margin-left: 64px;
+    }
+
+    &:not(:last-child) {
+      @media (min-width: $desktop-width) {
+        margin-bottom: 15px;
+      }
     }
   }
 
   &--append {
+    @media (min-width: $tablet-width) {
+      padding-top: 49px;
+      padding-bottom: 55px;
+
+      border-radius: 30px;
+    }
+
     @media (min-width: $desktop-width) {
       @include padding-center(160px);
+      padding-top: 100px;
+      padding-bottom: 105px;
+
+      border-radius: 60px;
+    }
+
+    &:not(:last-child) {
+      @media (min-width: $tablet-width) {
+        margin-bottom: 40px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: 44px;
+      }
     }
   }
 }
@@ -201,6 +240,7 @@
 
     @media (min-width: $desktop-width) {
       width: 485px;
+      align-items: center;
     }
 
     &:first-child {
@@ -217,6 +257,7 @@
 
     @media (min-width: $desktop-width) {
       justify-content: flex-end;
+      align-self: center;
       width: 300px;
       margin-left: auto;
     }
@@ -224,9 +265,15 @@
 }
 
 .plan__count-wrapper {
+  position: relative;
+
   display: flex;
   margin-top: 8px;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 180px;
@@ -237,15 +284,100 @@
 .plan__button {
   &--minus,
   &--plus {
+    position: absolute;
+    top: 0;
+
+    height: 100%;
     width: 40px;
+
+    border: none;
+    background-color: transparent;
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+    }
+
+    &::before,
+    &::after {
+      @include pseudo(absolute, 49%);
+      left: 34%;
+
+      @include rectangle(14px, 2px);
+
+      background-color: #cfcfcf;
+
+      @media (min-width: $tablet-width) {
+        width: 20px;
+      }
+    }
   }
 
-  &--prev {
+  &--minus {
+    left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &--plus {
+    right: 0;
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  &--trek {
+    position: relative;
+
+    border: none;
+    background-color: transparent;
+
+    @media (min-width: $tablet-width) {
+      width: 45px;
+      height: 45px;
+    }
+
+    &::before,
+    &::after {
+      @include pseudo(absolute, 43%);
+      left: 3px;
+
+      @include rectangle(12px, 2px);
+
+      background-color: #b2b2b2;
+
+      transform-origin: top left;
+
+      @media (min-width: $tablet-width) {
+        @include rectangle(25px, 3px);
+        left: 10px;
+      }
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      width: 10px;
+
+      transform: rotate(-45deg);
+
+      @media (min-width: $tablet-width) {
+        width: 22px;
+      }
+    }
+  }
+
+  &--trek-prev {
     margin-right: auto;
   }
 
-  &--next {
+  &--trek-next {
     margin-left: auto;
+    transform: rotate(180deg);
   }
 }
 
@@ -262,6 +394,9 @@
 
   @media (min-width: $desktop-width) {
     order: 1;
+    margin-left: auto;
+
+    color: $link-color;
   }
 }
 
@@ -269,6 +404,7 @@
   display: flex;
   padding-top: 12px;
   padding-bottom: 10px;
+  margin-bottom: 20px;
 
   font-weight: 700;
 
@@ -279,12 +415,27 @@
 
   @media (min-width: $tablet-width) {
     @include font-size-height(36px, 36px);
+    padding-top: 29px;
+    padding-bottom: 22px;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 
 .plan__calendar-days {
   @include font-size-height(14px, 18px);
   margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .plan__list-calendar {
@@ -294,41 +445,98 @@
 }
 
 .plan__item-weekdays {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-basis: (100% / 7);
+  height: 30px;
   color: $light-black;
 
   @media (min-width: $tablet-width) {
     @include font-size-height(18px, 30px);
+    height: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 55px;
+    padding: 15px;
   }
 
   &--ends {
     color: #ff5c23;
   }
+
+  span {
+    @media (max-width: $tablet-width - 1) {
+      display: none;
+    }
+  }
 }
 
 .plan__item-days {
   flex-basis: (100% / 7);
+  height: 30px;
 
   @media (min-width: $tablet-width) {
     @include font-size-height(20px, 20px);
     font-weight: 500;
+    height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 72px;
   }
 }
 
 .plan__countries-wrapper {
+  position: relative;
+
   @media (min-width: $tablet-width) {
     padding-top: 41px;
+    margin-bottom: 49px;
 
     border-top: 1px solid #d6d9e6;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      @include pseudo(absolute);
+      top: 0;
+      right: 142px;
+
+      width: 1px;
+      height: 110%;
+
+      background-color: #d6d9e6;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 225px;
+      height: 120%;
+    }
   }
 }
 
 .plan__country-wrapper {
+  position: relative;
+
   display: flex;
   margin-bottom: 22px;
 
-  &--add {
-    flex-wrap: wrap;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
+
+  &--delete {
+    .plan__delete-button {
+      display: block;
+    }
   }
 }
 
@@ -336,41 +544,259 @@
   @media (min-width: $tablet-width) {
     padding-top: 26px;
     padding-right: 28px;
+    margin-bottom: 47px;
 
     border-top: 1px solid #d6d9e6;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 80px;
     padding-right: 110px;
+    margin-bottom: 56px;
   }
 }
 
 .plan__action {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+  }
+
+  &:not(:last-child) {
+    &::before {
+      @include pseudo(absolute);
+      top: 7px;
+      bottom: -37px;
+      left: -11px;
+
+      width: 2px;
+
+      background-color: $link-color;
+
+      @media (min-width: $tablet-width) {
+        left: auto;
+        right: -28px;
+        bottom: -45px;
+        width: 3px;
+      }
+
+      @media (min-width: $desktop-width) {
+        right: 103px;
+        bottom: -58px;
+      }
+    }
+  }
 }
 
-.plan__country-name {
+.plan__country-button {
+  position: relative;
+
+  flex-grow: 1;
   padding: 13px 11px;
+  padding-right: 5px;
   font-weight: 500;
 
   @include font-size-height(14px, 18px);
   text-transform: uppercase;
+  white-space: nowrap;
+  color: $link-color;
+  text-align: left;
 
+  background-color: transparent;
   border: 1px solid $input-border-color;
   border-radius: 3px;
 
   @media (min-width: $tablet-width) {
+    flex-grow: 0;
     width: 370px;
+    padding: 25px 24px 23px 24px;
+
+    @include font-size-height(20px, 20px);
   }
 
   @media (min-width: $desktop-width) {
     width: 730px;
   }
+
+  &::after {
+    @include pseudo(absolute);
+    top: 50%;
+    left: 162px;
+
+    @include circle(8px);
+
+    background-color: $white;
+    border: 1px solid #c2c4c9;
+
+    transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      left: auto;
+      right: -34px;
+
+      @include square(15px);
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -52px;
+    }
+  }
+
+  &--checked {
+    &::after {
+      background-color: $link-color;
+      border: none;
+    }
+  }
+
+  &--choose {
+    background-color: $light-grey;
+    border: none;
+
+    &::after {
+      background-color: $light-grey;
+    }
+  }
+
+  &--show {
+    color: $white;
+
+    background-color: $link-color;
+
+    &::after {
+      @media (max-width: $tablet-width - 1) {
+        display: none;
+      }
+    }
+
+    .plan__country-action {
+      &--unfold {
+        background-color: transparent;
+        box-shadow: none;
+
+        &::before,
+        &::after {
+          top: 47%;
+          width: 13px;
+          transform-origin: center center;
+        }
+
+        &::after {
+          left: 0;
+        }
+      }
+    }
+
+    .plan__filter-country {
+      display: block;
+    }
+  }
+}
+
+.plan__country-action {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  right: 1px;
+
+  width: 28px;
+
+  &::before,
+  &::after {
+    @include pseudo(absolute);
+    top: 46%;
+    left: 0;
+
+    background-color: #c2c4c9;
+  }
+
+  &--unfold {
+    background-color: $white;
+
+    box-shadow: -18px 0 8px 0 $white;
+
+    &::before,
+    &::after {
+      top: 40%;
+
+      @include rectangle(9px, 2px);
+    }
+
+    &::before {
+      transform-origin: top left;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      left: 1px;
+
+      transform-origin: top right;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--plus {
+    &::before,
+    &::after {
+      @include rectangle(14px, 2px);
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.plan__delete-button {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+
+  display: none;
+
+  @include circle(21px);
+  background-color: $light-grey;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    top: 24px;
+
+    background-color: transparent;
+
+    transform: scale(2);
+  }
+
+  &::before,
+  &::after {
+    @include pseudo(absolute);
+    top: 49%;
+    left: 26%;
+
+    @include rectangle(11px, 1px);
+    background-color: #c2c4c9;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
 }
 
 .plan__flag-wrapper {
+  width: 53px;
+  flex-shrink: 0;
+
   border: 1px solid $input-border-color;
   border-radius: 3px;
 
@@ -387,7 +813,48 @@
 }
 
 .plan__filter-country {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+
   display: none;
+
+  background-color: $white;
+  border: 1px solid $input-border-color;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 20px 50px 0 rgba($link-color, 0.1);
+
+  @media (min-width: $tablet-width) {
+    width: 575px;
+    padding: 34px 27px 96px 27px;
+
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding-bottom: 19px;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      @include pseudo(absolute);
+      top: 0;
+      left: 367px;
+      bottom: 0;
+
+      width: 1px;
+
+      background-color: $input-border-color;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 489px;
+    }
+  }
 }
 
 .plan__steps-wrapper {
@@ -403,6 +870,20 @@
 .plan__button-step {
   width: 100%;
 
+  @media (max-width: $tablet-width - 1) {
+    padding: 5px 5px 3px 5px;
+
+    @include font-size-height(17px, 30px);
+    color: $night-blue;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 50px;
+
+    &::after {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 286px;
     margin-right: auto;
@@ -410,13 +891,29 @@
 }
 
 .plan__link-step {
+  position: relative;
+
   color: $night-blue;
 
   @include font-size-height(17px, 30px);
 
   @media (min-width: $tablet-width) {
+    padding-left: 34px;
+
     text-transform: none;
 
     @include font-size-height(24px, 24px);
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      @include pseudo(absolute);
+      top: 3px;
+      left: 0;
+
+      @include triangle-right($link-color, 10px, 14px);
+
+      transform: rotate(180deg);
+    }
   }
 }

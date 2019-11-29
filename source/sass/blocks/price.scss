@@ -28,6 +28,12 @@
     width: 100%;
     text-align: center;
   }
+
+  &--popup {
+    width: auto;
+
+    text-align: center;
+  }
 }
 
 .price__list {
@@ -38,6 +44,23 @@
   @media (min-width: $tablet-width) {
     margin-left: 90px;
     margin-bottom: 59px;
+  }
+
+  &--popup {
+    @media (min-width: $tablet-width) {
+      margin-right: 90px;
+      margin-bottom: 50px;
+    }
+
+    .price__item {
+      width: 220px;
+
+      @media (min-width: $tablet-width) {
+        width: 100%;
+
+        @include font-size-height(22px, 28px);
+      }
+    }
   }
 }
 
@@ -125,6 +148,7 @@
 
 .price__link-show {
   line-height: 16px;
+  color: $dark-blue;
 
   @include padding-center(24px);
 
@@ -142,5 +166,55 @@
 
       background-color: $blue-grey;
     }
+  }
+}
+
+.price__popup {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+
+  width: 270px;
+  padding-top: 30px;
+
+  background-color: $white;
+  border-radius: 20px;
+  overflow: hidden;
+
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    top: 61px;
+
+    width: 690px;
+    padding-top: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 160px;
+
+    width: 750px;
+  }
+}
+
+.price__close-button {
+  width: 100%;
+  padding: 19px 25px 16px 25px;
+
+  @include link-style($link-color, 16px, 24px);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  border: none;
+  background-color: #f3f4f8;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 40px;
+
+    font-size: 24px;
+    text-transform: none;
   }
 }

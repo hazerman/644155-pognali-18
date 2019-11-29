@@ -1,3 +1,9 @@
 .popup {
   display: none;
+
+  box-shadow: 0 20px 50px 0 rgba($link-color, 0.1);
+
+  &--show {
+    display: block;
+  }
 }

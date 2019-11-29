@@ -24,6 +24,10 @@
     }
   }
 
+  &--norel {
+    position: static;
+  }
+
   &--show {
     color: $night-blue;
 
