@@ -1,5 +1,15 @@
 .contacts {
   @include list;
+
+  &--header {
+    .contacts__link {
+      &::after {
+        @media (max-width: $desktop-width - 1) {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 .contacts__item {
@@ -33,12 +43,40 @@
     @include font-size-height(28px, 28px);
   }
 
+  &::after {
+    @include pseudo(absolute);
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transform: translate(-50%, -50%);
+  }
+
   &--color--dark {
     color: $dark-blue;
+
+    &:hover {
+      color: rgba($dark-blue, 0.6);
+    }
+
+    &:active {
+      color: rgba($dark-blue, 0.3);
+    }
   }
 
   &--color--light {
     color: $yellow;
+
+    &:hover {
+      color: $dark-yellow;
+    }
+
+    &:active {
+      color: rgba($dark-yellow, 0.3);
+    }
 
     .contacts__mode {
       @media (min-width: $desktop-width) {
@@ -53,6 +91,12 @@
   &--mail-header {
     &::before {
       @include pseudo(relative, 0, auto, auto, 0);
+    }
+
+    &:active {
+      &::after {
+        opacity: 0.3;
+      }
     }
   }
 
@@ -81,12 +125,46 @@
     &::before {
       background-color: $dark-orange;
     }
+
+    &::after {
+      width: 18px;
+      height: 18px;
+
+      background-image: url("../img/topmenu-phone.svg");
+    }
+
+    &:hover {
+      &::before {
+        background-color: #f26926;
+      }
+    }
   }
 
   &--mail,
   &--mail-header {
     &::before {
       background-color: $dark-yellow;
+    }
+
+    &::after {
+      width: 18px;
+      height: 14px;
+
+      background-image: url("../img/topmenu-mail.svg");
+    }
+
+    &:hover {
+      &::before {
+        background-color: $dark-orange;
+      }
+    }
+  }
+
+  &:active {
+    .contacts__mode {
+      &::after {
+        opacity: 0.3;
+      }
     }
   }
 }
@@ -115,6 +193,49 @@
       top: -22px;
 
       @include circle(68px);
+    }
+  }
+
+  &::after {
+    @include pseudo(absolute);
+    top: 37%;
+    left: 14px;
+
+    width: 18px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      top: 40%;
+      left: 21px;
+      width: 27px;
+    }
+  }
+
+  &--phone {
+    &::after {
+      height: 18px;
+
+      background-image: url("../img/contacts-phone.svg");
+
+      @media (min-width: $tablet-width) {
+        height: 27px;
+      }
+    }
+  }
+
+  &--mail {
+    &::after {
+      height: 13px;
+
+      background-image: url("../img/contacts-mail.svg");
+
+      @media (min-width: $tablet-width) {
+        height: 19px;
+      }
     }
   }
 }

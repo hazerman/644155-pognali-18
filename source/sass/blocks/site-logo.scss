@@ -1,4 +1,14 @@
 .site-logo {
+  height: 19px;
+
+  @media (min-width: $tablet-width) {
+    height: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 52px;
+  }
+
   &[href] {
     &:hover {
       opacity: 0.6;

@@ -16,7 +16,10 @@
 }
 
 .site-list__link {
+  display: block;
   font-weight: 500;
+
+  overflow: hidden;
 
   @include link-style($dark-blue, 30px, 36px);
   text-transform: uppercase;
@@ -26,6 +29,26 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include link-style($white, 20px, 30px);
+    @include font-size-height(20px, 30px);
+    color: transparent;
+    text-shadow: 0 0 0 $white, 0 40px 0 $yellow;
+
+    transition: text-shadow 300ms;
+  }
+
+  &[href] {
+    &:hover {
+      @media (max-width: $desktop-width - 1) {
+        opacity: 0.6;
+      }
+
+      @media (min-width: $desktop-width) {
+        text-shadow: 0 -40px 0 $white, 0 0 0 $yellow;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

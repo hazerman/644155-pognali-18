@@ -76,7 +76,7 @@
     .main-header__button-toggle {
       &::before,
       &::after {
-        @include pseudo(absolute, 11px, auto, auto, 0);
+        @include pseudo(absolute, 10px, auto, auto, 0);
         @include rectangle(25px, 3px);
 
         background-color: #cccccc;
@@ -149,7 +149,15 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 27px;
+  padding-top: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 47px;
+  }
 }
 
 .main-header__site-logo {
@@ -177,7 +185,7 @@
   }
 
   &::before {
-    @include pseudo(absolute, 0, auto, auto, 0);
+    @include pseudo(absolute, 7px, auto, auto, 0);
     @include rectangle(25px, 3px);
 
     background-color: $white;
@@ -199,6 +207,7 @@
 
   @media (min-width: $tablet-width) {
     display: inline-block;
+    width: 188px;
     margin-left: auto;
 
     font-size: 20px;
