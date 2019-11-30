@@ -2,25 +2,83 @@
   color: $white;
 
   background-color: $night-blue;
+  background-image: url("../../img/globe-back-mobile@1x.jpg");
+  background-size: 320px 569px;
+  background-repeat: no-repeat;
+  background-position: center bottom 295px;
+
+  @media (min-resolution: $retina) {
+    background-image: url("../../img/globe-back-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/globe-back-tablet@1x.jpg");
+    background-size: 1479px 612px;
+    background-position: center bottom;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../../img/globe-back-tablet@2x.jpg");
+    }
+  }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     background-color: #182044;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../img/globe-back-desktop@1x.jpg");
+    background-size: 1800px 750px;
+    background-position: center bottom;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../../img/globe-back-desktop@2x.jpg");
+    }
   }
 }
 
 .index-header__container {
   @include container;
-  padding-top: 50px;
+  padding-top: 35px;
+
+  background-image: url("../../img/traveller-illustration-mobile@1x.png");
+  background-size: 192px 255px;
+  background-repeat: no-repeat;
+  background-position: right 49px bottom 295px;
+
+  @media (min-resolution: $retina) {
+    background-image: url("../../img/traveller-illustration-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 71px;
+
+    background-image: url("../../img/traveller-illustration-tablet@1x.png");
+    background-size: 372px 451px;
+    background-position: right 112px bottom 142px;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../../img/traveller-illustration-tablet@2x.png");
+    }
+  }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 110px;
+
+    background-image: url("../../img/traveller-illustration-desktop@1x.png");
+    background-size: 431px 640px;
+    background-position: right 405px bottom;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../../img/traveller-illustration-desktop@2x.png");
+    }
   }
 }
 
 .index-header__tagline {
   @include reset-m-p;
-  margin-bottom: 247px;
+  margin-bottom: 244px;
 
   @include padding-center(16px);
   padding-top: 10px;
@@ -33,9 +91,8 @@
   @media (min-width: $tablet-width) {
     @include padding-center(145px);
     margin-right: auto;
-    margin-bottom: 96px;
+    margin-bottom: 87px;
     padding-top: 0;
-
 
     @include font-size-height(60px, 70px);
   }
@@ -43,7 +100,7 @@
   @media (min-width: $desktop-width) {
     @include padding-center(0);
     width: 430px;
-    margin-bottom: 96px;
+    margin-bottom: 101px;
     margin-left: 70px;
 
     text-align: left;
@@ -52,7 +109,7 @@
 
 .index-header__wrapper {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 4px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -71,14 +128,12 @@
 
 .index-header__quote {
   @include reset-m-p;
-  width: 155px;
-  margin-left: 23px;
 
   @include font-size-height(16px, 22px);
 
   @media (min-width: $tablet-width) {
     width: 262px;
-    margin-bottom: 213px;
+    margin-bottom: 211px;
     margin-left: 34px;
   }
 
@@ -86,27 +141,30 @@
     margin-right: 25px;
     margin-bottom: 0;
     margin-left: 0;
+    padding-top: 12px;
   }
 }
 
 .index-header__review {
   display: block;
-  margin-bottom: 20px;
 
   @include index-description;
+  margin-bottom: 19px;
+  padding-right: 77px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 52px;
+    margin-bottom: 43px;
   }
 }
 
 .index-header__author {
   display: block;
-  margin-bottom: 33px;
 
   font-style: normal;
 
   @include index-description-bold;
+  padding-right: 63px;
+  margin-bottom: 29px;
 }
 
 .index-header__scheme-list {
@@ -117,6 +175,8 @@
   margin-top: -230px;
   border-radius: 10px;
   overflow: hidden;
+
+  counter-reset: sheme;
 
   @media (min-width: $tablet-width) {
     top: 138px;
@@ -139,7 +199,7 @@
 .index-header__scheme-item {
   position: relative;
 
-  padding: 23px 102px 34px 25px;
+  padding: 23px 102px 37px 25px;
 
   font-weight: 700;
   color: $night-blue;
@@ -147,8 +207,39 @@
   @include font-size-height(18px, 18px);
   border-radius: 10px;
 
+  &::after {
+    counter-increment: sheme;
+    content: counter(sheme);
+
+    position: absolute;
+    top: 22px;
+    right: 21px;
+
+    color: $white;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+      top: auto;
+      right: auto;
+
+      display: block;
+      margin-top: 9px;
+
+      @include font-size-height(30px, 30px);
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 20px;
+      right: 68px;
+
+      @include font-size-height(24px, 24px);
+    }
+  }
+
   @media (min-width: $tablet-width) {
     flex-basis: 50%;
+    padding: 31px 102px 22px 33px;
 
     @include font-size-height(24px, 24px);
     border-radius: 0;
@@ -157,6 +248,8 @@
   @media (min-width: $desktop-width) {
     flex-basis: 25%;
     flex-grow: 1;
+    padding-top: 29px;
+    padding-bottom: 30px;
 
     border-radius: 10px;
   }
@@ -192,7 +285,7 @@
   }
 
   &:last-child {
-    padding-bottom: 22px;
+    padding-bottom: 21px;
 
     @media (min-width: $tablet-width) {
       border-bottom-left-radius: 20px;
