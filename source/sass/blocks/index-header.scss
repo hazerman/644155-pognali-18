@@ -2,6 +2,10 @@
   color: $white;
 
   background-color: $night-blue;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    background-color: #182044;
+  }
 }
 
 .index-header__container {

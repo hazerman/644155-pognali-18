@@ -6,6 +6,10 @@
 
   background-color: $night-blue;
 
+  @media (min-width: $tablet-width) {
+    background-color: #182044;
+  }
+
   @media (min-width: $desktop-width) {
     color: $white;
 
