@@ -11,13 +11,16 @@
 
     @media (min-width: $desktop-width) {
       flex-direction: row;
-      margin-right: 35px;
+      margin-right: 44px;
     }
 
     .transport-whish-list__item {
       @include circle(32px);
 
-      background-color: $light-grey;
+      @media (max-width: $tablet-width - 1) {
+        background-color: $light-grey;
+        background-size: auto 16px;
+      }
     }
   }
 }

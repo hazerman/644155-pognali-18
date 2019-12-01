@@ -2,11 +2,19 @@
   @include list;
 
   &--inner {
+    margin-bottom: 11px;
+
     .country-whish-list__item {
-      margin-bottom: 16px;
+      margin-bottom: 9px;
 
       @media (min-width: $tablet-width) {
         margin-bottom: 0;
+        margin-right: 28px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: 6px;
+        margin-right: 0;
       }
     }
   }
@@ -57,7 +65,9 @@
 }
 
 .country-whish-list__name {
-  padding-left: 40px;
+  position: relative;
+
+  padding-left: 45px;
 
   font-weight: 500;
 
@@ -65,7 +75,89 @@
   color: $link-color;
   text-transform: uppercase;
 
+  &::before {
+    @include pseudo(absolute);
+    top: -4px;
+    left: 5px;
+
+    @include rectangle(26px, 18px);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      left: 1px;
+
+      @include rectangle(35px, 24px);
+    }
+  }
+
   @media (min-width: $tablet-width) {
     @include font-size-height(20px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 54px;
+  }
+
+  &--sri-lanka {
+    &::before {
+      background-image: url("../../img/flag-sri-lanka.svg");
+    }
+  }
+
+  &--thailand {
+    &::before {
+      background-image: url("../../img/flag-thailand.svg");
+    }
+  }
+
+  &--seychelles {
+    &::before {
+      background-image: url("../../img/flag-seychelles.svg");
+    }
+  }
+
+  &--belgium {
+    &::before {
+      background-image: url("../../img/flag-belgium.svg");
+    }
+  }
+
+  &--czech {
+    &::before {
+      background-image: url("../../img/flag-czech.svg");
+    }
+  }
+
+  &--usa {
+    &::before {
+      background-image: url("../../img/flag-usa.svg");
+    }
+  }
+
+  &--australia {
+    &::before {
+      background-image: url("../../img/flag-australia.svg");
+    }
+  }
+
+  &--dominica {
+    &::before {
+      background-image: url("../../img/flag-dominica.svg");
+    }
+  }
+
+  &--uk {
+    &::before {
+      background-image: url("../../img/flag-united-kingdom.svg");
+    }
+  }
+
+  &--germany {
+    &::before {
+      background-image: url("../../img/flag-belgium.svg");
+    }
   }
 }

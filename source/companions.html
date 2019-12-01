@@ -858,7 +858,11 @@
 
             <li class="companions-list__item companions-list__item--inner">
               <a class="companions-list__avatar-wrapper" href="#">
-                <img class="companions-list__avatar" src="#" alt="Таня Фирсова">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                  <img class="companions-list__avatar" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
+                </picture>
               </a>
               <div class="companions-list__content-wrapper">
                 <div class="companions-list__user-info">
@@ -871,13 +875,13 @@
                   <h3 class="companions-list__title">хочет посетить:</h3>
                   <ul class="country-whish-list country-whish-list--inner companions-list__country-whish-list">
                     <li class="country-whish-list__item">
-                      <span class="country-whish-list__name">Шри-ланка</span>
+                      <span class="country-whish-list__name country-whish-list__name--sri-lanka">Шри-ланка</span>
                     </li>
                     <li class="country-whish-list__item">
-                      <span class="country-whish-list__name">Таиланд</span>
+                      <span class="country-whish-list__name country-whish-list__name--thailand">Таиланд</span>
                     </li>
                     <li class="country-whish-list__item">
-                      <span class="country-whish-list__name">Сейшелы</span>
+                      <span class="country-whish-list__name country-whish-list__name--seychelles">Сейшелы</span>
                     </li>
                   </ul>
                 </div>
@@ -885,16 +889,16 @@
                   <div class="companions-list__transport-wrapper">
                     <h3 class="companions-list__title">транспорт:</h3>
                     <ul class="transport-whish-list transport-whish-list--inner companions-list__transport-whish-list">
-                      <li class="transport-whish-list__item">
-                        <span class="visually-hidden">Автотранспорт</span>
-                      </li>
-                      <li class="transport-whish-list__item">
+                      <li class="transport-whish-list__item transport-whish-list__item--air transport-whish-list__item--active">
                         <span class="visually-hidden">Авиаперелет</span>
                       </li>
-                      <li class="transport-whish-list__item">
+                      <li class="transport-whish-list__item transport-whish-list__item--auto">
+                        <span class="visually-hidden">Автотранспорт</span>
+                      </li>
+                      <li class="transport-whish-list__item transport-whish-list__item--bike">
                         <span class="visually-hidden">Велосипед</span>
                       </li>
-                      <li class="transport-whish-list__item">
+                      <li class="transport-whish-list__item transport-whish-list__item--foot">
                         <span class="visually-hidden">Пешком</span>
                       </li>
                     </ul>
@@ -907,9 +911,9 @@
                   </div>
                 </div>
                 <div class="companions-list__action-wrapper">
-                  <a class="button button--theme--light button--border--full-rounded companions-list__action-button" href="#">Позвать</a>
+                  <a class="button button--theme--light button--border--full-rounded companions-list__action-button" href="#">Позвать!</a>
                   <div class="companions-list__actions">
-                    <button class="companions-list__fav-button" type="button">
+                    <button class="companions-list__fav-button companions-list__fav-button--active" type="button">
                       <span class="visually-hidden">Добавить/убрать из избранного</span>
                     </button>
                     <span class="companions-list__popularity">1,5 М</span>
@@ -920,7 +924,11 @@
 
             <li class="companions-list__item companions-list__item--inner">
               <a class="companions-list__avatar-wrapper" href="#">
-                <img class="companions-list__avatar" src="#" alt="Петя Демин">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                  <img class="companions-list__avatar" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
+                </picture>
               </a>
               <div class="companions-list__content-wrapper">
                 <div class="companions-list__user-info">
@@ -933,10 +941,10 @@
                   <h3 class="companions-list__title">хочет посетить:</h3>
                   <ul class="country-whish-list country-whish-list--inner companions-list__country-whish-list">
                     <li class="country-whish-list__item">
-                      <span class="country-whish-list__name">Бельгия</span>
+                      <span class="country-whish-list__name country-whish-list__name--belgium">Бельгия</span>
                     </li>
                     <li class="country-whish-list__item">
-                      <span class="country-whish-list__name">Чехия</span>
+                      <span class="country-whish-list__name country-whish-list__name--czech">Чехия</span>
                     </li>
                   </ul>
                 </div>
@@ -944,16 +952,16 @@
                   <div class="companions-list__transport-wrapper">
                     <h3 class="companions-list__title">транспорт:</h3>
                     <ul class="transport-whish-list transport-whish-list--inner companions-list__transport-whish-list">
-                      <li class="transport-whish-list__item">
-                        <span class="visually-hidden">Автотранспорт</span>
-                      </li>
-                      <li class="transport-whish-list__item">
+                      <li class="transport-whish-list__item transport-whish-list__item--air transport-whish-list__item--active">
                         <span class="visually-hidden">Авиаперелет</span>
                       </li>
-                      <li class="transport-whish-list__item">
+                      <li class="transport-whish-list__item transport-whish-list__item--auto transport-whish-list__item--active">
+                        <span class="visually-hidden">Автотранспорт</span>
+                      </li>
+                      <li class="transport-whish-list__item transport-whish-list__item--bike transport-whish-list__item--active">
                         <span class="visually-hidden">Велосипед</span>
                       </li>
-                      <li class="transport-whish-list__item">
+                      <li class="transport-whish-list__item transport-whish-list__item--foot">
                         <span class="visually-hidden">Пешком</span>
                       </li>
                     </ul>
@@ -966,7 +974,7 @@
                   </div>
                 </div>
                 <div class="companions-list__action-wrapper">
-                  <a class="button button--theme--light button--border--full-rounded companions-list__action-button" href="#">Позвать</a>
+                  <a class="button button--theme--light button--border--full-rounded companions-list__action-button" href="#">Позвать!</a>
                   <div class="companions-list__actions">
                     <button class="companions-list__fav-button" type="button">
                       <span class="visually-hidden">Добавить/убрать из избранного</span>
@@ -979,7 +987,11 @@
 
             <li class="companions-list__item companions-list__item--inner">
               <a class="companions-list__avatar-wrapper" href="#">
-                <img class="companions-list__avatar" src="#" alt="Марк Смолов">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                  <img class="companions-list__avatar" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
+                </picture>
               </a>
               <div class="companions-list__content-wrapper">
                 <div class="companions-list__user-info">
@@ -992,13 +1004,13 @@
                   <h3 class="companions-list__title">хочет посетить:</h3>
                   <ul class="country-whish-list country-whish-list--inner companions-list__country-whish-list">
                     <li class="country-whish-list__item">
-                      <span class="country-whish-list__name">США</span>
+                      <span class="country-whish-list__name country-whish-list__name--usa">США</span>
                     </li>
                     <li class="country-whish-list__item">
-                      <span class="country-whish-list__name">Австралия</span>
+                      <span class="country-whish-list__name country-whish-list__name--australia">Австралия</span>
                     </li>
                     <li class="country-whish-list__item">
-                      <span class="country-whish-list__name">Доминика</span>
+                      <span class="country-whish-list__name country-whish-list__name--dominica">Доминика</span>
                     </li>
                   </ul>
                 </div>
@@ -1006,16 +1018,16 @@
                   <div class="companions-list__transport-wrapper">
                     <h3 class="companions-list__title">транспорт:</h3>
                     <ul class="transport-whish-list transport-whish-list--inner companions-list__transport-whish-list">
-                      <li class="transport-whish-list__item">
-                        <span class="visually-hidden">Автотранспорт</span>
-                      </li>
-                      <li class="transport-whish-list__item">
+                      <li class="transport-whish-list__item transport-whish-list__item--air transport-whish-list__item--active">
                         <span class="visually-hidden">Авиаперелет</span>
                       </li>
-                      <li class="transport-whish-list__item">
+                      <li class="transport-whish-list__item transport-whish-list__item--auto transport-whish-list__item--active">
+                        <span class="visually-hidden">Автотранспорт</span>
+                      </li>
+                      <li class="transport-whish-list__item transport-whish-list__item--bike">
                         <span class="visually-hidden">Велосипед</span>
                       </li>
-                      <li class="transport-whish-list__item">
+                      <li class="transport-whish-list__item transport-whish-list__item--foot">
                         <span class="visually-hidden">Пешком</span>
                       </li>
                     </ul>
@@ -1028,7 +1040,7 @@
                   </div>
                 </div>
                 <div class="companions-list__action-wrapper">
-                  <a class="button button--theme--light button--border--full-rounded companions-list__action-button" href="#">Позвать</a>
+                  <a class="button button--theme--light button--border--full-rounded companions-list__action-button" href="#">Позвать!</a>
                   <div class="companions-list__actions">
                     <button class="companions-list__fav-button" type="button">
                       <span class="visually-hidden">Добавить/убрать из избранного</span>
@@ -1041,7 +1053,11 @@
 
             <li class="companions-list__item companions-list__item--inner">
               <a class="companions-list__avatar-wrapper" href="#">
-                <img class="companions-list__avatar" src="#" alt="Лариса Роговая">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                  <img class="companions-list__avatar" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
+                </picture>
               </a>
               <div class="companions-list__content-wrapper">
                 <div class="companions-list__user-info">
@@ -1054,10 +1070,10 @@
                   <h3 class="companions-list__title">хочет посетить:</h3>
                   <ul class="country-whish-list country-whish-list--inner companions-list__country-whish-list">
                     <li class="country-whish-list__item">
-                      <span class="country-whish-list__name">Великобритания</span>
+                      <span class="country-whish-list__name country-whish-list__name--uk">Великобритания</span>
                     </li>
                     <li class="country-whish-list__item">
-                      <span class="country-whish-list__name">Германия</span>
+                      <span class="country-whish-list__name country-whish-list__name--germany">Германия</span>
                     </li>
                   </ul>
                 </div>
@@ -1065,16 +1081,16 @@
                   <div class="companions-list__transport-wrapper">
                     <h3 class="companions-list__title">транспорт:</h3>
                     <ul class="transport-whish-list transport-whish-list--inner companions-list__transport-whish-list">
-                      <li class="transport-whish-list__item">
-                        <span class="visually-hidden">Автотранспорт</span>
-                      </li>
-                      <li class="transport-whish-list__item">
+                      <li class="transport-whish-list__item transport-whish-list__item--air transport-whish-list__item--active">
                         <span class="visually-hidden">Авиаперелет</span>
                       </li>
-                      <li class="transport-whish-list__item">
+                      <li class="transport-whish-list__item transport-whish-list__item--auto transport-whish-list__item--active">
+                        <span class="visually-hidden">Автотранспорт</span>
+                      </li>
+                      <li class="transport-whish-list__item transport-whish-list__item--bike">
                         <span class="visually-hidden">Велосипед</span>
                       </li>
-                      <li class="transport-whish-list__item">
+                      <li class="transport-whish-list__item transport-whish-list__item--foot">
                         <span class="visually-hidden">Пешком</span>
                       </li>
                     </ul>
@@ -1087,7 +1103,7 @@
                   </div>
                 </div>
                 <div class="companions-list__action-wrapper">
-                  <a class="button button--theme--light button--border--full-rounded companions-list__action-button" href="#">Позвать</a>
+                  <a class="button button--theme--light button--border--full-rounded companions-list__action-button" href="#">Позвать!</a>
                   <div class="companions-list__actions">
                     <button class="companions-list__fav-button" type="button">
                       <span class="visually-hidden">Добавить/убрать из избранного</span>
