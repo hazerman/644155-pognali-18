@@ -6,6 +6,7 @@
 
 .price__container {
   position: relative;
+
   @include container(0, 0, 70, 70);
   padding-top: 112px;
   padding-bottom: 38px;
