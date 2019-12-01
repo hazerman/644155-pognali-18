@@ -136,7 +136,7 @@
     .main-header__home-link {
       &::after {
         @media (max-width: $desktop-width - 1) {
-          background-image: url("../../img/return-dark.svg");
+          background-image: url("../img/return-dark.svg");
         }
       }
 
@@ -366,7 +366,7 @@
 
       @include rectangle(32px, 16px);
 
-      background-image: url("../../img/return-light.svg");
+      background-image: url("../img/return-light.svg");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
