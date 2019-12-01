@@ -10,6 +10,50 @@
       }
     }
   }
+
+  &--index {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .country-whish-list__item {
+      width: 35px;
+      height: 24px;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &--sri-lanka {
+        background-image: url("../img/flag-sri-lanka.svg");
+      }
+
+      &--thailand {
+        background-image: url("../img/flag-thailand.svg");
+      }
+
+      &--seychelles {
+        background-image: url("../img/flag-seychelles.svg");
+      }
+
+      &--belgium {
+        background-image: url("../img/flag-belgium.svg");
+      }
+
+      &--czech {
+        background-image: url("../img/flag-czech.svg");
+      }
+
+      &:not(:last-child) {
+        margin-right: 19px;
+      }
+    }
+  }
 }
 
 .country-whish-list__name {

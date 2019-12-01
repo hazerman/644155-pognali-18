@@ -33,13 +33,13 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 80px;
 
-    background-image: url("../../img/flags-back@1x.png");
+    background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
     background-size: 289px 575px;
     background-position: top 140px right 40px;
 
     @media (min-resolution: $retina) {
-      background-image: url("../../img/flags-back@2x.png");
+      background-image: url("../img/flags-back@2x.png");
     }
   }
 
