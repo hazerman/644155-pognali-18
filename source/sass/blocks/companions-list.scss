@@ -6,7 +6,15 @@
   }
 
   &--inner {
-    margin-bottom: 26px;
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 6px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 36px;
+    }
   }
 }
 
@@ -23,10 +31,24 @@
   background-color: $white;
   border-radius: 10px;
 
+  overflow: hidden;
+
   @media (min-width: $tablet-width) {
     width: 285px;
 
     border-radius: 20px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 21px 0 rgba($black, 0.08);
+
+    .companions-list__img {
+      transform: scale(1.5);
+    }
+
+    .companions-list__avatar {
+      transform: scale(1.2);
+    }
   }
 
   &--profile {
@@ -36,12 +58,19 @@
   &--center {
     align-items: center;
     text-align: center;
+    padding: 0;
+
+    .companions-list__content-wrapper {
+      padding: 26px 16px 16px 16px;
+    }
   }
 
   &--inner {
+    border-radius: 20px;
+
     @media (min-width: $tablet-width) {
       width: 100%;
-      padding: 35px 25px 26px 35px;
+      padding: 33px 25px 10px 35px;
       margin-bottom: 40px;
     }
 
@@ -59,7 +88,7 @@
 
       @media (min-width: $desktop-width) {
         flex-grow: 1;
-        padding: 48px 44px 42px 56px;
+        padding: 48px 44px 41px 56px;
       }
     }
 
@@ -83,16 +112,25 @@
     .companions-list__country-whish-list {
       position: static;
 
+      display: flex;
       flex-direction: column;
 
       @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
         flex-direction: row;
       }
+
+      @media (min-width: $desktop-width) {
+        margin-top: -17px;
+      }
     }
 
     .companions-list__level {
       position: static;
-      margin-top: -13px;
+      margin-top: -9px;
+
+      @media (min-width: $desktop-width) {
+        margin-top: -22px;
+      }
     }
   }
 }
@@ -113,6 +151,7 @@
     width: 275px;
     padding-left: 0;
     margin-right: 58px;
+    margin-bottom: 29px;
   }
 }
 
@@ -120,17 +159,20 @@
   position: absolute;
   top: 15px;
   left: 18px;
+  z-index: 1;
 
   display: block;
 
   @include circle(70px);
+
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     top: 35px;
     left: 35px;
 
     @include square(190px);
-    border-radius: 20px;
+    border-radius: 18px;
   }
 
   @media (min-width: $desktop-width) {
@@ -139,17 +181,35 @@
     flex-shrink: 0;
 
     @include square(285px);
+    border-radius: 0;
+  }
+}
+
+.companions-list__avatar {
+  display: block;
+
+  @include square(70px);
+
+  transition: transform 500ms;
+
+  @media (min-width: $tablet-width) {
+    @include square(190px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include square(285px);
   }
 }
 
 .companions-list__trans-level-wrapper {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
     align-items: center;
     order: 1;
+    margin-bottom: 17px;
   }
 
   @media (min-width: $desktop-width) {
@@ -176,12 +236,12 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
-    top: -75px;
+    top: -73px;
 
     align-items: flex-start;
     order: 2;
     max-width: 340px;
-    margin-bottom: -75px;
+    margin-bottom: -73px;
     margin-left: 220px;
   }
 
@@ -220,6 +280,7 @@
   position: absolute;
   top: 40px;
   left: 47px;
+  z-index: 2;
 
   display: flex;
   align-items: center;
@@ -237,6 +298,14 @@
 
   @include link-style($link-color, 21px, 21px);
 
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 24px;
 
@@ -246,7 +315,7 @@
   &--smaller {
     width: 90px;
     margin-left: 85px;
-    margin-bottom: 50px;
+    margin-bottom: 44px;
 
     @include font-size-height(20px, 20px);
 
@@ -284,11 +353,24 @@
 .companions-list__img-wrapper {
   order: -1;
   min-height: 270px;
+  overflow: hidden;
+}
+
+.companions-list__img {
+  display: block;
+
+  @include square(270px);
+
+  transition: transform 300ms;
+
+  @media (min-width: $tablet-width) {
+    @include square(285px);
+  }
 }
 
 .companions-list__hashtags {
   @include reset-m-p;
-  margin-bottom: 17px;
+  margin-bottom: 10px;
 
   color: $light-black;
 
@@ -302,6 +384,8 @@
 
   &--smaller {
     width: 180px;
+    margin-bottom: 13px;
+
     font-size: 15px;
 
     @media (min-width: $tablet-width) {
@@ -313,6 +397,7 @@
 }
 
 .companions-list__fav-button {
+  position: relative;
   display: block;
 
   @include reset-m-p;
@@ -320,11 +405,60 @@
 
   @include circle(31px);
 
-  background-color: #f9eaea;
+  background-color: $light-grey;
   border: none;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue-grey;
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.1;
+    }
+  }
+
+  &::before {
+    @include pseudo(absolute);
+    top: 50%;
+    left: 50%;
+
+    @include rectangle(13px, 11px);
+
+    background-image: url("../img/heart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $tablet-width) {
+      @include rectangle(20px, 17px);
+    }
+  }
 
   @media (min-width: $tablet-width) {
     @include square(50px);
+  }
+
+  &--active {
+    background-color: #f9eaea;
+
+    &:hover {
+      background-color: #f9d8d8;
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.3;
+      }
+    }
+
+    &::before {
+      background-image: url("../img/heart-active.svg");
+    }
   }
 }
 
@@ -341,12 +475,16 @@
 
 .companions-list__title {
   @include reset-m-p;
-  margin-bottom: 23px;
+  margin-bottom: 16px;
 
   font-weight: 400;
 
   @include font-size-height(15px, 18px);
   color: $light-black;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 48px;
+  }
 
   &--profile {
     font-weight: 700;
@@ -354,13 +492,6 @@
     color: $link-color;
     text-transform: uppercase;
   }
-}
-
-.companions-list__country-whish-list {
-  position: absolute;
-  top: -50px;
-
-  display: flex;
 }
 
 .companions-list__transport-whish-list {
@@ -371,13 +502,14 @@
   position: absolute;
   top: 16px;
   left: 16px;
+  z-index: 10;
 }
 
 .companions-list__action-button {
   width: 100%;
 
   @media (min-width: $tablet-width) {
-    width: 150px;
+    width: 148px;
     padding-top: 12px;
     padding-bottom: 9px;
   }

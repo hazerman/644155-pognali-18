@@ -1,0 +1,33 @@
+.site-logo {
+  height: 19px;
+
+  @media (min-width: $tablet-width) {
+    height: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 52px;
+  }
+
+  &[href] {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.site-logo__img {
+  @include rectangle(100px, 19px);
+
+  @media (min-width: $tablet-width) {
+    @include rectangle(166px, 42px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include rectangle(200px, 52px);
+  }
+}

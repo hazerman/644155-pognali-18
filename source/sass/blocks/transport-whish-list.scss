@@ -1,5 +1,7 @@
 .transport-whish-list {
   @include list;
+  display: flex;
+  justify-content: center;
 
   &--inner {
     @media (min-width: $tablet-width) {
@@ -9,13 +11,40 @@
 
     @media (min-width: $desktop-width) {
       flex-direction: row;
-      margin-right: 35px;
+      margin-right: 44px;
     }
 
     .transport-whish-list__item {
       @include circle(32px);
 
-      background-color: $light-grey;
+      @media (max-width: $tablet-width - 1) {
+        background-color: $light-grey;
+        background-size: auto 16px;
+      }
     }
+  }
+}
+
+.transport-whish-list__item {
+  @include square(32px);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 21px;
+
+  &--air {
+    background-image: url("../img/plane.svg");
+  }
+
+  &--auto {
+    background-image: url("../img/bus.svg");
+  }
+
+  &--bike {
+    background-image: url("../img/bike.svg");
+  }
+
+  &--foot {
+    background-image: url("../img/run.svg");
   }
 }

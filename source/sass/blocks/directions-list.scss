@@ -40,20 +40,74 @@
 }
 
 .directions-list__title {
+  position: relative;
+
   @include reset-m-p;
   @include font-size-height(21px, 21px);
   color: $night-blue;
 
+  &::before {
+    @include pseudo(absolute);
+    top: -40px;
+    left: 0;
+
+    @include rectangle(35px, 24px);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (min-width: $tablet-width) {
+      top: -15px;
+      left: 368px;
+
+      @include rectangle(71px, 48px);
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -1px;
+      left: 308px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     @include font-size-height(24px, 24px);
   }
+
+  &--country--thailand {
+    &::before {
+      background-image: url("../img/flag-thailand.svg");
+    }
+  }
+
+  &--country--france {
+    &::before {
+      background-image: url("../img/flag-france.svg");
+    }
+  }
+
+  &--country--czech {
+    &::before {
+      background-image: url("../img/flag-czech.svg");
+    }
+  }
 }
 
-.directions-list__img {
+.directions-list__img-wrapper {
   order: -1;
 
   @media (min-width: $tablet-width) {
     order: 0;
+  }
+}
+
+.directions-list__img {
+  display: block;
+
+  @include rectangle(270px, 110px);
+
+  @media (min-width: $tablet-width) {
+    @include rectangle(186px, 140px);
   }
 }
 
@@ -67,12 +121,42 @@
 }
 
 .directions-list__visitors {
+  position: relative;
+
   @include font-size-height(16px, 30px);
+
+  @media (min-width: $tablet-width) {
+    padding-left: 31px;
+
+    font-size: 20px;
+  }
+
+
+  &::before {
+    @include pseudo(absolute);
+    top: 7px;
+    left: -20px;
+
+    @include square(11px);
+
+    background-image: url("../img/user.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (min-width: $tablet-width) {
+      top: 3px;
+      left: 0;
+
+      @include square(20px);
+    }
+  }
 }
 
 .directions-list__text-wrapper {
   display: flex;
-  padding: 30px 25px 20px 25px;
+  padding: 28px 25px 23px 25px;
+  margin-top: -11px;
 
   background-color: $white;
   border-radius: 10px;
@@ -80,14 +164,26 @@
   @media (min-width: $tablet-width) {
     flex-direction: column;
     width: 432px;
+    margin-top: 0;
+    padding: 31px 25px 16px 30px;
+
     border-radius: 0;
   }
 
-  @media (min-width: $tablet-width) {
-    width: 373px;
+  @media (min-width: $desktop-width) {
+    width: 374px;
+    padding: 24px 25px 16px 31px;
   }
 }
 
 .directions-list__country-wrapper {
   margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
 }

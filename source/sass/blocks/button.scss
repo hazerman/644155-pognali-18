@@ -16,12 +16,25 @@
 
   cursor: pointer;
 
+  &:active {
+    color: rgba($night-blue, 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
   }
 
   &--theme--light {
     background-color: $yellow;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 12px;
+      padding-bottom: 8px;
+    }
+
+    &:hover {
+      background-color: $dark-yellow;
+    }
   }
 
   &--theme--pale {
@@ -38,6 +51,18 @@
     text-align: left;
     background-color: $yellow;
     border-radius: 10px;
+
+    &:hover {
+      background-color: $dark-yellow;
+    }
+
+    &:active {
+      color: rgba($link-color, 0.3);
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
 
     @media (min-width: $tablet-width) {
       @include font-size-height(24px, 24px);
@@ -66,8 +91,23 @@
 
   &--theme--location {
     text-transform: none;
+    color: $dark-blue;
 
-    border: 3px solid $dark-blue;
+    box-shadow: 0 0 0 3px $dark-blue inset;
+
+    &:hover {
+      color: $white;
+
+      background-color: $dark-blue;
+
+      &::after {
+        border-left-color: $white;
+      }
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+    }
   }
 
   &--border--full-rounded {

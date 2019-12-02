@@ -5,32 +5,75 @@
 }
 
 .price__container {
+  position: relative;
+
   @include container(0, 0, 70, 70);
-  padding-top: 111px;
+  padding-top: 112px;
   padding-bottom: 38px;
 
+  background-image: url("../img/rates@1x.png");
+  background-repeat: no-repeat;
+  background-size: 99px;
+  background-position: top 97px right 26px;
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      @include pseudo(absolute);
+      top: 209px;
+      right: 40px;
+      z-index: -1;
+
+      @include rectangle(198px, 285px);
+      background-color: $blue-grey;
+      border-radius: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 295px;
+      right: 246px;
+
+      @include rectangle(444px, 300px);
+    }
+  }
+
+  @media (min-resolution: $retina) {
+    background-image: url("../img/rates@2x.png");
+  }
+
   @media (min-width: $tablet-width) {
-    padding-top: 132px;
+    padding-top: 134px;
     padding-bottom: 86px;
+
+    background-position: bottom 46px right 86px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 165px;
-    padding-bottom: 187px;
+    padding-bottom: 190px;
+
+    background-size: 198px;
+    background-position: top 345px right 135px;
   }
 }
 
 .price__heading {
   @include index-headings;
   width: 150px;
+  margin-bottom: 43px;
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    margin-bottom: 74px;
     text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 135px;
   }
 
   &--popup {
     width: auto;
+    margin-bottom: 30px;
 
     text-align: center;
   }
@@ -39,11 +82,13 @@
 .price__list {
   @include list;
   margin-left: 24px;
-  margin-bottom: 31px;
+  margin-bottom: 29px;
+
+  counter-reset: price;
 
   @media (min-width: $tablet-width) {
     margin-left: 90px;
-    margin-bottom: 59px;
+    margin-bottom: 54px;
   }
 
   &--popup {
@@ -54,6 +99,10 @@
 
     .price__item {
       width: 220px;
+
+      &::before {
+        display: none;
+      }
 
       @media (min-width: $tablet-width) {
         width: 100%;
@@ -69,7 +118,7 @@
 
   width: 200px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 11px;
 
   font-weight: 300;
 
@@ -78,6 +127,31 @@
 
   border-top: 1px solid rgba($light-black, 0.05);
   border-bottom: 1px solid rgba($light-black, 0.05);
+
+  &::before {
+    counter-increment: price;
+    content: counter(price);
+
+    position: absolute;
+    top: 3px;
+    right: -45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include circle(34px);
+
+    color: $white;
+
+    @media (min-width: $tablet-width) {
+      top: -3px;
+      right: auto;
+      left: -90px;
+
+      @include square(67px);
+    }
+  }
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -97,44 +171,21 @@
   }
 
   &:nth-child(3n+1) {
-    .price__count {
+    &::before {
       background-color: $orange;
     }
   }
 
   &:nth-child(3n+2) {
-    .price__count {
+    &::before {
       background-color: $dark-yellow;
     }
   }
 
   &:nth-child(3n+3) {
-    .price__count {
+    &::before {
       background-color: $yellow;
     }
-  }
-}
-
-.price__count {
-  position: absolute;
-  top: 0;
-  right: -44px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @include circle(34px);
-  @include font-size-height(16px, 16px);
-  color: $white;
-  font-weight: 300;
-
-  @media (min-width: $tablet-width) {
-    right: auto;
-    left: -91px;
-
-    @include square(67px);
-    @include font-size-height(28px, 28px);
   }
 }
 
@@ -148,7 +199,7 @@
 
 .price__link-show {
   line-height: 16px;
-  color: $dark-blue;
+  color: #132576;
 
   @include padding-center(24px);
 
@@ -159,12 +210,44 @@
     margin-left: 90px;
   }
 
+  &:hover {
+    color: rgba(#132576, 0.7);
+
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    color: rgba(#132576, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
   &::before {
     @media (min-width: $tablet-width) {
       @include pseudo(absolute, -27px, auto, auto, -91px);
       @include circle(67px);
 
       background-color: $blue-grey;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      @include pseudo(absolute);
+      top: 50%;
+      left: -64px;
+
+      @include rectangle(17px, 21px);
+
+      background-image: url("../img/business.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      transform: translateY(-50%);
     }
   }
 }
@@ -209,6 +292,14 @@
   background-color: #f3f4f8;
 
   cursor: pointer;
+
+  &:hover {
+    background-color: $light-grey;
+  }
+
+  &:active {
+    color: rgba($link-color, 0.3);
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 43px;

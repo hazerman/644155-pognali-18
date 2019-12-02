@@ -6,6 +6,10 @@
 
   background-color: $night-blue;
 
+  @media (min-width: $tablet-width) {
+    background-color: #182044;
+  }
+
   @media (min-width: $desktop-width) {
     color: $white;
 
@@ -39,6 +43,20 @@
       background-color: $night-blue;
     }
 
+    .main-header__img {
+      &--light {
+        @media (max-width: $desktop-width - 1) {
+          display: none;
+        }
+      }
+
+      &--dark {
+        @media (max-width: $desktop-width - 1) {
+          display: inline;
+        }
+      }
+    }
+
     .main-header__nav-wrapper {
       display: block;
 
@@ -58,7 +76,7 @@
     .main-header__button-toggle {
       &::before,
       &::after {
-        @include pseudo(absolute, 11px, auto, auto, 0);
+        @include pseudo(absolute, 10px, auto, auto, 0);
         @include rectangle(25px, 3px);
 
         background-color: #cccccc;
@@ -82,6 +100,20 @@
       background-color: $white;
     }
 
+    .main-header__img {
+      &--light {
+        @media (max-width: $desktop-width - 1) {
+          display: none;
+        }
+      }
+
+      &--dark {
+        @media (max-width: $desktop-width - 1) {
+          display: inline;
+        }
+      }
+    }
+
     .main-header__button-toggle {
       display: none;
     }
@@ -102,6 +134,12 @@
     }
 
     .main-header__home-link {
+      &::after {
+        @media (max-width: $desktop-width - 1) {
+          background-image: url("../img/return-dark.svg");
+        }
+      }
+
       @media (max-width: $desktop-width - 1) {
         align-self: flex-start;
         margin-top: 20px;
@@ -117,12 +155,26 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 27px;
+  padding-top: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 47px;
+  }
 }
 
 .main-header__site-logo {
   display: block;
   margin-right: auto;
+}
+
+.main-header__img {
+  &--dark {
+    display: none;
+  }
 }
 
 .main-header__button-toggle {
@@ -139,7 +191,7 @@
   }
 
   &::before {
-    @include pseudo(absolute, 0, auto, auto, 0);
+    @include pseudo(absolute, 7px, auto, auto, 0);
     @include rectangle(25px, 3px);
 
     background-color: $white;
@@ -161,6 +213,7 @@
 
   @media (min-width: $tablet-width) {
     display: inline-block;
+    width: 188px;
     margin-left: auto;
 
     font-size: 20px;
@@ -179,15 +232,15 @@
 
   @include reset-m-p;
   margin-right: 145px;
-  padding-top: 60px;
-  padding-bottom: 12px;
+  padding-top: 53px;
+  padding-bottom: 9px;
 
   @include font-size-height(36px, 40px);
 
   @media (min-width: $tablet-width) {
-    padding-top: 135px;
-    padding-bottom: 69px;
-    margin-left: 36px;
+    padding-top: 128px;
+    padding-bottom: 62px;
+    margin-left: 35px;
 
     @include font-size-height(60px, 70px);
   }
@@ -195,6 +248,8 @@
   @media (min-width: $desktop-width) {
     order: 3;
     margin-right: 400px;
+    margin-left: 66px;
+    padding-top: 119px;
   }
 
   &::after {
@@ -284,8 +339,9 @@
 }
 
 .main-header__home-link {
+  position: relative;
   display: none;
-  margin-top: 65px;
+  margin-top: 69px;
   margin-right: 35px;
   margin-left: auto;
   padding-right: 61px;
@@ -294,12 +350,36 @@
   color: inherit;
   text-transform: uppercase;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      @include pseudo(absolute);
+      top: 0;
+      right: 0;
+
+      @include rectangle(32px, 16px);
+
+      background-image: url("../img/return-light.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: block;
   }
 
   @media (min-width: $desktop-width) {
     order: 5;
-    margin-top: 50px;
+    margin-top: 60px;
+    margin-right: 64px;
   }
 }

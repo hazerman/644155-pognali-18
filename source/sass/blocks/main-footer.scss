@@ -45,7 +45,7 @@
 }
 
 .main-footer__site-logo {
-  margin-bottom: 41px;
+  margin-bottom: 37px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -62,7 +62,7 @@
 
 .main-footer__link-wrapper {
   align-self: stretch;
-  padding-top: 22px;
+  padding-top: 13px;
 
   border-top: 1px solid rgba($light-black, 0.05);
 
@@ -72,4 +72,26 @@
 
     border-top: none;
   }
+}
+
+.main-footer__link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 154px;
+  }
+}
+
+.main-footer__academy-logo {
+  margin-left: auto;
 }
