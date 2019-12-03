@@ -143,12 +143,12 @@
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding-top: 75px;
+  padding-top: 77px;
 
   @include container(35, 35, 0, 0);
 
   @media (min-width: $tablet-width) {
-    padding-top: 115px;
+    padding-top: 119px;
   }
 }
 
@@ -161,6 +161,11 @@
   color: $dark-blue;
   text-transform: uppercase;
 
+  background-image: url("../img/filter.svg");
+  background-repeat: no-repeat;
+  background-position: left top 5px;
+  background-size: 15px;
+
   @media (min-width: $tablet-width) {
     order: 0;
 
@@ -171,9 +176,14 @@
 
   @media (min-width: $desktop-width) {
     display: block;
+    margin-left: 20px;
     margin-right: 35px;
+    padding-left: 44px;
 
     @include font-size-height(20px, 24px);
+
+    background-position: left top 2px;
+    background-size: 23px 15px;
   }
 
   &::after {
@@ -193,6 +203,24 @@
   font-size: 0;
   color: $dark-blue;
 
+  &:hover {
+    color: rgba($dark-blue, 0.6);
+
+    &::after,
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    color: rgba($dark-blue, 0.3);
+
+    &::after,
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     order: 2;
 
@@ -201,6 +229,10 @@
     padding-right: 47px;
 
     @include font-size-height(20px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 68px;
   }
 
   &::after {
@@ -266,12 +298,16 @@
 
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
-    @include font-size-height(20px, 24px);
+  &:hover {
+    color: rgba($dark-blue, 0.6);
   }
 
-  @media (min-width: $desktop-width) {
-    @include current;
+  &:active {
+    color: rgba($dark-blue, 1);
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font-size-height(20px, 24px);
   }
 
   &--current {
@@ -396,6 +432,14 @@
 
   @include link-style($light-black, 16px, 22px);
 
+  &:hover {
+    color: $link-color;
+  }
+
+  &:active {
+    color: rgba($link-color, 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     @include font-size-height(20px, 30px);
   }
@@ -406,6 +450,26 @@
   width: 100%;
 
   border-radius: 20px;
+
+  &:hover {
+    color: rgba($night-blue, 0.6);
+
+    background-color: #c8cee8;
+
+    &::before,
+    &::after {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    color: rgba($night-blue, 0.3);
+
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 40px;
