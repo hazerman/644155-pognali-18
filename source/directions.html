@@ -84,7 +84,11 @@
             <span class="level__number level__number--sub">80</span>
           </div>
           <div class="profile__avatar-wrapper">
-            <img class="profile__avatar" src="#" alt="Петя Демин">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+              <img class="profile__avatar" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" width="100" height="100" alt="Петя Демин">
+            </picture>
           </div>
           <button class="profile__button button button--border--full-rounded button--theme--pale" type="button"><span>Сменить </span>фото</button>
           <div class="profile__wrapper profile__wrapper--tags">
@@ -93,24 +97,24 @@
           </div>
           <div class="profile__wrapper profile__wrapper--transport">
             <h3 class="profile__title">Транспорт</h3>
-            <ul class="transport-whish-list profile__transport-whish-list">
+            <ul class="transport-whish-list transport-whish-list--profile profile__transport-whish-list">
               <li class="transport-whish-list__item">
-                <button class="transport-whish-list__button-toggle" type="button">
+                <button class="transport-whish-list__button-toggle transport-whish-list__button-toggle--air" type="button">
                   <span class="visually-hidden">Авиаперелет</span>
                 </button>
               </li>
               <li class="transport-whish-list__item">
-                <button class="transport-whish-list__button-toggle" type="button">
+                <button class="transport-whish-list__button-toggle transport-whish-list__button-toggle--auto" type="button">
                   <span class="visually-hidden">Автотранспорт</span>
                 </button>
               </li>
               <li class="transport-whish-list__item">
-                <button class="transport-whish-list__button-toggle" type="button">
+                <button class="transport-whish-list__button-toggle transport-whish-list__button-toggle--bike" type="button">
                   <span class="visually-hidden">Велосипед</span>
                 </button>
               </li>
               <li class="transport-whish-list__item">
-                <button class="transport-whish-list__button-toggle" type="button">
+                <button class="transport-whish-list__button-toggle transport-whish-list__button-toggle--foot" type="button">
                   <span class="visually-hidden">Пешком</span>
                 </button>
               </li>

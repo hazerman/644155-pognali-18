@@ -43,6 +43,24 @@
       }
     }
   }
+
+  &--profile {
+    .transport-whish-list__item {
+      @media (min-width: $tablet-width) {
+        @include square(43px)
+      }
+
+      &:not(:last-child) {
+        @media (min-width: $tablet-width) {
+          margin-right: 8px;
+        }
+
+        @media (min-width: $desktop-width) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }
 
 .transport-whish-list__item {
@@ -51,6 +69,38 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 21px;
+
+  &--air {
+    background-image: url("../img/plane.svg");
+  }
+
+  &--auto {
+    background-image: url("../img/bus.svg");
+  }
+
+  &--bike {
+    background-image: url("../img/bike.svg");
+  }
+
+  &--foot {
+    background-image: url("../img/run.svg");
+  }
+}
+
+.transport-whish-list__button-toggle {
+  @include reset-m-p;
+  @include circle(32px);
+
+  background-color: $white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 16px;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    @include square(43px);
+    background-size: auto 21px;
+  }
 
   &--air {
     background-image: url("../img/plane.svg");

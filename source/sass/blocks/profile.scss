@@ -43,6 +43,8 @@
   @include circle(98px);
   margin-right: 18px;
 
+  overflow: hidden;
+
   @media (min-width: $tablet-width) {
     margin-right: 0;
 
@@ -56,6 +58,23 @@
     right: 155px;
 
     @include square(190px);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.profile__avatar {
+  width: 100px;
+  height: 100px;
+
+  @media (min-width: $tablet-width) {
+    width: 94px;
+    height: 94px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 190px;
+    height: 190px;
   }
 }
 
@@ -100,11 +119,17 @@
   width: 100%;
 
   &--tags {
-    margin-bottom: 25px;
+    margin-bottom: 21px;
 
     @media (min-width: $desktop-width) {
       width: 730px;
       margin-bottom: 0;
+    }
+
+    .profile__title {
+      @media (min-width: $desktop-width) {
+        left: 9%;
+      }
     }
   }
 
@@ -143,13 +168,14 @@
     bottom: -9px;
 
     @include font-size-height(20px, 20px);
+    letter-spacing: 2px;
     font-weight: 500;
   }
 }
 
 .profile__hashtags {
   width: 100%;
-  padding: 25px;
+  padding: 22px 25px 20px 25px;
 
   @include font-size-height(16px, 22px);
   color: $light-black;
@@ -159,8 +185,8 @@
   border: 1px solid $input-border-color;
 
   @media (min-width: $tablet-width) {
-    padding: 37px;
-    height: 100px;
+    padding: 35px 37px 9px 35px;
+    min-height: 94px;
 
     @include font-size-height(20px, 24px);
   }
@@ -171,8 +197,13 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 25px;
+  padding: 14px;
 
   border-radius: 10px;
   border: 1px solid $input-border-color;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+    padding-bottom: 15px;
+  }
 }
