@@ -39,7 +39,7 @@
       overflow: hidden;
 
       @media (min-width: $tablet-width) {
-        @include square(43px)
+        @include square(43px);
       }
     }
   }
@@ -47,7 +47,7 @@
   &--profile {
     .transport-whish-list__item {
       @media (min-width: $tablet-width) {
-        @include square(43px)
+        @include square(43px);
       }
 
       &:not(:last-child) {
