@@ -67,6 +67,7 @@
         margin-right: 15px;
         margin-bottom: 15px;
       }
+
     }
 
     .filter-country__link-letter {
@@ -86,6 +87,22 @@
 
       @media (min-width: $desktop-width) {
         border-radius: 3px;
+        cursor: pointer;
+        pointer-events: all;
+      }
+
+      &:hover {
+        @media (min-width: $desktop-width) {
+          border-color: #959bb2;
+        }
+      }
+
+      &:active {
+        @media (min-width: $desktop-width) {
+          color: $white;
+
+          background-color: $link-color;
+        }
       }
 
       &--current {
