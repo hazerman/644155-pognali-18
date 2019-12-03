@@ -129,7 +129,7 @@
           <ol class="plan__list">
             <li class="plan__item plan__item--ready">
               <div class="plan__country-ready">
-                <span class="plan__item-count">1.</span>
+
                 Франция, Италия
               </div>
               <p class="plan__info">
@@ -140,7 +140,7 @@
             </li>
             <li class="plan__item plan__item--ready">
               <div class="plan__country-ready">
-                <span class="plan__item-count">2.</span>
+
                 Таиланд, Индонезия
               </div>
               <p class="plan__info">
@@ -159,7 +159,7 @@
           <form class="plan__form form" action="https://echo.htmlacademy.ru" method="post">
             <ol class="plan__list">
               <li class="plan__item plan__item--append">
-                <h3 class="plan__subtitle">Шаг 1.<br>Даты пребывания</h3>
+                <h3 class="plan__subtitle">Даты пребывания</h3>
                 <p class="plan__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
                 <div class="plan__inputs-wrapper">
                   <div class="plan__input-wrapper plan__input-wrapper--count">
@@ -189,7 +189,7 @@
                     </div>
                   </div>
                   <p class="plan__input-wrapper plan__input-wrapper--checkbox">
-                    <input class="form__input form__input--type--checkbox" name="children" id="children" type="checkbox" checked>
+                    <input class="visually-hidden form__input form__input--type--checkbox" name="children" id="children" type="checkbox" checked>
                     <label class="form__label form__label--children" for="children">Можно с детьми</label>
                   </p>
                 </div>
@@ -390,8 +390,8 @@
                 </div>
               </li>
               <li class="plan__item plan__item--append">
-                <h3 class="plan__subtitle">Шаг 2.<br>Маршрут</h3>
-                <p class="plan__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+                <h3 class="plan__subtitle">Маршрут</h3>
+                <p class="plan__description">Укажите страны, которые вы хотели бы посетить.<br>Это может быть одна или сразу несколько.</p>
                 <div class="plan__countries-wrapper">
                   <div class="plan__country-wrapper plan__country-wrapper--delete">
                     <button class="plan__country-button plan__country-button--checked" type="button">
@@ -400,8 +400,8 @@
                         <span class="visually-hidden">Раскрыть список</span>
                       </span>
                     </button>
-                    <span class="plan__flag-wrapper">
-                      <img class="flag-img" src="#" alt="">
+                    <span class="plan__flag-wrapper plan__flag-wrapper--bosnia">
+                      <span class="visually-hidden">Флаг Боснии и Герцеговины</span>
                     </span>
                     <button class="plan__delete-button" type="button">
                       <span class="visually-hidden">Очистить</span>
@@ -414,8 +414,8 @@
                         <span class="visually-hidden">Раскрыть список</span>
                       </span>
                     </button>
-                    <span class="plan__flag-wrapper">
-                      <img class="flag-img" src="#" alt="">
+                    <span class="plan__flag-wrapper plan__flag-wrapper--czech">
+                      <span class="visually-hidden">Флаг Чехии</span>
                     </span>
                     <button class="plan__delete-button" type="button">
                       <span class="visually-hidden">Очистить</span>
@@ -558,20 +558,20 @@
                 </div>
               </li>
               <li class="plan__item plan__item--append">
-                <h3 class="plan__subtitle">Шаг 3.<br>Развлечения</h3>
-                <p class="plan__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                <h3 class="plan__subtitle">Развлечения</h3>
+                <p class="plan__description">Наконец, расскажите о своих планах времяпровождения.<br>Можно писать в свободной форме и ставить тэги.</p>
                 <div class="plan__action-wrapper">
                   <div class="plan__action">
                     <label class="form__label form__label--action" for="action-country-bosnia">Босния и Герцеговина</label>
-                    <span class="plan__flag-wrapper plan__flag-wrapper--action">
-                      <img class="flag-img" src="#" alt="БГ">
+                    <span class="plan__flag-wrapper plan__flag-wrapper--bosnia plan__flag-wrapper--action">
+                      <span class="visually-hidden">Флаг Боснии и Герцеговины</span>
                     </span>
                     <textarea class="form__textarea form__textarea--action" name="action-country-bosnia" id="action-country-bosnia" cols="30" rows="3" placeholder="План действий"></textarea>
                   </div>
                   <div class="plan__action">
                     <label class="form__label form__label--action" for="action-country-czech">Чехия</label>
-                    <span class="plan__flag-wrapper plan__flag-wrapper--action">
-                      <img class="flag-img" src="#" alt="Чехия">
+                    <span class="plan__flag-wrapper plan__flag-wrapper--czech plan__flag-wrapper--action">
+                      <span class="visually-hidden">Флаг Чехии</span>
                     </span>
                     <textarea class="form__textarea form__textarea--action" name="action-country-czech" id="action-country-czech" cols="30" rows="3">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                   </div>
