@@ -182,6 +182,7 @@
 
   @media (min-width: $desktop-width) {
     display: none;
+    padding-left: 122px;
   }
 
   &::before {
@@ -193,6 +194,12 @@
       top: -22px;
 
       @include circle(68px);
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -33px;
+
+      @include circle(90px);
     }
   }
 
@@ -213,6 +220,11 @@
       left: 21px;
       width: 27px;
     }
+
+    @media (min-width: $desktop-width) {
+      left: 28px;
+      width: 36px;
+    }
   }
 
   &--phone {
@@ -223,6 +235,10 @@
 
       @media (min-width: $tablet-width) {
         height: 27px;
+      }
+
+      @media (min-width: $desktop-width) {
+        height: 36px;
       }
     }
   }
@@ -235,6 +251,10 @@
 
       @media (min-width: $tablet-width) {
         height: 19px;
+      }
+
+      @media (min-width: $desktop-width) {
+        height: 26px;
       }
     }
   }
