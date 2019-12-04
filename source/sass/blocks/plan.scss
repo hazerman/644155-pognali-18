@@ -12,28 +12,29 @@
 .plan__container {
   @include container(35, 35, 0, 0);
   padding-top: 29px;
-  padding-bottom: 105px;
+  padding-bottom: 60px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 58px;
-    padding-bottom: 123px;
+    padding-top: 51px;
+    padding-bottom: 106px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 132px;
+    padding-top: 46px;
+    padding-bottom: 91px;
   }
 }
 
 .plan__title {
   @include reset-m-p;
-  margin-bottom: 34px;
+  margin-bottom: 29px;
 
   @include font-size-height(24px, 24px);
   color: $link-color;
 
   @media (min-width: $tablet-width) {
     @include font-size-height(36px, 50px);
-    margin-bottom: 56px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -41,30 +42,53 @@
   }
 }
 
+.plan__list {
+  @include list;
+
+  counter-reset: plan;
+}
+
 .plan__subtitle {
+  position: relative;
+
   @include reset-m-p;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 
   @include font-size-height(20px, 20px);
 
+  &::before {
+    counter-increment: plan;
+    content: "Шаг " counter(plan) ". ";
+
+    position: relative;
+
+    display: block;
+
+    @media (min-width: $desktop-width) {
+      display: inline;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     @include font-size-height(36px, 36px);
+    margin-bottom: 37px;
   }
-}
-
-.plan__list {
-  @include list;
 }
 
 .plan__item {
   padding: 25px;
+  padding-bottom: 20px;
 
   background-color: $white;
   color: $link-color;
   border-radius: 10px;
 
   @media (min-width: $tablet-width) {
-    padding: 40px;
+    padding: 28px 32px 11px 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 39px 23px 42px;
   }
 
   &:not(:last-child) {
@@ -91,8 +115,7 @@
 
   &--append {
     @media (min-width: $tablet-width) {
-      padding-top: 49px;
-      padding-bottom: 55px;
+      padding: 52px 44px 55px 44px;
 
       border-radius: 30px;
     }
@@ -118,6 +141,7 @@
 }
 
 .plan__country-ready {
+  position: relative;
   margin-bottom: 21px;
 
   font-weight: 700;
@@ -125,10 +149,48 @@
   @include font-size-height(16px, 16px);
   color: $link-color;
 
+  &::before {
+    counter-increment: plan;
+    content: counter(plan) ".";
+
+    position: relative;
+    font-weight: 500;
+
+    @media (min-width: $tablet-width) {
+      order: 1;
+      margin-left: auto;
+
+      @include font-size-height(20px, 18px);
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 0;
+      margin-right: 38px;
+      margin-left: 0;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      @include pseudo(absolute);
+      bottom: -39%;
+      left: -37px;
+
+      width: 100%;
+      height: 1px;
+      padding-right: 32px;
+      padding-left: 37px;
+      box-sizing: content-box;
+
+      background-color: #eff0f4;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
     width: 100%;
+    margin-bottom: 40px;
 
     @include font-size-height(24px, 50px);
   }
@@ -139,29 +201,12 @@
   }
 }
 
-.plan__item-count {
-  font-weight: 500;
-
-  @media (min-width: $tablet-width) {
-    order: 1;
-    margin-left: auto;
-
-    @include font-size-height(20px, 18px);
-  }
-
-  @media (min-width: $desktop-width) {
-    order: 0;
-    margin-right: 38px;
-    margin-left: 0;
-  }
-}
-
 .plan__info {
   display: flex;
   flex-direction: column;
 
   @include reset-m-p;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 
   font-weight: 500;
 
@@ -191,6 +236,15 @@
 
 .plan__link {
   @include font-size-height(14px, 18px);
+  letter-spacing: 1px;
+
+  &:hover {
+    color: rgba($black, 0.6);
+  }
+
+  &:active {
+    color: rgba($black, 0.1);
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -199,13 +253,24 @@
 
 .plan__description {
   @include reset-m-p;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
 
   @include font-size-height(16px, 22px);
   color: $light-black;
 
   @media (min-width: $tablet-width) {
     @include font-size-height(20px, 24px);
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 588px;
+  }
+
+  br {
+    @media (max-width: $tablet-width - 1) {
+      display: none;
+    }
   }
 }
 
@@ -229,11 +294,15 @@
   flex-wrap: wrap;
 
   @include reset-m-p;
-  margin-bottom: 21px;
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
 
   &--count {
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      padding-top: 20px;
+      padding-top: 24px;
 
       border-top: 1px solid #d6d9e6;
     }
@@ -293,8 +362,24 @@
     border: none;
     background-color: transparent;
 
+    cursor: pointer;
+
     @media (min-width: $tablet-width) {
       width: 60px;
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        background-color: rgba($black, 0.4);
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: rgba($black, 0.1);
+      }
     }
 
     &::before,
@@ -304,7 +389,7 @@
 
       @include rectangle(14px, 2px);
 
-      background-color: #cfcfcf;
+      background-color: rgba($black, 0.2);
 
       @media (min-width: $tablet-width) {
         width: 20px;
@@ -334,6 +419,22 @@
     border: none;
     background-color: transparent;
 
+    cursor: pointer;
+
+    &:hover {
+      &::before,
+      &::after {
+        background-color: rgba($black, 0.3);
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: rgba($black, 0.1);
+      }
+    }
+
     @media (min-width: $tablet-width) {
       width: 45px;
       height: 45px;
@@ -346,7 +447,7 @@
 
       @include rectangle(12px, 2px);
 
-      background-color: #b2b2b2;
+      background-color: rgba($black, 0.5);
 
       transform-origin: top left;
 
@@ -383,6 +484,7 @@
 
 .plan__brief {
   font-weight: 500;
+  letter-spacing: 1.5px;
 
   @include font-size-height(16px, 16px);
   color: rgba($link-color, 0.3);
@@ -397,6 +499,12 @@
     margin-left: auto;
 
     color: $link-color;
+  }
+}
+
+.plan__calendar-wrapper {
+  @media (min-width: $tablet-width) {
+    padding-top: 32px;
   }
 }
 
@@ -583,7 +691,7 @@
 
       @media (min-width: $tablet-width) {
         left: auto;
-        right: -28px;
+        right: -36px;
         bottom: -45px;
         width: 3px;
       }
@@ -614,9 +722,36 @@
   border: 1px solid $input-border-color;
   border-radius: 3px;
 
+  cursor: pointer;
+
+  &:hover {
+    border-color: #959bb2;
+
+    .plan__country-action {
+      &::before,
+      &::after {
+        background-color: #918f8f;
+      }
+    }
+  }
+
+  &:active {
+    color: $white;
+
+    background-color: $link-color;
+    border-color: none;
+
+    .plan__country-action {
+      background-color: $link-color;
+
+      box-shadow: -20px 0 8px -4px $link-color;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     flex-grow: 0;
     width: 370px;
+    margin-right: 36px;
     padding: 25px 24px 23px 24px;
 
     @include font-size-height(20px, 20px);
@@ -624,6 +759,7 @@
 
   @media (min-width: $desktop-width) {
     width: 730px;
+    margin-right: 65px;
   }
 
   &::after {
@@ -661,6 +797,22 @@
     background-color: $light-grey;
     border: none;
 
+    &:hover {
+      background-color: #dfe3f0;
+    }
+
+    &:active {
+      background-color: #dfe3f0;
+
+      color: rgba($link-color, 0.3);
+
+      .plan__country-action {
+        background-color: #dfe3f0;
+
+        box-shadow: -20px 0 8px -4px #dfe3f0;
+      }
+    }
+
     &::after {
       background-color: $light-grey;
     }
@@ -670,6 +822,24 @@
     color: $white;
 
     background-color: $link-color;
+
+    &:hover {
+      .plan__country-action {
+        &::before,
+        &::after {
+          background-color: $white;
+        }
+      }
+    }
+
+    &:active {
+      .plan__country-action {
+        &::before,
+        &::after {
+          background-color: #34436c;
+        }
+      }
+    }
 
     &::after {
       @media (max-width: $tablet-width - 1) {
@@ -687,6 +857,7 @@
           top: 47%;
           width: 13px;
           transform-origin: center center;
+          background-color: #616d8d;
         }
 
         &::after {
@@ -695,7 +866,7 @@
       }
     }
 
-    .plan__filter-country {
+    + .plan__filter-country {
       display: block;
     }
   }
@@ -721,7 +892,7 @@
   &--unfold {
     background-color: $white;
 
-    box-shadow: -18px 0 8px 0 $white;
+    box-shadow: -20px 0 8px -4px $white;
 
     &::before,
     &::after {
@@ -766,12 +937,28 @@
   background-color: $light-grey;
   border: none;
 
+  cursor: pointer;
+
   @media (min-width: $tablet-width) {
     top: 24px;
 
     background-color: transparent;
 
     transform: scale(2);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: #a5a7ac;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: #e1e3e9;
+    }
   }
 
   &::before,
@@ -799,16 +986,36 @@
 
   border: 1px solid $input-border-color;
   border-radius: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px;
 
   @media (min-width: $tablet-width) {
+    width: 110px;
+
     border: none;
     border-radius: 0;
+    background-size: 70px;
+  }
+
+  &--bosnia {
+    background-image: url("../img/flag-bosnia.svg");
+  }
+
+  &--czech {
+    background-image: url("../img/flag-czech.svg");
   }
 
   &--action {
     width: 37px;
     border: none;
     border-radius: 0;
+
+    background-position: center top;
+
+    @media (min-width: $tablet-width) {
+      width: 70px;
+    }
   }
 }
 
@@ -828,14 +1035,14 @@
   box-shadow: 0 20px 50px 0 rgba($link-color, 0.1);
 
   @media (min-width: $tablet-width) {
-    width: 575px;
+    width: 574px;
     padding: 34px 27px 96px 27px;
 
     border: none;
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
+    width: 730px;
     padding-bottom: 19px;
   }
 
@@ -896,6 +1103,14 @@
   color: $night-blue;
 
   @include font-size-height(17px, 30px);
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     padding-left: 34px;

@@ -10,7 +10,7 @@
   padding-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 125px;
+    padding-top: 129px;
     padding-bottom: 85px;
   }
 
@@ -26,7 +26,7 @@
   position: relative;
 
   width: 210px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   padding-left: 62px;
 
   font-weight: 700;
@@ -38,7 +38,7 @@
   @media (min-width: $tablet-width) {
     width: auto;
     padding-left: 95px;
-    margin-bottom: 64px;
+    margin-bottom: 62px;
 
     @include font-size-height(28px, 28px);
   }
@@ -46,6 +46,7 @@
   @media (min-width: $desktop-width) {
     margin-right: auto;
     margin-bottom: 0;
+    padding-left: 122px;
   }
 
   &::before {
@@ -55,11 +56,23 @@
 
     @include circle(45px);
     background-color: #121936;
+    background-image: url("../img/contacts-location.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
 
     @media (min-width: $tablet-width) {
       top: -22px;
 
       @include square(68px);
+      background-size: 21px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -30px;
+
+      @include square(90px);
+      background-size: 28px;
     }
   }
 }
@@ -69,25 +82,37 @@
   z-index: 2;
   top: -30px;
 
-  min-height: 375px;
+  min-height: 332px;
   margin-bottom: -30px;
 
   @media (min-width: $tablet-width) {
     top: -60px;
 
-    min-height: 599px;
+    min-height: 580px;
     margin-bottom: -60px;
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 538px;
+    min-height: 516px;
   }
 }
 
 .location__map-img {
   display: block;
+  width: 320px;
+  height: 332px;
 
   @include center;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    height: 580px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    height: 516px;
+  }
 }
 
 .location__map-interactive {

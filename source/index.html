@@ -353,12 +353,16 @@
         <div class="location main__location">
           <div class="location__container">
             <address class="location__address">ул. Большая Конюшенная, 19/8</address>
-            <a class="location__button button button--arrow button--theme--location" href="">Проложить маршрут</a>
+            <a class="location__button button button--arrow button--theme--location" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.283171%2C59.955893&mode=routes&rtext=59.938662%2C30.323127~59.973013%2C30.220556&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D131568837112&z=13.26" target="_blank">Проложить маршрут</a>
           </div>
         </div>
         <div class="location__map-wrapper">
-          <img class="location__map-img" src="img/map-mobile.png" width="320" alt="ул. Большая Конюшенная, 19/8">
-          <iframe class="location__map-interactive" src="https://yandex.ru/map-widget/v1/-/CGXtRQKd" width="320" height="375"></iframe>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
+            <img class="location__map-img" src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x" width="320" height="332" alt="ул. Большая Конюшенная, 19/8">
+          </picture>
+          <iframe class="location__map-interactive" src="https://yandex.ru/map-widget/v1/-/CGdWiGOl" width="320" height="375"></iframe>
         </div>
       </div>
     </main>

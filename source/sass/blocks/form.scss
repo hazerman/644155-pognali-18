@@ -10,6 +10,55 @@
   }
 
   &--children {
+    position: relative;
+    padding-top: 6px;
+    padding-left: 39px;
+
+    cursor: pointer;
+
+    &:hover {
+      &::before {
+        border-color: #959bb2;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: #e2e5f1;
+        border-color: #e2e5f1;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-left: 59px;
+      letter-spacing: 1.5px;
+    }
+
+    &::before {
+      @include pseudo(absolute);
+      top: 0;
+      left: 0;
+
+      @include square(26px);
+      border: 1px solid $input-border-color;
+      border-radius: 3px;
+      background-color: $white;
+      background-image: url("../img/tick.svg");
+      background-repeat: no-repeat;
+      background-size: 9px;
+      background-position: left -30px;
+
+      @media (min-width: $tablet-width) {
+        @include square(36px);
+
+        background-size: 12px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: -3px;
+      }
+    }
+
     @media (min-width: $tablet-width) {
       font-weight: 500;
       color: $link-color;
@@ -20,6 +69,7 @@
   &--plan {
     margin-right: auto;
     font-weight: 500;
+    letter-spacing: 1.5px;
 
     @include font-size-height(16px, 16px);
     color: $link-color;
@@ -32,6 +82,49 @@
     @media (min-width: $desktop-width) {
       width: 220px;
       margin-right: 0;
+    }
+  }
+
+  &--filters {
+    position: relative;
+
+    display: block;
+    padding-left: 27px;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-left: 36px;
+    }
+
+    &::before {
+      @include pseudo(absolute);
+      top: -4px;
+      left: 1px;
+
+      @include square(18px);
+
+      background-color: $white;
+      border-radius: 3px;
+
+      background-image: url("../img/tick.svg");
+      background-repeat: no-repeat;
+      background-size: 9px;
+      background-position: left -30px;
+
+      @media (min-width: $tablet-width) {
+        @include square(24px);
+
+        background-size: 12px;
+      }
     }
   }
 
@@ -48,6 +141,7 @@
 
     @media (min-width: $tablet-width) {
       width: 420px;
+      margin-right: auto;
       margin-bottom: 37px;
       padding-left: 0;
 
@@ -94,6 +188,18 @@
       }
     }
   }
+}
+
+.form__label-transport {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: $white;
+
+  cursor: pointer;
 }
 
 .form__label-days {
@@ -186,10 +292,6 @@
       width: 40px;
       flex-grow: 1;
     }
-
-    @media (min-width: $desktop-width) {
-      // flex-grow: 0;
-    }
   }
 
   &--filters {
@@ -226,11 +328,33 @@
   }
 
   &--type--text {
+    &:hover {
+      border-color: #959bb2;
+    }
+
+    &:focus {
+      border-color: $night-blue;
+      outline: none;
+    }
+
     @include link-style($link-color, 15px, 15px);
     font-weight: 500;
 
     @media (min-width: $tablet-width) {
       @include font-size-height(20px, 20px);
+    }
+  }
+
+  &--type--checkbox {
+    &:checked {
+      + .form__label {
+        &--filters,
+        &--children {
+          &::before {
+            background-position: center;
+          }
+        }
+      }
     }
   }
 }
@@ -273,6 +397,15 @@
     min-width: 100%;
     max-width: 100%;
     min-height: 220px;
+
+    &:hover {
+      border-color: #959bb2;
+    }
+
+    &:focus {
+      border-color: $night-blue;
+      outline: none;
+    }
 
     @media (min-width: $tablet-width) {
       min-height: 142px;
