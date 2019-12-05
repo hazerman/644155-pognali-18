@@ -43,6 +43,9 @@
   &--plan {
     .filter-country__country-letter-list {
       @include reset-m-p;
+      margin-top: -1px;
+      margin-right: -1px;
+      margin-left: -1px;
       margin-bottom: 270px;
 
       @media (min-width: $tablet-width) {
@@ -56,6 +59,10 @@
     }
 
     .filter-country__item-letter {
+      margin-bottom: 0;
+      margin-right: 0;
+      width: 20%;
+
       @media (min-width: $tablet-width) {
         height: 70px;
         margin-bottom: 0;
