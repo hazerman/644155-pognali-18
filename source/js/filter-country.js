@@ -3,10 +3,21 @@ var filterCountryBtn = filterCountryWrapper.querySelector(".filter-country__show
 var filterCountryBtnClose = filterCountryWrapper.querySelector(".filter-country__close-button");
 var filterCountryLetterBtns = filterCountryWrapper.querySelectorAll(".filter-country__link-letter");
 
+var listHeight;
+var afterHeight = filterCountryWrapper.querySelector(".filter-country__letter-element");
+
 filterCountryBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
 
   filterCountryWrapper.classList.toggle("filter-country--show");
+
+  listHeight = filterCountryWrapper.querySelector(".filter-country__link-letter--current + .filter-country__country-name-list").offsetHeight;
+  if (window.innerWidth < 768) {
+    afterHeight.style.height = listHeight + "px";
+  }
+  else if ((window.innerWidth >= 768) && (window.innerWidth < 1440) && (listHeight > 475)) {
+    afterHeight.style.height = (listHeight - 475) + "px";
+  }
 })
 
 filterCountryBtnClose.addEventListener("click", function (evt) {
@@ -26,6 +37,19 @@ var changeList = function(btn) {
     }
 
     btn.classList.add("filter-country__link-letter--current");
+
+    listHeight = filterCountryWrapper.querySelector(".filter-country__link-letter--current + .filter-country__country-name-list").offsetHeight;
+    if (window.innerWidth < 768) {
+      afterHeight.style.height = listHeight + "px";
+    }
+    else if ((window.innerWidth >= 768) && (window.innerWidth < 1440)) {
+      if (listHeight > 475) {
+        afterHeight.style.height = (listHeight - 475) + "px";
+      }
+      else {
+        afterHeight.style.height = 0;
+      }
+    }
   })
 }
 
