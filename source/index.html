@@ -9,67 +9,69 @@
   <body>
 
     <header class="main-header main-header--nojs">
-      <div class="main-header__container">
-        <a class="site-logo main-header__site-logo">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-            <img class="site-logo__img main-header__img main-header__img--light" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
-          </picture>
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-            <img class="site-logo__img main-header__img main-header__img--dark" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
-          </picture>
-        </a>
-        <button class="main-header__button-toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <a class="main-header__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
-        <div class="main-header__nav-wrapper">
-          <nav class="main-nav main-header__main-nav">
-            <ul class="site-list main-nav__list">
-              <li class="site-list__item">
-                <a class="site-list__link" href="#">О сервисе</a>
+      <div class="main-header__scroll-container">
+        <div class="main-header__container">
+          <a class="site-logo main-header__site-logo">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="site-logo__img main-header__img main-header__img--light" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
+            </picture>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+              <img class="site-logo__img main-header__img main-header__img--dark" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
+            </picture>
+          </a>
+          <button class="main-header__button-toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <a class="main-header__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
+          <div class="main-header__nav-wrapper">
+            <nav class="main-nav main-header__main-nav">
+              <ul class="site-list main-nav__list">
+                <li class="site-list__item">
+                  <a class="site-list__link" href="#">О сервисе</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link" href="directions.html">Направления</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link" href="companions.html">Попутчики</a>
+                </li>
+              </ul>
+              <a class="main-nav__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
+            </nav>
+            <ul class="contacts contacts--header main-header__contacts">
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--phone-header contacts__link--color--dark" href="#">
+                  <address class="contacts__mode contacts__mode--phone">8 800 555-86-28</address>
+                </a>
               </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="directions.html">Направления</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="companions.html">Попутчики</a>
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--mail-header contacts__link--color--dark" href="#">
+                  <address class="contacts__mode contacts__mode--mail">mail@htmlacademy.ru</address>
+                </a>
               </li>
             </ul>
-            <a class="main-nav__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
-          </nav>
-          <ul class="contacts contacts--header main-header__contacts">
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--phone-header contacts__link--color--dark" href="#">
-                <address class="contacts__mode contacts__mode--phone">8 800 555-86-28</address>
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--mail-header contacts__link--color--dark" href="#">
-                <address class="contacts__mode contacts__mode--mail">mail@htmlacademy.ru</address>
-              </a>
-            </li>
-          </ul>
-          <ul class="social-list main-header__social-list">
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--icon--light social-list__link--fb" href="#">
-                <span class="visually-hidden">Погнали в Фэйсбуке</span>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--icon--light social-list__link--vk" href="#">
-                <span class="visually-hidden">Погнали во Вконтакте </span>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--icon--light social-list__link--in" href="#">
-                <span class="visually-hidden">Погнали в Инстаграме</span>
-              </a>
-            </li>
-          </ul>
+            <ul class="social-list main-header__social-list">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--icon--light social-list__link--fb" href="#">
+                  <span class="visually-hidden">Погнали в Фэйсбуке</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--icon--light social-list__link--vk" href="#">
+                  <span class="visually-hidden">Погнали во Вконтакте </span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--icon--light social-list__link--in" href="#">
+                  <span class="visually-hidden">Погнали в Инстаграме</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -143,6 +145,8 @@
               </div>
               <div class="directions-list__img-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/thailand-desktop@1x.webp 1x, img/thailand-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/thailand-mobile@1x.webp 1x, img/thailand-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
                   <img class="directions-list__img" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Виды Таиланда">
                 </picture>
@@ -158,6 +162,8 @@
               </div>
               <div class="directions-list__img-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/france-desktop@1x.webp 1x, img/france-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/france-mobile@1x.webp 1x, img/france-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
                   <img class="directions-list__img" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" width="270" height="110" alt="Виды Франции">
                 </picture>
@@ -173,6 +179,8 @@
               </div>
               <div class="directions-list__img-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/czech-desktop@1x.webp 1x, img/czech-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/czech-mobile@1x.webp 1x, img/czech-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
                   <img class="directions-list__img" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" width="270" height="110" alt="Виды Чехии">
                 </picture>
@@ -230,7 +238,10 @@
                 <span class="level__number level__number--sub">99</span>
               </div>
               <div class="companions-list__img-wrapper">
-                <img class="companions-list__img" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x" width="270" height="270" alt="Таня Фирсова">
+                <picture>
+                  <source type="image/webp" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+                  <img class="companions-list__img" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x" width="270" height="270" alt="Таня Фирсова">
+                </picture>
               </div>
             </li>
             <li class="companions-list__item companions-list__item--center">
@@ -269,7 +280,10 @@
                 <span class="level__number level__number--sub">80</span>
               </div>
               <div class="companions-list__img-wrapper">
-                <img class="companions-list__img" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" width="270" height="270" alt="Петя Демин">
+                <picture>
+                  <source type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                  <img class="companions-list__img" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" width="270" height="270" alt="Петя Демин">
+                </picture>
               </div>
             </li>
           </ul>
@@ -353,16 +367,19 @@
         <div class="location main__location">
           <div class="location__container">
             <address class="location__address">ул. Большая Конюшенная, 19/8</address>
-            <a class="location__button button button--arrow button--theme--location" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.283171%2C59.955893&mode=routes&rtext=59.938662%2C30.323127~59.973013%2C30.220556&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D131568837112&z=13.26" target="_blank">Проложить маршрут</a>
+            <a class="location__button button button--arrow button--theme--location" href="https://www.google.ru/maps/dir/''/%D0%93%D0%B0%D0%B7%D0%BF%D1%80%D0%BE%D0%BC+%D0%90%D1%80%D0%B5%D0%BD%D0%B0/@59.9544858,30.2669108,13z/data=!4m14!4m13!1m5!1m1!1s0x4696310fca145cc1:0x42b32648d8238007!2m2!1d30.3230474!2d59.9387165!1m5!1m1!1s0x469636ecc0b23029:0x385942b59e488b88!2m2!1d30.2214045!2d59.972728!3e0?hl=ru" target="_blank">Проложить маршрут</a>
           </div>
         </div>
         <div class="location__map-wrapper">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
             <img class="location__map-img" src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x" width="320" height="332" alt="ул. Большая Конюшенная, 19/8">
           </picture>
-          <iframe class="location__map-interactive" src="https://yandex.ru/map-widget/v1/-/CGdWiGOl" width="320" height="375"></iframe>
+          <iframe class="location__map-interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716173465!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575473043577!5m2!1sru!2sru" width="320" height="375"></iframe>
         </div>
       </div>
     </main>

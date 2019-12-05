@@ -6,6 +6,12 @@
   &--append {
     background-color: #d4d9eb;
     margin-top: -29px;
+
+    .plan__container {
+      @media (max-width: $tablet-width - 1) {
+        padding-bottom: 85px;
+      }
+    }
   }
 }
 
@@ -616,7 +622,7 @@
     @media (min-width: $tablet-width) {
       @include pseudo(absolute);
       top: 0;
-      right: 142px;
+      right: 134px;
 
       width: 1px;
       height: 110%;

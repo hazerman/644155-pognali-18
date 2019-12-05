@@ -76,11 +76,9 @@
     .main-header__button-toggle {
       &::before,
       &::after {
-        @include pseudo(absolute, 10px, auto, auto, 0);
-        @include rectangle(25px, 3px);
+        top: 11px;
 
         background-color: #cccccc;
-        box-shadow: none;
       }
 
       &::before {
@@ -146,6 +144,67 @@
       }
     }
   }
+
+  &--scroll {
+    min-height: 49px;
+
+    @media (min-width: $tablet-width) {
+      min-height: 91px;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 99px;
+    }
+
+    .main-header__scroll-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+
+      min-width: $mobile-width;
+      width: 100%;
+
+      background-color: $white;
+    }
+
+    .main-header__container {
+      padding-bottom: 24px;
+
+      @media (min-width: $tablet-width) {
+        padding-bottom: 41px;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding-bottom: 47px;
+      }
+    }
+
+    .main-header__img {
+      &--light {
+        display: none;
+      }
+
+      &--dark {
+        display: block;
+      }
+    }
+
+    .main-header__button-toggle {
+      &::before,
+      &::after {
+        background-color: #cccccc;
+      }
+    }
+
+    .main-header__page-title {
+      display: none;
+    }
+
+    .main-header__home-link {
+      display: none;
+    }
+  }
 }
 
 .main-header__container {
@@ -190,13 +249,17 @@
     display: none;
   }
 
-  &::before {
+  &::before,
+  &::after {
     @include pseudo(absolute, 7px, auto, auto, 0);
     @include rectangle(25px, 3px);
 
     background-color: $white;
     border-radius: 1px;
-    box-shadow: 0 8px 0 0 $white;
+  }
+
+  &::after {
+    top: 15px;
   }
 
   &:hover {

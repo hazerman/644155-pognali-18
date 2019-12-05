@@ -9,70 +9,72 @@
   <body>
 
     <header class="main-header main-header--inner main-header--nojs">
-      <div class="main-header__container">
-        <a class="site-logo main-header__site-logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-            <img class="site-logo__img main-header__img main-header__img--light" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
-          </picture>
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-            <img class="site-logo__img main-header__img main-header__img--dark" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
-          </picture>
-        </a>
-        <button class="main-header__button-toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <a class="main-header__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
-        <div class="main-header__nav-wrapper">
-          <nav class="main-nav main-header__main-nav">
-            <ul class="site-list main-nav__list">
-              <li class="site-list__item">
-                <a class="site-list__link" href="#">О сервисе</a>
+      <div class="main-header__scroll-container">
+        <div class="main-header__container">
+          <a class="site-logo main-header__site-logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="site-logo__img main-header__img main-header__img--light" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
+            </picture>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+              <img class="site-logo__img main-header__img main-header__img--dark" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
+            </picture>
+          </a>
+          <button class="main-header__button-toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <a class="main-header__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
+          <div class="main-header__nav-wrapper">
+            <nav class="main-nav main-header__main-nav">
+              <ul class="site-list main-nav__list">
+                <li class="site-list__item">
+                  <a class="site-list__link" href="#">О сервисе</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link" href="directions.html">Направления</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link">Попутчики</a>
+                </li>
+              </ul>
+              <a class="main-nav__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
+            </nav>
+            <ul class="contacts contacts--header main-header__contacts">
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--phone-header contacts__link--color--dark" href="#">
+                  <address class="contacts__mode contacts__mode--phone">8 800 555-86-28</address>
+                </a>
               </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="directions.html">Направления</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link">Попутчики</a>
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--mail-header contacts__link--color--dark" href="#">
+                  <address class="contacts__mode contacts__mode--mail">mail@htmlacademy.ru</address>
+                </a>
               </li>
             </ul>
-            <a class="main-nav__button button button--theme--light button--border--full-rounded" href="#">Авторизация</a>
-          </nav>
-          <ul class="contacts contacts--header main-header__contacts">
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--phone-header contacts__link--color--dark" href="#">
-                <address class="contacts__mode contacts__mode--phone">8 800 555-86-28</address>
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--mail-header contacts__link--color--dark" href="#">
-                <address class="contacts__mode contacts__mode--mail">mail@htmlacademy.ru</address>
-              </a>
-            </li>
-          </ul>
-          <ul class="social-list main-header__social-list">
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--icon--light social-list__link--fb" href="#">
-                <span class="visually-hidden">Погнали в Фэйсбуке</span>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--icon--light social-list__link--vk" href="#">
-                <span class="visually-hidden">Погнали во Вконтакте </span>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--icon--light social-list__link--in" href="#">
-                <span class="visually-hidden">Погнали в Инстаграме</span>
-              </a>
-            </li>
-          </ul>
+            <ul class="social-list main-header__social-list">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--icon--light social-list__link--fb" href="#">
+                  <span class="visually-hidden">Погнали в Фэйсбуке</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--icon--light social-list__link--vk" href="#">
+                  <span class="visually-hidden">Погнали во Вконтакте </span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--icon--light social-list__link--in" href="#">
+                  <span class="visually-hidden">Погнали в Инстаграме</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <h1 class="main-header__page-title">Попутчики</h1>
+          <a class="main-header__home-link link" href="index.html">На главную</a>
         </div>
-        <h1 class="main-header__page-title">Попутчики</h1>
-        <a class="main-header__home-link link" href="index.html">На главную</a>
       </div>
     </header>
 
@@ -712,6 +714,7 @@
                     </li>
                   </ul>
                 </li>
+                <li class="filter-country__letter-element"></li>
               </ul>
               <button class="filter-country__close-button button button--theme--pale" type="button">Свернуть</button>
             </div>
@@ -859,6 +862,9 @@
             <li class="companions-list__item companions-list__item--inner">
               <a class="companions-list__avatar-wrapper" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
                   <img class="companions-list__avatar" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
@@ -925,6 +931,9 @@
             <li class="companions-list__item companions-list__item--inner">
               <a class="companions-list__avatar-wrapper" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
                   <img class="companions-list__avatar" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
@@ -988,6 +997,9 @@
             <li class="companions-list__item companions-list__item--inner">
               <a class="companions-list__avatar-wrapper" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
                   <img class="companions-list__avatar" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
@@ -1054,6 +1066,9 @@
             <li class="companions-list__item companions-list__item--inner">
               <a class="companions-list__avatar-wrapper" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
                   <img class="companions-list__avatar" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
