@@ -197,6 +197,16 @@
       }
     }
 
+    .main-header__nav-wrapper {
+      top: 100%;
+    }
+
+    .main-header__main-nav {
+      &::before {
+        background-color: $dark-blue;
+      }
+    }
+
     .main-header__page-title {
       display: none;
     }
@@ -364,10 +374,12 @@
   }
 
   &::before {
-    @include pseudo(absolute, 11px, auto, auto, -105px);
-    @include rectangle(60px, 2px);
+    @media (min-width: $desktop-width) {
+      @include pseudo(absolute, 11px, auto, auto, -105px);
+      @include rectangle(60px, 2px);
 
-    background-color: $white;
+      background-color: $white;
+    }
   }
 }
 

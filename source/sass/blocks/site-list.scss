@@ -5,6 +5,14 @@
   @media (min-width: $tablet-width) {
     text-align: left;
   }
+
+  &--scroll {
+    .site-list__link {
+      @media (min-width: $desktop-width) {
+        text-shadow: 0 0 0 $dark-blue, 0 40px 0 $yellow;
+      }
+    }
+  }
 }
 
 .site-list__item {
