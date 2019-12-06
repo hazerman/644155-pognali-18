@@ -356,6 +356,20 @@
         }
       }
     }
+    &:focus {
+      + .form__label {
+        &--filters,
+        &--children {
+          &::before {
+            outline: auto 1px;
+          }
+        }
+      }
+
+      + .form__label-transport {
+        box-shadow: 0 0 0 2px $link-color inset;
+      }
+    }
   }
 }
 
@@ -375,6 +389,12 @@
       color: $white;
 
       background-color: $link-color;
+    }
+  }
+
+  &:focus {
+    + .form__label-days {
+      box-shadow: 0 0 0 2px #ff5c23 inset;
     }
   }
 }
