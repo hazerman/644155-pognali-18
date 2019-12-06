@@ -381,7 +381,7 @@
 
 .form__textarea {
   display: block;
-  padding: 13px 15px;
+  padding: 11px 13px;
 
   border: 1px solid $input-border-color;
   border-radius: 3px;
@@ -389,8 +389,13 @@
   @include font-size-height(16px, 18px);
   color: $light-black;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     @include font-size-height(20px, 24px);
+    padding: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 24px;
   }
 
   &--action {
