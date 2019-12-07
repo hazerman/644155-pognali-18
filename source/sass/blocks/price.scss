@@ -238,16 +238,14 @@
   &::after {
     @media (min-width: $tablet-width) {
       @include pseudo(absolute);
-      top: 50%;
-      left: -64px;
+      top: -5px;
+      left: -65px;
 
       @include rectangle(17px, 21px);
 
       background-image: url("../img/business.svg");
       background-repeat: no-repeat;
       background-size: contain;
-
-      transform: translateY(-50%);
     }
   }
 }
