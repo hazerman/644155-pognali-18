@@ -1,5 +1,6 @@
 var filterCountryWrapper = document.querySelector(".filter-country");
 var filterCountryBtn = filterCountryWrapper.querySelector(".filter-country__show-button");
+var filterCountryBtnText = filterCountryBtn.querySelector("span");
 var filterCountryBtnClose = filterCountryWrapper.querySelector(".filter-country__close-button");
 var filterCountryLetterBtns = filterCountryWrapper.querySelectorAll(".filter-country__link-letter");
 
@@ -17,6 +18,13 @@ filterCountryBtn.addEventListener("click", function (evt) {
   }
   else if ((window.innerWidth >= 768) && (window.innerWidth < 1440) && (listHeight > 475)) {
     afterHeight.style.height = (listHeight - 475) + "px";
+  }
+
+  if (filterCountryBtnText.textContent === "Показать все") {
+    filterCountryBtnText.textContent = "Свернуть";
+  }
+  else if (filterCountryBtnText.textContent === "Свернуть") {
+    filterCountryBtnText.textContent = "Показать все";
   }
 })
 
