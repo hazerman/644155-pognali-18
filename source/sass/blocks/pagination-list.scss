@@ -49,8 +49,9 @@
   @include font-size-height(20px, 30px);
   font-weight: 700;
   color: $night-blue;
-
   text-decoration: none;
+
+  border-radius: 50%;
 
   &:hover {
     color: rgba($night-blue, 0.6);
@@ -60,6 +61,11 @@
     color: rgba($night-blue, 1);
 
     background-color: $yellow;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $link-color inset;
   }
 
   &--current {

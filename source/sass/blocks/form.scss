@@ -198,6 +198,7 @@
   height: 100%;
 
   background-color: $white;
+  border-radius: 50%;
 
   cursor: pointer;
 }
@@ -361,7 +362,7 @@
         &--filters,
         &--children {
           &::before {
-            outline: auto 1px;
+            box-shadow: 0 0 0 2px $link-color;
           }
         }
       }
