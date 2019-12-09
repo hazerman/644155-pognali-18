@@ -171,6 +171,7 @@
   top: 230px;
 
   @include list;
+  width: 100%;
   margin-top: -230px;
   border-radius: 10px;
   overflow: hidden;
@@ -237,7 +238,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    flex-basis: 50%;
+    width: 50%;
     padding: 31px 102px 22px 33px;
 
     @include font-size-height(24px, 24px);
@@ -245,7 +246,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    flex-basis: 25%;
+    width: 25%;
     flex-grow: 1;
     padding-top: 29px;
     padding-bottom: 30px;

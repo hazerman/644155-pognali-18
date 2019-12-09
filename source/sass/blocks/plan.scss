@@ -5,11 +5,21 @@
 
   &--append {
     background-color: #d4d9eb;
-    margin-top: -29px;
+    margin-top: -30px;
+
+    @media (min-width: $desktop-width) {
+      margin-top: -60px;
+    }
 
     .plan__container {
-      @media (max-width: $tablet-width - 1) {
-        padding-bottom: 85px;
+      padding-bottom: 104px;
+
+      @media (min-width: $tablet-width) {
+        padding-bottom: 123px;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding-bottom: 132px;
       }
     }
   }
@@ -27,7 +37,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 46px;
-    padding-bottom: 91px;
+    padding-bottom: 122px;
   }
 }
 
@@ -357,6 +367,10 @@
 }
 
 .plan__button {
+  padding: 0;
+
+  cursor: pointer;
+
   &--minus,
   &--plus {
     position: absolute;
@@ -367,8 +381,6 @@
 
     border: none;
     background-color: transparent;
-
-    cursor: pointer;
 
     @media (min-width: $tablet-width) {
       width: 60px;
@@ -424,8 +436,6 @@
 
     border: none;
     background-color: transparent;
-
-    cursor: pointer;
 
     &:hover {
       &::before,
@@ -938,6 +948,7 @@
   right: -8px;
 
   display: none;
+  padding: 0;
 
   @include circle(21px);
   background-color: $light-grey;
