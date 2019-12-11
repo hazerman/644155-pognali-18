@@ -64,11 +64,12 @@
   }
 
   &--inner {
+    padding: 15px 0 22px 0;
     border-radius: 20px;
 
     @media (min-width: $tablet-width) {
       width: 100%;
-      padding: 33px 25px 10px 35px;
+      padding: 33px 0 10px 0;
       margin-bottom: 40px;
     }
 
@@ -86,16 +87,34 @@
 
       @media (min-width: $desktop-width) {
         flex-grow: 1;
-        padding: 48px 44px 41px 56px;
+        padding: 47px 44px 41px 56px;
+      }
+
+      &::before {
+        @media (min-width: $desktop-width) {
+          content: "";
+
+          position: absolute;
+          top: 50%;
+          left: 52%;
+
+          width: 1px;
+          height: 60%;
+
+          background-color: #e8e8e8;
+          background-image: linear-gradient(to bottom, #fbfbfb 0%, #e8e8e8 20%, #e8e8e8 80%, #fbfbfb 100%);
+
+          transform: translateY(-50%);
+        }
       }
     }
 
     .companions-list__name {
       &::before {
-        left: auto;
-        right: -67px;
+        left: 139px;
 
         @media (min-width: $tablet-width) {
+          left: auto;
           right: -30px;
           top: 12px;
         }
@@ -112,19 +131,27 @@
 
       display: flex;
       flex-direction: column;
+      padding-left: 20px;
 
       @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
         flex-direction: row;
+        padding-left: 37px;
       }
 
       @media (min-width: $desktop-width) {
         margin-top: -17px;
+        padding-left: 0;
       }
     }
 
     .companions-list__level {
       position: static;
       margin-top: -9px;
+      margin-left: 23px;
+
+      @media (min-width: $tablet-width) {
+        margin-left: 0;
+      }
 
       @media (min-width: $desktop-width) {
         margin-top: -22px;
@@ -142,16 +169,17 @@
 .companions-list__user-info {
   @media (min-width: $tablet-width) {
     order: 0;
-    width: 460px;
-    padding-left: 224px;
+    width: 490px;
+    padding-left: 258px;
     margin-right: auto;
   }
 
   @media (min-width: $desktop-width) {
-    width: 275px;
+    width: 260px;
     padding-left: 0;
-    margin-right: 58px;
+    margin-right: 69px;
     margin-bottom: 29px;
+    margin-left: 3px;
   }
 }
 
@@ -210,13 +238,14 @@
     align-items: center;
     order: 1;
     margin-bottom: 17px;
+    padding-right: 25px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
     order: 3;
-
     margin-bottom: 0;
+    padding-right: 0;
   }
 
   .companions-list__title {
@@ -224,15 +253,31 @@
       @include reset-m-p;
       font-size: 0;
     }
+
+    &::before,
+    &::after {
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
   }
 }
 
+.companions-list__transport-wrapper {
+  flex-grow: 1;
+}
+
 .companions-list__level-wrapper {
-  margin-left: auto;
+  width: 88px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
 }
 
 .companions-list__action-wrapper {
   display: flex;
+  @include padding-center(20px);
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -242,7 +287,8 @@
     order: 2;
     max-width: 340px;
     margin-bottom: -73px;
-    margin-left: 220px;
+    margin-left: 255px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -258,6 +304,8 @@
 }
 
 .companions-list__country-wrapper {
+  display: flex;
+  flex-direction: column;
   @media (min-width: $tablet-width) {
     order: 3;
     width: 100%;
@@ -273,13 +321,20 @@
       @include reset-m-p;
       font-size: 0;
     }
+
+    &::before,
+    &::after {
+      @media (min-width: $desktop-width) {
+        display: none;
+      }
+    }
   }
 }
 
 .companions-list__actions {
   position: absolute;
   top: 40px;
-  left: 47px;
+  left: 67px;
   z-index: 2;
 
   display: flex;
@@ -314,14 +369,14 @@
 
   &--smaller {
     width: 90px;
-    margin-left: 85px;
-    margin-bottom: 44px;
+    margin-left: 104px;
+    margin-bottom: 45px;
 
     @include font-size-height(20px, 20px);
 
     @media (min-width: $tablet-width) {
       width: auto;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       margin-left: 0;
 
       @include font-size-height(30px, 30px);
@@ -391,13 +446,15 @@
   }
 
   &--smaller {
-    width: 180px;
+    width: 200px;
+    padding-left: 25px;
     margin-bottom: 13px;
 
     font-size: 15px;
 
     @media (min-width: $tablet-width) {
       width: auto;
+      padding-left: 3px;
 
       font-size: 20px;
     }
@@ -482,7 +539,13 @@
 }
 
 .companions-list__title {
+  position: relative;
+
   @include reset-m-p;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
   margin-bottom: 16px;
 
   font-weight: 400;
@@ -490,20 +553,31 @@
   @include font-size-height(15px, 18px);
   color: $light-black;
 
-  @media (min-width: $tablet-width) {
-    margin-left: 48px;
+  &::before,
+  &::after {
+    content: "";
+
+    position: relative;
+
+    height: 1px;
+
+    background-color: $light-grey;
   }
 
-  &--profile {
-    font-weight: 700;
-    font-size: 16px;
-    color: $link-color;
-    text-transform: uppercase;
-  }
-}
+  &::before {
+    width: 17px;
+    margin-right: 10px;
 
-.companions-list__transport-whish-list {
-  display: flex;
+    @media (min-width: $tablet-width) {
+      width: 73px;
+    }
+  }
+
+  &::after {
+    flex-grow: 1;
+    width: auto;
+    margin-left: 10px;
+  }
 }
 
 .companions-list__level {

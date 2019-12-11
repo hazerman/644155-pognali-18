@@ -4,9 +4,13 @@
   justify-content: center;
 
   &--inner {
+    padding-left: 25px;
+    justify-content: flex-start;
+
     @media (min-width: $tablet-width) {
       flex-direction: column;
       margin-top: -18px;
+      padding-left: 0;
     }
 
     @media (min-width: $desktop-width) {
