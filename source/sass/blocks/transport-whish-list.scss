@@ -72,11 +72,58 @@
 }
 
 .transport-whish-list__item {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   @include circle(32px);
+
+  &[data-hover] {
+    &::before {
+      @media (min-width: $desktop-width) {
+        content: attr(data-hover);
+
+        position: absolute;
+        top: 138%;
+        left: 50%;
+
+        display: none;
+        padding: 16px 24px 17px 24px;
+
+        @include font-size-height(20px, 24px);
+        color: $white;
+
+        background-color: #101d41;
+        border-radius: 3px;
+
+        transform: translateX(-50%);
+      }
+    }
+
+    &::after {
+      @media (min-width: $desktop-width) {
+        content: "";
+
+        position: absolute;
+        top: 100%;
+        left: 50%;
+
+        display: none;
+
+        @include triangle-right(#101d41, 8px, 16px);
+        transform: translateX(-50%) rotate(-90deg);
+      }
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        display: block;
+      }
+    }
+  }
 
   svg {
     width: auto;

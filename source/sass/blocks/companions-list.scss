@@ -31,8 +31,6 @@
   background-color: $white;
   border-radius: 10px;
 
-  overflow: hidden;
-
   @media (min-width: $tablet-width) {
     width: 285px;
 
@@ -183,7 +181,7 @@
     flex-shrink: 0;
 
     @include square(285px);
-    border-radius: 0;
+    border-radius: 20px 0 0 20px;
   }
 }
 
@@ -356,6 +354,14 @@
   order: -1;
   min-height: 270px;
   overflow: hidden;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
 
 .companions-list__img {
