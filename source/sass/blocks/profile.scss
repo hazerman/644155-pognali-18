@@ -161,6 +161,7 @@
   @include reset-m-p;
   @include padding-center(17px);
   @include font-size-height(16px, 18px);
+  font-weight: 700;
   text-transform: uppercase;
 
   background-color: $light-grey;
