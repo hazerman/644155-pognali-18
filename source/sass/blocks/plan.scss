@@ -12,6 +12,8 @@
     }
 
     .plan__container {
+      display: flex;
+      flex-wrap: wrap;
       padding-bottom: 104px;
 
       @media (min-width: $tablet-width) {
@@ -58,6 +60,83 @@
   }
 }
 
+.plan__carousel {
+  @include list;
+  display: flex;
+  justify-content: space-between;
+  width: 45px;
+  margin-left: auto;
+  margin-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 69px;
+    margin-right: 4px;
+  }
+
+  &--main {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--sub {
+    position: absolute;
+    top: 108px;
+    right: 205px;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
+    margin: 0;
+
+    @media (max-width: $desktop-width - 1) {
+      display: none;
+    }
+  }
+}
+
+.plan__carousel-item {
+  position: relative;
+
+  @include font-size-height(20px, 20px);
+  color: rgba($black, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 24px;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    left: 0;
+
+    @include circle(5px);
+
+    background-color: rgba(#808285, 0.3);
+
+    @media (min-width: $tablet-width) {
+      top: 19px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 7px;
+      left: -42px;
+    }
+  }
+
+  &--current {
+    color:  $black;
+
+    &::before {
+      background-color: $link-color;
+    }
+  }
+}
+
 .plan__list {
   @include list;
 
@@ -89,6 +168,10 @@
     @include font-size-height(36px, 36px);
     margin-bottom: 37px;
   }
+}
+
+.plan__form {
+  width: 100%;
 }
 
 .plan__item {
@@ -130,6 +213,8 @@
   }
 
   &--append {
+    position: relative;
+
     @media (min-width: $tablet-width) {
       padding: 52px 44px 55px 44px;
 

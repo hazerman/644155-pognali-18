@@ -187,11 +187,33 @@
       <section class="main__plan plan plan--append">
         <div class="plan__container">
           <h2 class="plan__title">Добавить план:</h2>
+          <ul class="plan__carousel plan__carousel--main">
+            <li class="plan__carousel-item plan__carousel-item--current">
+              <span class="visually-hidden">Даты</span>
+            </li>
+            <li class="plan__carousel-item">
+              <span class="visually-hidden">Маршрут</span>
+            </li>
+            <li class="plan__carousel-item">
+              <span class="visually-hidden">Развлечения</span>
+            </li>
+          </ul>
           <form class="plan__form form" action="https://echo.htmlacademy.ru" method="post">
             <ol class="plan__list">
               <li class="plan__item plan__item--append">
                 <h3 class="plan__subtitle">Даты пребывания</h3>
                 <p class="plan__description">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                <ul class="plan__carousel plan__carousel--sub">
+                  <li class="plan__carousel-item plan__carousel-item--current">
+                    Даты
+                  </li>
+                  <li class="plan__carousel-item">
+                    Маршрут
+                  </li>
+                  <li class="plan__carousel-item">
+                    Развлечения
+                  </li>
+                </ul>
                 <div class="plan__inputs-wrapper">
                   <div class="plan__input-wrapper plan__input-wrapper--count">
                     <label class="form__label form__label--plan" for="count-companions">Ищу попутчиков:</label>
@@ -423,6 +445,17 @@
               <li class="plan__item plan__item--append">
                 <h3 class="plan__subtitle">Маршрут</h3>
                 <p class="plan__description plan__description--small">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+                <ul class="plan__carousel plan__carousel--sub">
+                  <li class="plan__carousel-item">
+                    Даты
+                  </li>
+                  <li class="plan__carousel-item plan__carousel-item--current">
+                    Маршрут
+                  </li>
+                  <li class="plan__carousel-item">
+                    Развлечения
+                  </li>
+                </ul>
                 <div class="plan__countries-wrapper">
                   <div class="plan__country-wrapper plan__country-wrapper--delete">
                     <button class="plan__country-button plan__country-button--checked" type="button">
@@ -1099,6 +1132,17 @@
               <li class="plan__item plan__item--append">
                 <h3 class="plan__subtitle">Развлечения</h3>
                 <p class="plan__description">Наконец, расскажите о своих планах времяпровождения. Можно&nbsp;писать в свободной форме и ставить тэги.</p>
+                <ul class="plan__carousel plan__carousel--sub">
+                  <li class="plan__carousel-item">
+                    Даты
+                  </li>
+                  <li class="plan__carousel-item">
+                    Маршрут
+                  </li>
+                  <li class="plan__carousel-item plan__carousel-item--current">
+                    Развлечения
+                  </li>
+                </ul>
                 <div class="plan__action-wrapper">
                   <div class="plan__action">
                     <label class="form__label form__label--action" for="action-country-bosnia">Босния и Герцеговина</label>
