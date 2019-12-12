@@ -33,6 +33,7 @@ filterCountryBtnClose.addEventListener("click", function (evt) {
 
   filterCountryWrapper.classList.remove("filter-country--show");
   filterCountryBtnText.textContent = "Показать все";
+  filterCountryWrapper.scrollIntoView();
 })
 
 var changeList = function(btn) {
