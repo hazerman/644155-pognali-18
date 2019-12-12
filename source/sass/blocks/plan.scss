@@ -215,6 +215,8 @@
   &--append {
     position: relative;
 
+    display: none;
+
     @media (min-width: $tablet-width) {
       padding: 52px 44px 55px 44px;
 
@@ -238,6 +240,10 @@
         margin-bottom: 44px;
       }
     }
+  }
+
+  &--show {
+    display: block;
   }
 }
 
