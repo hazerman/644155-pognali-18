@@ -277,6 +277,7 @@
 
 .companions-list__action-wrapper {
   display: flex;
+
   @include padding-center(20px);
 
   @media (min-width: $tablet-width) {
@@ -306,6 +307,7 @@
 .companions-list__country-wrapper {
   display: flex;
   flex-direction: column;
+
   @media (min-width: $tablet-width) {
     order: 3;
     width: 100%;
@@ -434,6 +436,7 @@
 .companions-list__hashtags {
   @include reset-m-p;
   margin-bottom: 10px;
+
   @include padding-center(15px);
 
   color: $light-black;
