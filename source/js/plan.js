@@ -18,6 +18,7 @@ var nextSlide = function (btn, counter) {
     planCarouselItems[counter].classList.remove("plan__carousel-item--current");
     planListItems[counter + 1].classList.add("plan__item--show");
     planCarouselItems[counter + 1].classList.add("plan__carousel-item--current");
+    planList.style.counterReset = "plan " + (counter + 1);
     planWrapper.scrollIntoView();
   })
 }
@@ -30,6 +31,7 @@ var prevSlide = function (btn, counter) {
     planCarouselItems[counter + 1].classList.remove("plan__carousel-item--current");
     planListItems[counter].classList.add("plan__item--show");
     planCarouselItems[counter].classList.add("plan__carousel-item--current");
+    planList.style.counterReset = "plan " + counter;
     planWrapper.scrollIntoView();
   })
 }
