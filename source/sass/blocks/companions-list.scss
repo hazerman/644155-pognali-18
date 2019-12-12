@@ -434,6 +434,7 @@
 .companions-list__hashtags {
   @include reset-m-p;
   margin-bottom: 10px;
+  @include padding-center(15px);
 
   color: $light-black;
 
@@ -447,6 +448,7 @@
 
   &--smaller {
     width: 200px;
+    padding: 0;
     padding-left: 25px;
     margin-bottom: 13px;
 

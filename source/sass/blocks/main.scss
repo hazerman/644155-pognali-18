@@ -13,7 +13,7 @@
 
 .main__items-wrapper {
   @include container;
-  padding-top: 24px;
+  padding-top: 26px;
   padding-bottom: 106px;
 
   @media (min-width: $tablet-width) {
@@ -58,6 +58,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 36px 34px 38px 34px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -167,6 +168,6 @@
   @include rounding-bottom(30px, 60px, 60px);
 
   @media (min-width: $tablet-width) {
-    min-height: 190px;
+    min-height: 196px;
   }
 }
