@@ -130,6 +130,7 @@
       position: static;
 
       display: flex;
+      flex-wrap: wrap;
       flex-direction: column;
       padding-left: 20px;
 
@@ -145,7 +146,9 @@
     }
 
     .companions-list__level {
-      position: static;
+      position: relative;
+      top: 0;
+      left: 0;
       margin-top: -9px;
       margin-left: 23px;
 
@@ -487,6 +490,22 @@
   &:active {
     &::before {
       opacity: 0.1;
+    }
+  }
+
+  &::after {
+    @media (max-width: $tablet-width - 1) {
+      content: "";
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      display: block;
+      width: 48px;
+      height: 48px;
+
+      transform: translate(-50%, -50%);
     }
   }
 
