@@ -108,6 +108,7 @@
 .feedback__contacts {
   @media (min-width: $desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 870px;
 
