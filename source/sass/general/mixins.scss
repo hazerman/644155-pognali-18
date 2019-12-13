@@ -159,3 +159,7 @@
   bottom: $bot;
   left: $left;
 }
+
+@mixin progress ($radius, $level) {
+  stroke-dasharray: (($radius * 2 * 3.14) / 100 * $level) (($radius * 2 * 3.14) / 100 * (100 - $level));
+}

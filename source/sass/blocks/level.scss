@@ -10,7 +10,6 @@
   @include font-size-height(24px, 24px);
 
   border-radius: 50%;
-  box-shadow: 0 0 0 3px $dark-orange inset;
 
   &::after {
     @include pseudo(relative, auto, auto, auto, auto, "level");
@@ -86,5 +85,36 @@
     @media (min-width: $desktop-width) {
       color: $white;
     }
+  }
+}
+
+.level__progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  fill: none;
+  stroke: $dark-orange;
+  stroke-width: 3%;
+
+  transform: rotate(-90deg);
+
+  &--80 {
+    @include progress(49, 80);
+  }
+
+  &--99 {
+    @include progress(49, 99);
+  }
+
+  &--25 {
+    @include progress(49, 25);
+  }
+
+  &--50 {
+    @include progress(49, 50);
   }
 }
