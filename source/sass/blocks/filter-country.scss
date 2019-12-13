@@ -132,6 +132,8 @@
     }
 
     .filter-country__country-name-list {
+      width: 170px;
+
       @media (min-width: $tablet-width) {
         left: 370px;
       }
@@ -143,6 +145,20 @@
 
         display: none;
         padding-top: 0;
+      }
+
+      &--limit {
+        max-height: 200px;
+        overflow: auto;
+
+        @media (min-width: $tablet-width) {
+          max-height: 350px;
+        }
+
+        @media (min-width: $desktop-width) {
+          width: 180px;
+          max-height: 390px;
+        }
       }
     }
 

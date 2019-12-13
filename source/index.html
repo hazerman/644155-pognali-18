@@ -4,10 +4,18 @@
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script async src="js/picturefill.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <script async src="js/picturefill.min.js"></script>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="body body--clearfix">
+
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <header class="main-header main-header--nojs">
       <div class="main-header__scroll-container">
@@ -57,17 +65,26 @@
             </ul>
             <ul class="social-list main-header__social-list">
               <li class="social-list__item">
-                <a class="social-list__link social-list__link--icon--light social-list__link--fb" href="#">
+                <a class="social-list__link social-list__link--style--header" href="#">
+                  <svg class="social-list__icon social-list__icon--fb" width="11" height="21" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg>
                   <span class="visually-hidden">Погнали в Фэйсбуке</span>
                 </a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__link social-list__link--icon--light social-list__link--vk" href="#">
+                <a class="social-list__link social-list__link--style--header" href="#">
+                  <svg class="social-list__icon social-list__icon--vk" width="23" height="12" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg>
                   <span class="visually-hidden">Погнали во Вконтакте </span>
                 </a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__link social-list__link--icon--light social-list__link--in" href="#">
+                <a class="social-list__link social-list__link--style--header" href="#">
+                  <svg class="social-list__icon social-list__icon--in" width="18" height="18" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-instagram"></use>
+                  </svg>
                   <span class="visually-hidden">Погнали в Инстаграме</span>
                 </a>
               </li>
@@ -220,16 +237,28 @@
                 </ul>
                 <h3 class="visually-hidden">транспорт:</h3>
                 <ul class="transport-whish-list companions-list__transport-whish-list">
-                  <li class="transport-whish-list__item transport-whish-list__item--air transport-whish-list__item--active">
+                  <li class="transport-whish-list__item transport-whish-list__item--active" data-hover="Авиаперелет">
+                    <svg width="19" height="21" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-plane"></use>
+                    </svg>
                     <span class="visually-hidden">Авиаперелет</span>
                   </li>
-                  <li class="transport-whish-list__item transport-whish-list__item--auto">
+                  <li class="transport-whish-list__item" data-hover="Автотранспорт">
+                    <svg width="17" height="21" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-bus"></use>
+                    </svg>
                     <span class="visually-hidden">Автотранспорт</span>
                   </li>
-                  <li class="transport-whish-list__item transport-whish-list__item--bike">
+                  <li class="transport-whish-list__item" data-hover="Велосипед">
+                    <svg width="24" height="21" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-bike"></use>
+                    </svg>
                     <span class="visually-hidden">Велосипед</span>
                   </li>
-                  <li class="transport-whish-list__item transport-whish-list__item--foot">
+                  <li class="transport-whish-list__item" data-hover="Пешком">
+                    <svg width="20" height="21" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-run"></use>
+                    </svg>
                     <span class="visually-hidden">Пешком</span>
                   </li>
                 </ul>
@@ -262,16 +291,28 @@
                 </ul>
                 <h3 class="visually-hidden">транспорт:</h3>
                 <ul class="transport-whish-list companions-list__transport-whish-list">
-                  <li class="transport-whish-list__item transport-whish-list__item--air transport-whish-list__item--active">
+                  <li class="transport-whish-list__item transport-whish-list__item--active" data-hover="Авиаперелет">
+                    <svg width="19" height="21" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-plane"></use>
+                    </svg>
                     <span class="visually-hidden">Авиаперелет</span>
                   </li>
-                  <li class="transport-whish-list__item transport-whish-list__item--auto transport-whish-list__item--active">
+                  <li class="transport-whish-list__item transport-whish-list__item--active" data-hover="Автотранспорт">
+                    <svg width="17" height="21" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-bus"></use>
+                    </svg>
                     <span class="visually-hidden">Автотранспорт</span>
                   </li>
-                  <li class="transport-whish-list__item transport-whish-list__item--bike">
+                  <li class="transport-whish-list__item" data-hover="Велосипед">
+                    <svg width="24" height="21" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-bike"></use>
+                    </svg>
                     <span class="visually-hidden">Велосипед</span>
                   </li>
-                  <li class="transport-whish-list__item transport-whish-list__item--foot transport-whish-list__item--active">
+                  <li class="transport-whish-list__item transport-whish-list__item--active" data-hover="Пешком">
+                    <svg width="20" height="21" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-run"></use>
+                    </svg>
                     <span class="visually-hidden">Пешком</span>
                   </li>
                 </ul>
@@ -343,6 +384,7 @@
           <h2 class="feedback__heading">Заинтересовались?</h2>
           <p class="feedback__description">Зарегистрируйтесь, это&nbsp;быстро&nbsp;и бесплатно!<br>Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь.</a></p>
           <form class="form feedback__form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="feedback-email">Введите ваш email</label>
             <input class="form__input form__input--type--email" type="email" name="feedback-email" id="feedback-email" placeholder="E-mail">
             <button class="feedback__button button button--arrow" type="submit">
               Регистрация
@@ -380,7 +422,7 @@
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
             <img class="location__map-img" src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x" width="320" height="332" alt="ул. Большая Конюшенная, 19/8">
           </picture>
-          <iframe class="location__map-interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716173465!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575473043577!5m2!1sru!2sru" width="320" height="375"></iframe>
+          <iframe class="location__map-interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716173465!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575473043577!5m2!1sru!2sru" width="320" height="375" title="Интерактвиная карта с адресом ул. Большая Конюшенная, 19/8"></iframe>
         </div>
       </div>
     </main>
@@ -396,17 +438,26 @@
         </a>
         <ul class="social-list main-footer__social-list">
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--bg--footer social-list__link--icon--dark social-list__link--fb" href="#">
+            <a class="social-list__link social-list__link--style--footer" href="#">
+              <svg class="social-list__icon social-list__icon--fb" width="11" height="21" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
               <span class="visually-hidden">Погнали в Фэйсбуке</span>
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--bg--footer social-list__link--icon--dark social-list__link--vk" href="#">
+            <a class="social-list__link social-list__link--style--footer" href="#">
+              <svg class="social-list__icon social-list__icon--vk" width="23" height="12" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
               <span class="visually-hidden">Погнали во Вконтакте </span>
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--bg--footer social-list__link--icon--dark social-list__link--in" href="#">
+            <a class="social-list__link social-list__link--style--footer" href="#">
+              <svg class="social-list__icon social-list__icon--in" width="18" height="18" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
               <span class="visually-hidden">Погнали в Инстаграме</span>
             </a>
           </li>
@@ -421,7 +472,7 @@
       </div>
     </footer>
 
-    <script src="js/menu.js"></script>
-    <script src="js/popup-price.js"></script>
+    <script src="js/menu.min.js"></script>
+    <script src="js/popup-price.min.js"></script>
   </body>
 </html>

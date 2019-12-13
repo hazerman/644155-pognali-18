@@ -12,12 +12,22 @@ dropBtns[2].addEventListener("click", function (evt) {
   dropBtns[2].classList.toggle("plan__country-button--show");
 
   dropListHeight = dropCountryWrapper.querySelector(".filter-country__link-letter--current + .filter-country__country-name-list").offsetHeight;
+
+  var limitList = dropCountryWrapper.querySelector(".filter-country__link-letter--current + .filter-country__country-name-list");
+
   if (window.innerWidth < 768) {
     dropAfterHeight.style.height = dropListHeight + "px";
+    if (dropListHeight > 200) {
+      limitList.classList.add("filter-country__country-name-list--limit");
+      dropAfterHeight.style.height = 200 + "px";
+    }
+    else {
+      dropAfterHeight.style.height = dropListHeight + "px";
+    }
   }
   else if ((window.innerWidth >= 768) && (window.innerWidth < 1440)) {
     if (dropListHeight > 350) {
-      dropAfterHeight.style.height = (dropListHeight - 350) + "px";
+      limitList.classList.add("filter-country__country-name-list--limit");
     }
     else {
       dropAfterHeight.style.height = 0;
@@ -25,7 +35,7 @@ dropBtns[2].addEventListener("click", function (evt) {
   }
   else if (window.innerWidth >= 1440) {
     if (dropListHeight > 390) {
-      dropAfterHeight.style.height = (dropListHeight - 350) + "px";
+      limitList.classList.add("filter-country__country-name-list--limit");
     }
     else {
       dropAfterHeight.style.height = 0;
@@ -46,12 +56,21 @@ var changeDropList = function (btn) {
     btn.classList.add("filter-country__link-letter--current");
 
     dropListHeight = dropCountryWrapper.querySelector(".filter-country__link-letter--current + .filter-country__country-name-list").offsetHeight;
+    var limitList = dropCountryWrapper.querySelector(".filter-country__link-letter--current + .filter-country__country-name-list");
+
     if (window.innerWidth < 768) {
-      dropAfterHeight.style.height = dropListHeight + "px";
+
+      if (dropListHeight > 200) {
+        limitList.classList.add("filter-country__country-name-list--limit");
+        dropAfterHeight.style.height = 200 + "px";
+      }
+      else {
+        dropAfterHeight.style.height = dropListHeight + "px";
+      }
     }
     else if ((window.innerWidth >= 768) && (window.innerWidth < 1440)) {
       if (dropListHeight > 350) {
-        dropAfterHeight.style.height = (dropListHeight - 350) + "px";
+        limitList.classList.add("filter-country__country-name-list--limit");
       }
       else {
         dropAfterHeight.style.height = 0;
@@ -59,7 +78,7 @@ var changeDropList = function (btn) {
     }
     else if (window.innerWidth >= 1440) {
       if (dropListHeight > 390) {
-        dropAfterHeight.style.height = (dropListHeight - 350) + "px";
+        limitList.classList.add("filter-country__country-name-list--limit");
       }
       else {
         dropAfterHeight.style.height = 0;

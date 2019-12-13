@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали | Направления</title>
-    <script async src="js/picturefill.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <script async src="js/picturefill.min.js"></script>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="body body--bg--inner">
+
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <header class="main-header main-header--inner main-header--nojs main-header--norel">
       <div class="main-header__scroll-container">
@@ -57,17 +64,26 @@
             </ul>
             <ul class="social-list main-header__social-list">
               <li class="social-list__item">
-                <a class="social-list__link social-list__link--icon--light social-list__link--fb" href="#">
+                <a class="social-list__link social-list__link--style--header" href="#">
+                  <svg class="social-list__icon social-list__icon--fb" width="11" height="21" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg>
                   <span class="visually-hidden">Погнали в Фэйсбуке</span>
                 </a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__link social-list__link--icon--light social-list__link--vk" href="#">
+                <a class="social-list__link social-list__link--style--header" href="#">
+                  <svg class="social-list__icon social-list__icon--vk" width="23" height="12" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg>
                   <span class="visually-hidden">Погнали во Вконтакте </span>
                 </a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__link social-list__link--icon--light social-list__link--in" href="#">
+                <a class="social-list__link social-list__link--style--header" href="#">
+                  <svg class="social-list__icon social-list__icon--in" width="18" height="18" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-instagram"></use>
+                  </svg>
                   <span class="visually-hidden">Погнали в Инстаграме</span>
                 </a>
               </li>
@@ -98,29 +114,41 @@
           </div>
           <button class="profile__button button button--border--full-rounded button--theme--pale" type="button"><span>Сменить </span>фото</button>
           <div class="profile__wrapper profile__wrapper--tags">
-            <h3 class="profile__title">Тэги</h3>
-            <textarea class="profile__hashtags" placeholder="Коротко о себе в виде 5-8 хэштегов">#бургер #бар #футбол #концерт #крафт</textarea>
+            <label class="profile__title" for="profile-tags">Тэги</label>
+            <textarea class="profile__hashtags" name="profile-tags" id="profile-tags" placeholder="Коротко о себе в виде 5-8 хэштегов">#бургер #бар #футбол #концерт #крафт</textarea>
           </div>
           <div class="profile__wrapper profile__wrapper--transport">
             <h3 class="profile__title">Транспорт</h3>
             <ul class="transport-whish-list transport-whish-list--profile profile__transport-whish-list">
-              <li class="transport-whish-list__item">
-                <button class="transport-whish-list__button-toggle transport-whish-list__button-toggle--air" type="button">
+              <li class="transport-whish-list__item transport-whish-list__item--active">
+                <button class="transport-whish-list__button-toggle" type="button">
+                  <svg width="14" height="16" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-plane"></use>
+                  </svg>
                   <span class="visually-hidden">Авиаперелет</span>
                 </button>
               </li>
-              <li class="transport-whish-list__item">
-                <button class="transport-whish-list__button-toggle transport-whish-list__button-toggle--auto" type="button">
+              <li class="transport-whish-list__item transport-whish-list__item--active">
+                <button class="transport-whish-list__button-toggle" type="button">
+                  <svg width="13" height="16" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-bus"></use>
+                  </svg>
                   <span class="visually-hidden">Автотранспорт</span>
                 </button>
               </li>
               <li class="transport-whish-list__item">
-                <button class="transport-whish-list__button-toggle transport-whish-list__button-toggle--bike" type="button">
+                <button class="transport-whish-list__button-toggle" type="button">
+                  <svg width="19" height="16" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-bike"></use>
+                  </svg>
                   <span class="visually-hidden">Велосипед</span>
                 </button>
               </li>
-              <li class="transport-whish-list__item">
-                <button class="transport-whish-list__button-toggle transport-whish-list__button-toggle--foot" type="button">
+              <li class="transport-whish-list__item transport-whish-list__item--active">
+                <button class="transport-whish-list__button-toggle" type="button">
+                  <svg width="15" height="16" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-run"></use>
+                  </svg>
                   <span class="visually-hidden">Пешком</span>
                 </button>
               </li>
@@ -162,11 +190,33 @@
       <section class="main__plan plan plan--append">
         <div class="plan__container">
           <h2 class="plan__title">Добавить план:</h2>
+          <ul class="plan__carousel plan__carousel--main">
+            <li class="plan__carousel-item plan__carousel-item--current">
+              <span class="visually-hidden">Даты</span>
+            </li>
+            <li class="plan__carousel-item">
+              <span class="visually-hidden">Маршрут</span>
+            </li>
+            <li class="plan__carousel-item">
+              <span class="visually-hidden">Развлечения</span>
+            </li>
+          </ul>
           <form class="plan__form form" action="https://echo.htmlacademy.ru" method="post">
             <ol class="plan__list">
-              <li class="plan__item plan__item--append">
+              <li class="plan__item plan__item--append plan__item--show">
                 <h3 class="plan__subtitle">Даты пребывания</h3>
-                <p class="plan__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                <p class="plan__description">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                <ul class="plan__carousel plan__carousel--sub">
+                  <li class="plan__carousel-item plan__carousel-item--current">
+                    Даты
+                  </li>
+                  <li class="plan__carousel-item">
+                    Маршрут
+                  </li>
+                  <li class="plan__carousel-item">
+                    Развлечения
+                  </li>
+                </ul>
                 <div class="plan__inputs-wrapper">
                   <div class="plan__input-wrapper plan__input-wrapper--count">
                     <label class="form__label form__label--plan" for="count-companions">Ищу попутчиков:</label>
@@ -395,9 +445,20 @@
                   <a class="plan__button-step button button--arrow" href="#">Следующий шаг</a>
                 </div>
               </li>
-              <li class="plan__item plan__item--append">
+              <li class="plan__item plan__item--append plan__item--show">
                 <h3 class="plan__subtitle">Маршрут</h3>
-                <p class="plan__description">Укажите страны, которые вы хотели бы посетить.<br>Это может быть одна или сразу несколько.</p>
+                <p class="plan__description plan__description--small">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+                <ul class="plan__carousel plan__carousel--sub">
+                  <li class="plan__carousel-item">
+                    Даты
+                  </li>
+                  <li class="plan__carousel-item plan__carousel-item--current">
+                    Маршрут
+                  </li>
+                  <li class="plan__carousel-item">
+                    Развлечения
+                  </li>
+                </ul>
                 <div class="plan__countries-wrapper">
                   <div class="plan__country-wrapper plan__country-wrapper--delete">
                     <button class="plan__country-button plan__country-button--checked" type="button">
@@ -1071,9 +1132,20 @@
                   <a class="link link--uppercase plan__link-step" href="#">На шаг назад</a>
                 </div>
               </li>
-              <li class="plan__item plan__item--append">
+              <li class="plan__item plan__item--append plan__item--show">
                 <h3 class="plan__subtitle">Развлечения</h3>
-                <p class="plan__description">Наконец, расскажите о своих планах времяпровождения.<br>Можно писать в свободной форме и ставить тэги.</p>
+                <p class="plan__description">Наконец, расскажите о своих планах времяпровождения. Можно&nbsp;писать в свободной форме и ставить тэги.</p>
+                <ul class="plan__carousel plan__carousel--sub">
+                  <li class="plan__carousel-item">
+                    Даты
+                  </li>
+                  <li class="plan__carousel-item">
+                    Маршрут
+                  </li>
+                  <li class="plan__carousel-item plan__carousel-item--current">
+                    Развлечения
+                  </li>
+                </ul>
                 <div class="plan__action-wrapper">
                   <div class="plan__action">
                     <label class="form__label form__label--action" for="action-country-bosnia">Босния и Герцеговина</label>
@@ -1113,17 +1185,26 @@
         </a>
         <ul class="social-list main-footer__social-list">
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--bg--footer social-list__link--icon--dark social-list__link--fb" href="#">
+            <a class="social-list__link social-list__link--style--footer" href="#">
+              <svg class="social-list__icon social-list__icon--fb" width="11" height="21" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
               <span class="visually-hidden">Погнали в Фэйсбуке</span>
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--bg--footer social-list__link--icon--dark social-list__link--vk" href="#">
+            <a class="social-list__link social-list__link--style--footer" href="#">
+              <svg class="social-list__icon social-list__icon--vk" width="23" height="12" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
               <span class="visually-hidden">Погнали во Вконтакте </span>
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--bg--footer social-list__link--icon--dark social-list__link--in" href="#">
+            <a class="social-list__link social-list__link--style--footer" href="#">
+              <svg class="social-list__icon social-list__icon--in" width="18" height="18" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
               <span class="visually-hidden">Погнали в Инстаграме</span>
             </a>
           </li>
@@ -1138,7 +1219,9 @@
       </div>
     </footer>
 
-    <script src="js/menu.js"></script>
-    <script src="js/filter-country-drop.js"></script>
+    <script src="js/menu.min.js"></script>
+    <script src="js/plan.min.js"></script>
+    <script src="js/transport-button.min.js"></script>
+    <script src="js/filter-country-drop.min.js"></script>
   </body>
 </html>

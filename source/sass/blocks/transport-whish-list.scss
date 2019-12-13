@@ -4,9 +4,13 @@
   justify-content: center;
 
   &--inner {
+    padding-left: 25px;
+    justify-content: flex-start;
+
     @media (min-width: $tablet-width) {
       flex-direction: column;
       margin-top: -18px;
+      padding-left: 0;
     }
 
     @media (min-width: $desktop-width) {
@@ -15,11 +19,14 @@
     }
 
     .transport-whish-list__item {
-      @include circle(32px);
-
       @media (max-width: $tablet-width - 1) {
         background-color: $light-grey;
-        background-size: auto 16px;
+      }
+
+      svg {
+        @media (max-width: $tablet-width - 1) {
+          height: 16px;
+        }
       }
     }
   }
@@ -35,11 +42,16 @@
     }
 
     .transport-whish-list__item {
-      @include circle(32px);
       overflow: hidden;
 
       @media (min-width: $tablet-width) {
         @include square(43px);
+      }
+
+      svg {
+        @media (max-width: $tablet-width - 1) {
+          height: 16px;
+        }
       }
     }
   }
@@ -64,57 +76,111 @@
 }
 
 .transport-whish-list__item {
-  @include square(32px);
+  position: relative;
 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &--air {
-    background-image: url("../img/plane.svg");
+  @include circle(32px);
+
+  &[data-hover] {
+    &::before {
+      @media (min-width: $desktop-width) {
+        content: attr(data-hover);
+
+        position: absolute;
+        top: 138%;
+        left: 50%;
+
+        display: none;
+        padding: 16px 24px 17px 24px;
+
+        @include font-size-height(20px, 24px);
+        color: $white;
+
+        background-color: #101d41;
+        border-radius: 3px;
+
+        transform: translateX(-50%);
+      }
+    }
+
+    &::after {
+      @media (min-width: $desktop-width) {
+        content: "";
+
+        position: absolute;
+        top: 100%;
+        left: 50%;
+
+        display: none;
+
+        @include triangle-right(#101d41, 8px, 16px);
+        transform: translateX(-50%) rotate(-90deg);
+      }
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        display: block;
+      }
+    }
   }
 
-  &--auto {
-    background-image: url("../img/bus.svg");
+  svg {
+    width: auto;
+    height: 21px;
+
+    opacity: 0.15;
   }
 
-  &--bike {
-    background-image: url("../img/bike.svg");
-  }
-
-  &--foot {
-    background-image: url("../img/run.svg");
+  &--active {
+    svg {
+      fill: $link-color;
+      opacity: 1;
+    }
   }
 }
 
 .transport-whish-list__button-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @include reset-m-p;
   @include circle(32px);
 
   background-color: $white;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto 16px;
   border: none;
+
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 2px 10px 0 rgba($black, 0.08);
+
+    svg {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    background-color: $blue-grey;
+    box-shadow: none;
+
+    svg {
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     @include square(43px);
-    background-size: auto 21px;
   }
 
-  &--air {
-    background-image: url("../img/plane.svg");
-  }
-
-  &--auto {
-    background-image: url("../img/bus.svg");
-  }
-
-  &--bike {
-    background-image: url("../img/bike.svg");
-  }
-
-  &--foot {
-    background-image: url("../img/run.svg");
+  svg {
+    @media (max-width: $tablet-width - 1) {
+      height: 16px;
+    }
   }
 }
