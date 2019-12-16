@@ -23,7 +23,7 @@
       top: 40%;
 
       @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-        top: 25%;
+        top: 27%;
       }
     }
   }
@@ -41,6 +41,10 @@
       color: $white;
 
       background-color: $night-blue;
+    }
+
+    .main-header__scroll-container {
+      margin-bottom: 1px;
     }
 
     .main-header__img {
@@ -164,6 +168,7 @@
 
       min-width: $mobile-width;
       width: 100%;
+      margin-bottom: 1px;
 
       background-color: $white;
     }
@@ -215,6 +220,10 @@
       display: none;
     }
   }
+}
+
+.main-header__scroll-container {
+  margin-bottom: -1px;
 }
 
 .main-header__container {
