@@ -458,8 +458,6 @@
 
   @media (min-width: $tablet-width) {
     display: inline;
-    width: auto;
-    height: auto;
 
     @include link-style($dark-blue, 60px, 60px, 0.2);
     font-weight: 700;
