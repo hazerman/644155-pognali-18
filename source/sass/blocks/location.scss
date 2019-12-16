@@ -1,6 +1,12 @@
 .location {
   color: $night-blue;
+}
 
+.location__header {
+  position: relative;
+  z-index: 3;
+
+  @include rounding-bottom(30px, 60px, 60px);
   background-color: $yellow;
 }
 
