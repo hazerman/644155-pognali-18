@@ -346,11 +346,11 @@
 
 .main-header__nav-wrapper {
   width: 100%;
-  padding-top: 75px;
+  padding-top: 68px;
   box-shadow: -300px 0 0 0 $white, 300px 0 0 0 $white;
 
   @media (min-width: $tablet-width) {
-    padding-top: 100px;
+    padding-top: 93px;
 
     box-shadow: -400px 0 0 0 $white, 400px 0 0 0 $white;
   }
@@ -393,11 +393,11 @@
 }
 
 .main-header__contacts {
-  margin-bottom: 42px;
+  margin-bottom: 39px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 116px;
-    margin-left: 60px;
+    margin-bottom: 130px;
+    margin-left: 57px;
   }
 
   @media (min-width: $desktop-width) {
@@ -409,7 +409,7 @@
 
 .main-header__social-list {
   justify-content: center;
-  margin-bottom: 33px;
+  margin-bottom: 28px;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-start;

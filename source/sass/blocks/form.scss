@@ -161,8 +161,8 @@
     }
 
     &::before {
-      top: 5px;
-      left: 0;
+      top: 7px;
+      left: -3px;
 
       @include circle(6px);
 
@@ -178,8 +178,8 @@
     }
 
     &::after {
-      top: 7px;
-      left: -11px;
+      top: 9px;
+      left: -14px;
 
       @include rectangle(11px, 2px);
 
@@ -429,7 +429,7 @@
   border: 1px solid $input-border-color;
   border-radius: 3px;
 
-  @include font-size-height(16px, 18px);
+  @include font-size-height(16px, 21px);
   color: $light-black;
 
   @media (min-width: $tablet-width) {

@@ -16,8 +16,8 @@ filterCountryBtn.addEventListener("click", function (evt) {
   if (window.innerWidth < 768) {
     afterHeight.style.height = listHeight + "px";
   }
-  else if ((window.innerWidth >= 768) && (window.innerWidth < 1440) && (listHeight > 475)) {
-    afterHeight.style.height = (listHeight - 475) + "px";
+  else if ((window.innerWidth >= 768) && (window.innerWidth < 1440) && (listHeight > 420)) {
+    afterHeight.style.height = (listHeight - 420) + "px";
   }
 
   if (filterCountryBtnText.textContent === "Показать все") {
@@ -53,8 +53,8 @@ var changeList = function(btn) {
       afterHeight.style.height = listHeight + "px";
     }
     else if ((window.innerWidth >= 768) && (window.innerWidth < 1440)) {
-      if (listHeight > 475) {
-        afterHeight.style.height = (listHeight - 475) + "px";
+      if (listHeight > 420) {
+        afterHeight.style.height = (listHeight - 420) + "px";
       }
       else {
         afterHeight.style.height = 0;

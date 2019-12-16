@@ -132,10 +132,12 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+      min-height: 54px;
       padding-left: 20px;
 
       @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
         flex-direction: row;
+        min-height: 0;
         padding-left: 37px;
       }
 
@@ -173,9 +175,11 @@
 .companions-list__user-info {
   @media (min-width: $tablet-width) {
     order: 0;
+    align-self: flex-start;
     width: 490px;
     padding-left: 258px;
     margin-right: auto;
+    margin-bottom: 70px;
   }
 
   @media (min-width: $desktop-width) {

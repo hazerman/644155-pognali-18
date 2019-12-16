@@ -100,7 +100,7 @@
   @media (min-width: $desktop-width) {
     @include padding-center(0);
     width: 430px;
-    margin-bottom: 101px;
+    margin-bottom: 102px;
     margin-left: 70px;
 
     text-align: left;
@@ -132,7 +132,7 @@
 
   @media (min-width: $tablet-width) {
     width: 262px;
-    margin-bottom: 211px;
+    margin-bottom: 212px;
     margin-left: 34px;
   }
 
@@ -163,7 +163,7 @@
 
   @include index-description-bold;
   padding-right: 63px;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 }
 
 .index-header__scheme-list {
@@ -231,14 +231,13 @@
     @media (min-width: $desktop-width) {
       position: absolute;
       top: 20px;
-      right: 68px;
+      right: 63px;
 
       @include font-size-height(24px, 24px);
     }
   }
 
   @media (min-width: $tablet-width) {
-    width: 50%;
     padding: 31px 102px 22px 33px;
 
     @include font-size-height(24px, 24px);
@@ -246,8 +245,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 25%;
-    flex-grow: 1;
+
     padding-top: 29px;
     padding-bottom: 30px;
 
@@ -256,18 +254,41 @@
 
   &:nth-child(4n+1) {
     background-color: $dark-orange;
+
+    @media (min-width: $desktop-width) {
+      width: 26%;
+    }
   }
 
   &:nth-child(4n+2) {
     background-color: $orange;
+
+    @media (min-width: $desktop-width) {
+      width: 28%;
+    }
   }
 
   &:nth-child(4n+3) {
     background-color: $dark-yellow;
+
+    @media (min-width: $desktop-width) {
+      width: 28%;
+    }
   }
 
   &:nth-child(4n+4) {
     background-color: $yellow;
+
+    @media (min-width: $desktop-width) {
+      width: 18%;
+      flex-grow: 1;
+    }
+
+    &::after {
+      @media (min-width: $desktop-width) {
+        right: 33px;
+      }
+    }
   }
 
   &:not(:first-child) {
@@ -293,9 +314,19 @@
     }
   }
 
+  &:nth-child(2n+1) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      width: 53%;
+    }
+  }
+
   &:nth-child(2n) {
     @media (min-width: $tablet-width) {
       margin-left: -20px;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      width: 47%;
       flex-grow: 1;
     }
   }

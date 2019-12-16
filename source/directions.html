@@ -206,7 +206,7 @@
           </ul>
           <form class="plan__form form" action="https://echo.htmlacademy.ru" method="post">
             <ol class="plan__list">
-              <li class="plan__item plan__item--append plan__item--show">
+              <li class="plan__item plan__item--append plan__item--show" id="plan-step1">
                 <h3 class="plan__subtitle">Даты пребывания</h3>
                 <p class="plan__description">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку и ее предполагаемую длительность.</p>
                 <ul class="plan__carousel plan__carousel--sub">
@@ -445,10 +445,10 @@
                   </div>
                 </div>
                 <div class="plan__steps-wrapper">
-                  <a class="plan__button-step button button--arrow" href="#">Следующий шаг</a>
+                  <a class="plan__button-step button button--arrow" href="#plan-step2">Следующий шаг</a>
                 </div>
               </li>
-              <li class="plan__item plan__item--append plan__item--show">
+              <li class="plan__item plan__item--append plan__item--show" id="plan-step2">
                 <h3 class="plan__subtitle">Маршрут</h3>
                 <p class="plan__description plan__description--small">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
                 <ul class="plan__carousel plan__carousel--sub">
@@ -463,8 +463,8 @@
                   </li>
                 </ul>
                 <div class="plan__countries-wrapper">
-                  <div class="plan__country-wrapper plan__country-wrapper--delete">
-                    <button class="plan__country-button plan__country-button--checked" type="button">
+                  <div class="plan__country-wrapper plan__country-wrapper--checked plan__country-wrapper--delete">
+                    <button class="plan__country-button" type="button">
                       Босния и Герцеговина
                       <span class="plan__country-action plan__country-action--unfold">
                         <span class="visually-hidden">Раскрыть список</span>
@@ -477,8 +477,8 @@
                       <span class="visually-hidden">Очистить</span>
                     </button>
                   </div>
-                  <div class="plan__country-wrapper plan__country-wrapper--delete">
-                    <button class="plan__country-button plan__country-button--checked" type="button">
+                  <div class="plan__country-wrapper plan__country-wrapper--checked plan__country-wrapper--delete">
+                    <button class="plan__country-button" type="button">
                       Чехия
                       <span class="plan__country-action plan__country-action--unfold">
                         <span class="visually-hidden">Раскрыть список</span>
@@ -1118,7 +1118,7 @@
                       <span class="visually-hidden">Очистить</span>
                     </button>
                   </div>
-                  <div class="plan__country-wrapper">
+                  <div class="plan__country-wrapper plan__country-wrapper--choose">
                     <button class="plan__country-button plan__country-button--choose" type="button">
                       Добавить страну
                       <span class="plan__country-action plan__country-action--plus">
@@ -1131,11 +1131,11 @@
                   </div>
                 </div>
                 <div class="plan__steps-wrapper">
-                  <a class="plan__button-step button button--arrow" href="#">Следующий шаг</a>
-                  <a class="link link--uppercase plan__link-step" href="#">На шаг назад</a>
+                  <a class="plan__button-step button button--arrow" href="#plan-step3">Следующий шаг</a>
+                  <a class="link link--uppercase plan__link-step" href="#plan-step1">На шаг назад</a>
                 </div>
               </li>
-              <li class="plan__item plan__item--append plan__item--show">
+              <li class="plan__item plan__item--append plan__item--show" id="plan-step3">
                 <h3 class="plan__subtitle">Развлечения</h3>
                 <p class="plan__description">Наконец, расскажите о своих планах времяпровождения. Можно&nbsp;писать в свободной форме и ставить тэги.</p>
                 <ul class="plan__carousel plan__carousel--sub">
@@ -1162,12 +1162,12 @@
                     <span class="plan__flag-wrapper plan__flag-wrapper--czech plan__flag-wrapper--action">
                       <span class="visually-hidden">Флаг Чехии</span>
                     </span>
-                    <textarea class="form__textarea form__textarea--action" name="action-country-czech" id="action-country-czech" cols="30" rows="3">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                    <textarea class="form__textarea form__textarea--action" name="action-country-czech" id="action-country-czech" cols="30" rows="3">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                   </div>
                 </div>
                 <div class="plan__steps-wrapper">
                   <button class="plan__button-step button button--arrow" type="submit">Отправить</button>
-                  <a class="link link--uppercase plan__link-step" href="#">На шаг назад</a>
+                  <a class="link link--uppercase plan__link-step" href="#plan-step2">На шаг назад</a>
                 </div>
               </li>
             </ol>
@@ -1223,7 +1223,7 @@
     </footer>
 
     <script src="js/menu.min.js"></script>
-    <script src="js/plan.min.js"></script>
+    <!-- <script src="js/plan.min.js"></script> -->
     <script src="js/transport-button.min.js"></script>
     <script src="js/filter-country-drop.min.js"></script>
   </body>
