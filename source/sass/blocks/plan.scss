@@ -18,11 +18,18 @@
       padding-bottom: 104px;
 
       @media (min-width: $tablet-width) {
+        padding-top: 49px;
         padding-bottom: 123px;
       }
 
       @media (min-width: $desktop-width) {
         padding-bottom: 132px;
+      }
+    }
+
+    .plan__title {
+      @media (min-width: $tablet-width) {
+        margin-bottom: 48px;
       }
     }
   }
@@ -57,7 +64,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 64px;
+    margin-left: 70px;
   }
 }
 
@@ -167,7 +174,7 @@
 
   @media (min-width: $tablet-width) {
     @include font-size-height(36px, 36px);
-    margin-bottom: 37px;
+    margin-bottom: 35px;
   }
 }
 
@@ -219,7 +226,7 @@
     display: none;
 
     @media (min-width: $tablet-width) {
-      padding: 52px 44px 55px 44px;
+      padding: 48px 44px 55px 44px;
 
       border-radius: 30px;
     }
@@ -227,7 +234,7 @@
     @media (min-width: $desktop-width) {
       @include padding-center(160px);
       padding-top: 100px;
-      padding-bottom: 105px;
+      padding-bottom: 107px;
 
       border-radius: 60px;
     }
@@ -306,7 +313,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 580px;
+    width: 584px;
     margin-bottom: 0;
   }
 }
@@ -331,6 +338,10 @@
 
     @include font-size-height(20px, 18px);
   }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: 2px;
+  }
 }
 
 .plan__info-item {
@@ -342,6 +353,13 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    width: 178px;
+  }
+
+  &:nth-child(2) {
+    @media (min-width: $desktop-width) {
+      width: 190px;
+    }
   }
 }
 
@@ -360,6 +378,10 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: 2px;
+  }
 }
 
 .plan__description {
@@ -371,12 +393,12 @@
 
   @media (min-width: $tablet-width) {
     @include font-size-height(20px, 24px);
-    margin-bottom: 35px;
+    margin-bottom: 37px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 588px;
-    margin-bottom: 51px;
+    margin-bottom: 54px;
   }
 
   &--small {
@@ -463,6 +485,7 @@
   @media (min-width: $desktop-width) {
     width: 180px;
     margin-top: 0;
+    margin-right: 38px;
   }
 }
 
@@ -592,10 +615,12 @@
 
   &--trek-prev {
     margin-right: auto;
+    margin-left: -7px;
   }
 
   &--trek-next {
     margin-left: auto;
+    margin-right: -7px;
     transform: rotate(180deg);
   }
 }
@@ -614,7 +639,6 @@
 
   @media (min-width: $desktop-width) {
     order: 1;
-    margin-left: auto;
 
     color: $link-color;
   }
@@ -660,7 +684,7 @@
   margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 46px;
+    margin-bottom: 47px;
   }
 
   @media (min-width: $desktop-width) {
@@ -712,11 +736,11 @@
   @media (min-width: $tablet-width) {
     @include font-size-height(20px, 20px);
     font-weight: 500;
-    height: 70px;
+    height: 69px;
   }
 
   @media (min-width: $desktop-width) {
-    height: 72px;
+    height: 71px;
   }
 }
 
@@ -726,21 +750,23 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 41px;
+    margin-top: -6px;
     margin-bottom: 49px;
 
     border-top: 1px solid #d6d9e6;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 56px;
-    padding-top: 61px;
+    margin-top: -2px;
+    margin-bottom: 55px;
+    padding-top: 62px;
   }
 
   &::before {
     @media (min-width: $tablet-width) {
       @include pseudo(absolute);
       top: 0;
-      right: 134px;
+      right: 135px;
 
       width: 1px;
       height: 110%;
@@ -779,14 +805,15 @@
     transform: translateY(-50%);
 
     @media (min-width: $tablet-width) {
+      top: 48%;
       left: auto;
-      right: -34px;
+      right: 128px;
 
       @include square(15px);
     }
 
     @media (min-width: $desktop-width) {
-      right: -52px;
+      right: 218px;
     }
   }
 
@@ -827,8 +854,9 @@
 
 .plan__action-wrapper {
   @media (min-width: $tablet-width) {
-    padding-top: 26px;
+    padding-top: 36px;
     padding-right: 28px;
+    margin-top: -5px;
     margin-bottom: 47px;
 
     border-top: 1px solid #d6d9e6;
@@ -837,6 +865,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 80px;
     padding-right: 110px;
+    margin-top: -2px;
     margin-bottom: 56px;
   }
 }
@@ -848,11 +877,11 @@
   margin-bottom: 28px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 37px;
+    margin-bottom: 51px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
   }
 
   &:not(:last-child) {
@@ -868,14 +897,14 @@
 
       @media (min-width: $tablet-width) {
         left: auto;
-        right: -36px;
-        bottom: -45px;
+        right: -26px;
+        bottom: -62px;
         width: 3px;
       }
 
       @media (min-width: $desktop-width) {
-        right: 103px;
-        bottom: -58px;
+        right: 114px;
+        bottom: -65px;
       }
     }
   }
@@ -932,12 +961,12 @@
 
   @media (min-width: $tablet-width) {
     flex-grow: 0;
-    width: 370px;
+    width: 368px;
     margin-right: 36px;
     padding: 25px 24px 23px 24px;
 
     @include font-size-height(20px, 20px);
-    letter-spacing: 2px;
+    letter-spacing: 1.9px;
   }
 
   @media (min-width: $desktop-width) {
@@ -1026,6 +1055,10 @@
 
   width: 24px;
 
+  @media (min-width: $tablet-width) {
+    width: 41px;
+  }
+
   &::before,
   &::after {
     @include pseudo(absolute);
@@ -1045,6 +1078,12 @@
       top: 40%;
 
       @include rectangle(9px, 2px);
+
+      @media (min-width: $tablet-width) {
+        top: 44%;
+
+        @include rectangle(12px, 2px);
+      }
     }
 
     &::before {
@@ -1053,7 +1092,7 @@
     }
 
     &::after {
-      left: 1px;
+      left: 2px;
 
       transform-origin: top right;
       transform: rotate(-45deg);
@@ -1065,6 +1104,10 @@
     &::after {
       @include rectangle(14px, 2px);
       left: -3px;
+
+      @media (min-width: $tablet-width) {
+        @include rectangle(18px, 2px);
+      }
     }
 
     &::after {
@@ -1094,6 +1137,10 @@
     background-color: transparent;
 
     transform: scale(2);
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 4px;
   }
 
   &:hover {
@@ -1140,11 +1187,15 @@
   background-size: 35px;
 
   @media (min-width: $tablet-width) {
-    width: 110px;
+    width: 104px;
 
     border: none;
     border-radius: 0;
     background-size: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 108px;
   }
 
   &--bosnia {
@@ -1166,7 +1217,15 @@
     background-position: center top;
 
     @media (min-width: $tablet-width) {
-      width: 70px;
+      width: 77px;
+      margin-top: -9px;
+
+      box-shadow: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 80px;
+      margin-top: -6px;
     }
   }
 }
