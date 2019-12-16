@@ -1033,6 +1033,10 @@
           width: 13px;
           transform-origin: center center;
           background-color: #616d8d;
+
+          @media (min-width: $tablet-width) {
+            width: 18px;
+          }
         }
 
         &::after {
