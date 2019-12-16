@@ -534,6 +534,7 @@
 
 .form__arrival-message {
   display: none;
+
   @media (min-width: $desktop-width) {
     display: block;
     width: 100%;
