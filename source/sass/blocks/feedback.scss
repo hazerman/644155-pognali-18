@@ -75,7 +75,7 @@
   margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 56px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: $desktop-width) {
@@ -89,10 +89,14 @@
   right: 0;
   bottom: 0;
 
+  padding-left: 17px;
+
   font-size: 0;
 
   @media (min-width: $tablet-width) {
     position: relative;
+
+    padding-left: 29px;
 
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;

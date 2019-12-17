@@ -9,6 +9,7 @@
   z-index: 11;
 
   @include rounding-bottom(0, 0, 60px);
+  margin-bottom: -1px;
 }
 
 .main__items-wrapper {
@@ -66,7 +67,7 @@
     align-self: flex-start;
     order: 1;
     margin-bottom: 40px;
-    padding: 47px 47px 38px 47px;
+    padding: 47px 47px 48px 47px;
   }
 }
 

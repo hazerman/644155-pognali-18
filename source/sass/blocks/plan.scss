@@ -615,13 +615,27 @@
 
   &--trek-prev {
     margin-right: auto;
-    margin-left: -7px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 7px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: -7px;
+    }
   }
 
   &--trek-next {
     margin-left: auto;
-    margin-right: -7px;
     transform: rotate(180deg);
+
+    @media (min-width: $tablet-width) {
+      margin-right: 7px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: -7px;
+    }
   }
 }
 
