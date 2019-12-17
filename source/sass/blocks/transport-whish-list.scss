@@ -1,6 +1,7 @@
 .transport-whish-list {
   @include list;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   &--inner {
@@ -16,6 +17,7 @@
     @media (min-width: $desktop-width) {
       flex-direction: row;
       margin-right: 44px;
+      width: 128px;
     }
 
     .transport-whish-list__item {
