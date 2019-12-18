@@ -175,6 +175,8 @@
   @media (min-width: $tablet-width) {
     @include font-size-height(36px, 36px);
     margin-bottom: 35px;
+
+    letter-spacing: -0.3px;
   }
 }
 
@@ -377,6 +379,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+    letter-spacing: 2px;
   }
 
   @media (min-width: $desktop-width) {

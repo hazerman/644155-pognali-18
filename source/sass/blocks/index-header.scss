@@ -5,7 +5,7 @@
   background-image: url("../img/globe-back-mobile@1x.jpg");
   background-size: 320px 569px;
   background-repeat: no-repeat;
-  background-position: center bottom 295px;
+  background-position: center bottom 284px;
 
   @media (min-resolution: $retina) {
     background-image: url("../img/globe-back-mobile@2x.jpg");
@@ -38,12 +38,12 @@
 
 .index-header__container {
   @include container;
-  padding-top: 35px;
+  padding-top: 36px;
 
   background-image: url("../img/traveller-illustration-mobile@1x.png");
   background-size: 192px 255px;
   background-repeat: no-repeat;
-  background-position: right 49px bottom 295px;
+  background-position: right 49px bottom 284px;
 
   @media (min-resolution: $retina) {
     background-image: url("../img/traveller-illustration-mobile@2x.png");
@@ -148,7 +148,7 @@
   display: block;
 
   @include index-description;
-  margin-bottom: 19px;
+  margin-bottom: 18px;
   padding-right: 77px;
 
   @media (min-width: $tablet-width) {
@@ -168,12 +168,12 @@
 
 .index-header__scheme-list {
   position: relative;
-  top: 230px;
+  top: 241px;
 
   @include list;
   width: 100%;
-  margin-top: -230px;
-  border-radius: 10px;
+  margin-top: -241px;
+  border-radius: 9px;
   overflow: hidden;
 
   counter-reset: sheme;
@@ -205,7 +205,7 @@
   color: $night-blue;
 
   @include font-size-height(18px, 18px);
-  border-radius: 10px;
+  border-radius: 9px;
 
   &::after {
     counter-increment: sheme;
@@ -231,7 +231,7 @@
     @media (min-width: $desktop-width) {
       position: absolute;
       top: 20px;
-      right: 63px;
+      right: 59px;
 
       @include font-size-height(24px, 24px);
     }
@@ -256,7 +256,7 @@
     background-color: $dark-orange;
 
     @media (min-width: $desktop-width) {
-      width: 26%;
+      width: 340px;
     }
   }
 
@@ -264,7 +264,7 @@
     background-color: $orange;
 
     @media (min-width: $desktop-width) {
-      width: 28%;
+      width: 370px;
     }
   }
 
@@ -272,7 +272,7 @@
     background-color: $dark-yellow;
 
     @media (min-width: $desktop-width) {
-      width: 28%;
+      width: 370px;
     }
   }
 
@@ -280,7 +280,7 @@
     background-color: $yellow;
 
     @media (min-width: $desktop-width) {
-      width: 18%;
+      width: 300px;
       flex-grow: 1;
     }
 

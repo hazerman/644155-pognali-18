@@ -72,7 +72,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-top: 190px;
-    padding-bottom: 56px;
+    padding-bottom: 53px;
 
     background-position: top 193px left 547px, bottom 80px left 191px;
   }
@@ -94,6 +94,7 @@
 
 .companions__description {
   @include index-description;
+  margin-bottom: 22px;
   padding-right: 18px;
 
   @media (min-width: $tablet-width) {
@@ -104,10 +105,11 @@
 
 .companions__subdescription {
   @include index-description-bold;
-  margin-bottom: 58px;
+  margin-bottom: 56px;
 
   @media (min-width: $tablet-width) {
     width: 264px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: $desktop-width) {
@@ -120,11 +122,11 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
-    top: -158px;
+    top: -161px;
 
     align-self: flex-start;
     width: 280px;
-    margin-bottom: -158px;
+    margin-bottom: -161px;
   }
 }
 
@@ -135,11 +137,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 72px;
+    margin-bottom: 71px;
   }
 
   @media (min-width: $desktop-width) {
     width: 630px;
+    padding-top: 4px;
   }
 }
 
@@ -157,6 +160,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 47px;
+    margin-right: 7px;
   }
 
   @media (min-width: $desktop-width) {

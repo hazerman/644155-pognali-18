@@ -18,7 +18,7 @@
 .site-list__item {
   &:not(:last-child) {
     @media (min-width: $desktop-width) {
-      margin-right: 37px;
+      margin-right: 33px;
     }
   }
 }

@@ -281,7 +281,7 @@
   @media (min-width: $tablet-width) {
     order: 2;
 
-    width: 180px;
+    width: 177px;
     margin-right: 0;
     padding-right: 47px;
 
@@ -290,6 +290,8 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 68px;
+    width: 173px;
+    padding-right: 40px;
   }
 
   &::after {
@@ -343,7 +345,7 @@
 
     display: flex;
     justify-content: space-between;
-    width: 365px;
+    width: 363px;
     margin-right: auto;
 
     @include padding-center(0);
@@ -403,7 +405,7 @@
   @media (min-width: $desktop-width) {
     width: 1255px;
     margin-left: 36px;
-    margin-bottom: -10px;
+    margin-bottom: 18px;
   }
 }
 
@@ -422,7 +424,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 48px;
+    margin-bottom: 46px;
   }
 
   &:nth-child(11) {
@@ -511,7 +513,7 @@
 
     display: block;
     width: 100%;
-    padding-top: 30px;
+    padding-top: 33px;
   }
 }
 
@@ -536,6 +538,7 @@
 .filter-country__close-button {
   position: relative;
   width: 100%;
+  padding-left: 44px;
 
   border-radius: 20px;
 
@@ -562,21 +565,23 @@
   @media (min-width: $tablet-width) {
     padding-top: 37px;
     padding-bottom: 33px;
+    padding-left: 55px;
   }
 
   &::before,
   &::after {
-    @include pseudo(absolute, 47%, auto, auto, 27%);
+    @include pseudo(absolute, 47%, auto, auto, 31%);
     @include rectangle(16px, 2px);
     background-color: $dark-blue;
 
     @media (min-width: $tablet-width) {
-      left: 37%;
+      left: 39%;
+      top: 49%;
       width: 24px;
     }
 
     @media (min-width: $desktop-width) {
-      left: 44%;
+      left: 44.8%;
       top: 48%;
     }
   }

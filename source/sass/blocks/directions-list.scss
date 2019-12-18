@@ -123,6 +123,7 @@
 
 .directions-list__visitors {
   position: relative;
+  top: -3px;
 
   @include font-size-height(16px, 30px);
 
@@ -136,7 +137,7 @@
   &::before {
     @include pseudo(absolute);
     top: 7px;
-    left: -20px;
+    left: -17px;
 
     @include square(11px);
 
