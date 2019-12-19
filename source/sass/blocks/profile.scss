@@ -127,6 +127,7 @@
   width: 100%;
 
   &--tags {
+    align-self: flex-start;
     margin-bottom: 21px;
 
     @media (min-width: $desktop-width) {

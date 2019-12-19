@@ -14,7 +14,7 @@
   background-image: url("../img/about-mobile@1x.png");
   background-size: 292px 352px;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: right 10px bottom;
 
   &::before {
     @include pseudo(absolute);
@@ -27,8 +27,8 @@
     background-color: #141b3b;
 
     @media (min-width: $tablet-width) {
-      top: 234px;
-      left: 0;
+      top: 235px;
+      left: 40px;
 
       @include rectangle(688px, 213px);
     }
@@ -85,6 +85,12 @@
 
   @media (min-width: $desktop-width) {
     width: 620px;
+  }
+
+  br {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 

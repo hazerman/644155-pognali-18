@@ -101,6 +101,12 @@
     width: 427px;
     margin-bottom: 40px;
   }
+
+  br {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .companions__subdescription {
@@ -114,6 +120,12 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 87px;
+  }
+
+  br {
+    @media (max-width: $tablet-width - 1) {
+      display: none;
+    }
   }
 }
 
