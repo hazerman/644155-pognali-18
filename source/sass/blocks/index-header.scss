@@ -3,9 +3,9 @@
 
   background-color: $night-blue;
   background-image: url("../img/globe-back-mobile@1x.jpg");
-  background-size: 320px 569px;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center bottom 284px;
+  background-position: center top -137px;
 
   @media (min-resolution: $retina) {
     background-image: url("../img/globe-back-mobile@2x.jpg");
@@ -43,7 +43,7 @@
   background-image: url("../img/traveller-illustration-mobile@1x.png");
   background-size: 192px 255px;
   background-repeat: no-repeat;
-  background-position: right 49px bottom 284px;
+  background-position: right 49px top 177px;
 
   @media (min-resolution: $retina) {
     background-image: url("../img/traveller-illustration-mobile@2x.png");
@@ -78,6 +78,7 @@
 
 .index-header__tagline {
   @include reset-m-p;
+  min-height: 130px;
   margin-bottom: 244px;
 
   @include padding-center(16px);
@@ -93,6 +94,7 @@
     margin-right: auto;
     margin-bottom: 87px;
     padding-top: 0;
+    min-height: 210px;
 
     @include font-size-height(60px, 70px);
   }
@@ -102,6 +104,7 @@
     width: 430px;
     margin-bottom: 102px;
     margin-left: 70px;
+    min-height: auto;
 
     text-align: left;
   }

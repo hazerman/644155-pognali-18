@@ -334,6 +334,9 @@
 .filter-country__continent-list {
   @include list;
   @include padding-center(25px);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   padding-top: 22px;
 
   @media (max-width: $tablet-width - 1) {
@@ -343,7 +346,7 @@
   @media (min-width: $tablet-width) {
     order: 1;
 
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 363px;
     margin-right: auto;
@@ -392,11 +395,13 @@
 
   @include list;
   display: flex;
+  max-width: 270px;
   flex-wrap: wrap;
   padding-left: 25px;
   margin-bottom: 86px;
 
   @media (min-width: $tablet-width) {
+    max-width: 100%;
     width: 382px;
     padding-left: 0;
     margin-bottom: 36px;

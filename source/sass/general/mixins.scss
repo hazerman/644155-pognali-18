@@ -38,13 +38,12 @@
 }
 
 @mixin container($p-left-tablet: 0, $p-right-tablet: 0, $p-left-desktop: 0, $p-right-desktop: 0) {
-  width: $mobile-width;
+  width: 100%;
 
   @include center;
   @include padding-center(25px);
 
   @media (min-width: $tablet-width) {
-    width: $tablet-width;
     padding-left: 40px + $p-left-tablet;
     padding-right: 40px + $p-right-tablet;
   }

@@ -54,6 +54,8 @@
   }
 
   &--center {
+    @include center;
+    max-width: 270px;
     align-items: center;
     text-align: center;
     padding: 0;
@@ -69,10 +71,13 @@
   }
 
   &--inner {
+    @include center;
+    max-width: 270px;
     padding: 15px 0 22px 0;
     border-radius: 20px;
 
     @media (min-width: $tablet-width) {
+      max-width: 100%;
       width: 100%;
       padding: 33px 0 10px 0;
       margin-bottom: 40px;
@@ -183,7 +188,7 @@
   @media (min-width: $tablet-width) {
     order: 0;
     align-self: flex-start;
-    width: 490px;
+    width: 71.221%;
     padding-left: 258px;
     margin-right: auto;
     margin-bottom: 70px;

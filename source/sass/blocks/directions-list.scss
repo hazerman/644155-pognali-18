@@ -15,6 +15,8 @@
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
+    position: relative;
+
     flex-direction: row;
     width: 100%;
 
@@ -59,8 +61,9 @@
     background-size: contain;
 
     @media (min-width: $tablet-width) {
-      top: -15px;
-      left: 368px;
+      top: 20px;
+      left: auto;
+      right: 150px;
 
       @include rectangle(71px, 48px);
     }
@@ -72,7 +75,13 @@
   }
 
   @media (min-width: $tablet-width) {
+    position: static;
+
     @include font-size-height(24px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
   }
 
   &--country--thailand {
@@ -99,13 +108,18 @@
 
   @media (min-width: $tablet-width) {
     order: 0;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
   }
 }
 
 .directions-list__img {
   display: block;
 
-  @include rectangle(270px, 110px);
+  @include rectangle(100%, auto);
 
   @media (min-width: $tablet-width) {
     @include rectangle(186px, 140px);
